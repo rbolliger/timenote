@@ -1,0 +1,41 @@
+propel:
+  tn_entry:
+    id:                ~
+    project_id:        { type: integer, foreignTable: tn_project, foreignReference: id, required: true }
+    project_sub_id:    { type: integer, foreignTable: tn_project_sub, foreignReference: id, required: true }
+    category_id:       { type: integer, foreignTable: tn_category, foreignReference: id, required: true }
+    type:              { type: varchar(255) }
+    comment:           { type: longvarchar, required: true }
+    tags:              { type: longvarchar, required: true }
+    token:             { type: varchar(255), required: true, index: unique }
+    start_dt:          { type: timestamp, required: true }
+    end_dt:            { type: timestamp, required: true }
+    is_public:         { type: boolean, required: true, default: 1 }
+    expires_at:        { type: timestamp, required: true }
+    created_at:        ~
+
+  tn_project:
+    id:                ~
+    name:              { type: varchar(255) }
+    slug:              { type: varchar(255), required: true, index: unique }
+    description:       { type: longvarchar, required: true }
+    created_at:        ~
+    is_publish:        { type: boolean, required: true, default: 1 }
+
+  tn_project_sub:
+    id:                ~
+    project_id:        { type: integer, foreignTable: tn_project, foreignReference: id, required: true }
+    name:              { type: varchar(255) }
+    slug:              { type: varchar(255), required: true, index: unique }
+    description:       { type: longvarchar, required: true }
+    created_at:        ~
+    is_publish:        { type: boolean, required: true, default: 1 }
+
+  tn_category:
+    id:                ~
+    name:              { type: varchar(255), required: true }
+    slug:              { type: varchar(255), required: true, index: unique }
+    tree_left:         { type: integer, required: true }
+    tree_right:        { type: integer, required: true }
+    tree_parent:       { type: integer, required: true }
+    scope:             { type: integer, required: true, default: 1 }

@@ -1,0 +1,29 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           TimenoteProject
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          project
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:  ~
+      #list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
+
+      list:
+        peer_method: retrieveTree
+        max_per_page: 99999
+        display: [title]
+        batch_actions:
+          saveOrder:
+            label: Save Order
+            action: saveOrder

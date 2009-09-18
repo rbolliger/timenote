@@ -1,0 +1,19 @@
+dev:
+  propel:
+    param:
+      classname: DebugPDO
+test:
+  propel:
+    param:
+      classname: DebugPDO
+all:
+  propel:
+    class: sfPropelDatabase
+    param:
+      classname: PropelPDO
+      dsn: 'mysql:dbname=timenote;host=localhost'
+      username: root
+      password: nrj+2020
+      encoding: utf8
+      persistent: true
+      pooling: true

@@ -1,0 +1,119 @@
+/* 
+    Document   : admin
+    Created on : Sep 9, 2009, 10:46:57 AM
+    Author     : nbo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+#sf_admin_container table tr:hover {
+	background-color: #FFF;
+}
+
+ul#menu li{
+	list-style: none;
+	display: inline;
+	padding: 0 10px 0 0 ;
+}
+
+#admin_content ul {
+	margin: 0;
+	list-style-position: inside;
+}
+
+#admin_content ul#list-container {
+	margin-left: 1em;
+	background-color: #FFF ;
+	padding: 10px ;
+}
+
+#admin_content ul li {
+	list-style-position: inside;
+}
+
+li img {
+	vertical-align: text-bottom ;
+}
+
+#list-container li span {
+	cursor: pointer;
+}
+
+#sortHelper {
+	background: #FFE;
+}
+
+#dragHelper {
+	background-color: #EEE;
+}
+
+div.wrap {
+	border:1px solid #BBBBBB;
+	padding: 1em 1em 1em 1em;
+}
+#main_list,#contenu_list {
+	width: 700px;
+}
+
+#main_list li {
+	list-style-type: none;
+	list-style-position: none;
+}
+
+.page-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.clear-element {
+	clear: both;
+	position: relative;
+}
+
+.sort-handle {
+	cursor:move;
+	margin: 0.25em 0 0 0;
+	padding: 2px 0 2px 18px;
+	background: #f3F3F3 left center url(../images/toggleexpanddark.png) no-repeat;
+}
+
+div.item-title {
+	background-color: #DDD;
+	margin: 0.25em 0 0 0;
+	padding: 2px 0 2px 18px;
+}
+
+.list_action {
+	position: absolute;
+	right: 0; top:0;
+	width: 350px;
+}
+
+.list_action span {
+	padding: 0 10px 0 0;
+}
+
+.current-nesting {
+	background-color: #FFE;
+}
+
+#sf_admin_container #sf_admin_content p span.sf_admin_action_new a {
+	background:transparent url(/sfPropelPlugin/images/new.png) no-repeat scroll 0 0;
+}
+#sf_admin_container #sf_admin_content p span.sf_admin_action_edit a {
+	background:transparent url(/sfPropelPlugin/images/edit.png) no-repeat scroll 0 0;
+}
+#sf_admin_container #sf_admin_content p span.sf_admin_action_delete a,.link_delete {
+	background:transparent url(/sfPropelPlugin/images/delete.png) no-repeat scroll 0 0;
+}
