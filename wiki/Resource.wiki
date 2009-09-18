@@ -1,11 +1,6 @@
 #summary Different sites and resources wich will be useful
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
+= Resources =
 
   * http://www.smashingmagazine.com/2009/03/08/70-new-useful-ajax-and-javascript-techniques/
   * http://www.smashingmagazine.com/2008/02/22/gallery-of-date-stamps-and-calendars/
