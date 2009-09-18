@@ -29,6 +29,10 @@ sfGuardUser:
     username:       rbo
     password:       ob1
     is_super_admin: true
+  dbe:
+    username:       dbe
+    password:       ob1
+    is_super_admin: true
 
 sfGuardPermission:
   admin:
@@ -73,6 +77,9 @@ sfGuardUserGroup:
   rbo:
     group_id:       admin
     user_id:        rbo
+  dbe:
+    group_id:       admin
+    user_id:        dbe
 
 # check http://www.amicalement-web.net/symfony-gestion-d-un-arbre-en-propel-via-les-nestedset-part-1/2009/05/12/
 TimenoteProject:

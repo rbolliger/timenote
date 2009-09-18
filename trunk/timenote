@@ -5,15 +5,23 @@ echo "|           timenote update v0.1              |"
 echo "|      .: update your timenote app :.         |"
 echo "|_____________________________________________|"
 
-
+##
+# GENERAL
+##
 WRKDIR="/var/www/timenote";
 
+##
+# GOTO DIRECTORY
+##
 echo "- moving in your timenote directory"
 cd $WRKDIR
 pwd
 
 echo 
 
+##
+# SUBVERSION UPDATE
+##
 retour=X
 while [ "$retour" = "X" ]; do
 echo -n "- run svn up ? [y/n] " 
@@ -39,7 +47,9 @@ echo
 done
 ##exit $retour
 
-
+##
+# TESTING DIRECTORY CHMODAGE
+## 
 echo "- testing cache and log dirs chmod"
 if test -w $WRKDIR/cache
 then 
@@ -59,18 +69,67 @@ fi
 
 echo
 
+##
+# PROPEL BUILD ALL
+##
+retour=X
+while [ "$retour" = "X" ]; do
+echo -n "- run propel build all ? [y/n] " 
+read respone
+case "$respone" in
+y*| Y* | o* | O* )
+echo "... running propel build all"
+php symfony propel:build-all
+retour=0
+;;
+[nN]* )
+echo "... skipping propel build all"
+retour=1
+;;
+"?"* )
+echo "launch propel build all here"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retour
 
-#echo "... symfony propel build all"
-#php symfony propel-build-all
-
-#echo "... symfony propel load data"
-#php symfony propel-load-data frontend
-
-
-
+##
+# PROPEL LOAD DATA
+##
+retour=X
+while [ "$retour" = "X" ]; do
+echo -n "- run propel load data ? [y/n] " 
+read respone
+case "$respone" in
+y*| Y* | o* | O* ) 
+echo "... running propel load data"
+php symfony propel:data-load
+retour=0
+;;
+[nN]* )
+echo "... skipping propel load data"
+retour=1
+;;
+"?"* )
+echo "launch propel load data here"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retour
 
 echo
 
+##
+# SYMFONY CLEAR CACHE
+##
 retour=X
 while [ "$retour" = "X" ]; do
 echo -n "- run symfony cc ? [y/n] "
@@ -96,6 +155,10 @@ echo
 done
 ##exit $retour
 
+
+##
+# ENDING
+##
 echo "- that's it, go to"
 echo "http://localhost/timenote"
 
