@@ -5,6 +5,10 @@ The mockup are made with http://www.balsamiq.com/demos/mockups/Mockups.html. Sav
 
 = Frontend =
 == General ==
+=== Image ===
+http://timenote.googlecode.com/svn/wiki/Mockup.attach/mockup_frontend_general.png
+=== Source ===
+http://timenote.googlecode.com/svn/wiki/Mockup.attach/mockup_frontend_general
 {{{
 <mockup version="1.0" skin="sketch" measuredW="865" measuredH="738">
   <controls>
@@ -69,7 +73,12 @@ The mockup are made with http://www.balsamiq.com/demos/mockups/Mockups.html. Sav
   </controls>
 </mockup>
 }}}
-== Capture ==
+
+== Input ==
+=== Image ===
+http://timenote.googlecode.com/svn/wiki/Mockup.attach/mockup_frontend_input.png
+=== Source ===
+http://timenote.googlecode.com/svn/wiki/Mockup.attach/mockup_frontend_input
 {{{
 <mockup version="1.0" skin="sketch" measuredW="1115" measuredH="753">
   <controls>
