@@ -1,0 +1,17 @@
+#summary About page: project infos, tools, ...
+
+= Introduction =
+
+...
+
+
+= Tools we use =
+Thanks to them!
+  * [http://code.google.com Google Code] 
+  * [http://subversion.tigris.org/ Subversion]
+  * [http://www.ubuntu.com/ Ubuntu]
+  * [http://www.symfony-project.org Symfony]
+  * [http://www.netbeans.org/ Netbeans]
+  * [http://httpd.apache.org/ Apache]
+  * [http://www.php.net/ PHP]
+  * [http://www.mysql.com/ MySQL]
