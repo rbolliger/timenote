@@ -4,6 +4,39 @@
 ...
 
 = Apache =
+== Vhosts ==
+Le fichier du virtual host pour timenote:
+{{{
+usr@pc:/var/www/timenote$ more /etc/apache2/vhosts/timenote.conf 
+<VirtualHost *:80>
+	ServerName timenote
+	ServerAlias timenote
+        ServerAdmin usr@pc.ch
+      	
+	DocumentRoot "/var/www/timenote/web"
+      	DirectoryIndex index.php
+      	
+	#Alias /sf /usr/share/php/data/symfony/web/sf
+	Alias /sf /var/www/timenote/lib/vendor/symfony/data/web/sf
+ 
+	#<Directory "/usr/share/php/data/symfony/web/sf">
+	<Directory "/var/www/timenote/lib/vendor/symfony/data/web/sf">
+		AllowOverride All
+		Allow from All
+	</Directory>
+	<Directory "/var/www/timenote/web">
+		AllowOverride All
+		Allow from All
+	</Directory>
+</VirtualHost>
+}}}
+également ajouter 
+{{{
+usr@pc::/var/www/timenote$ more /etc/hosts
+127.0.0.1	localhost.localdomain	localhost
+127.0.0.X	timenote timenote.localdomain
+}}}
+
 == Utiliser aisément le répertoire contenant les sites ==
 Source: http://doc.ubuntu-fr.org/lamp#changer_le_repertoire_www_contenant_mes_sites_web
 
