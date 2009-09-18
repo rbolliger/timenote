@@ -1,0 +1,43 @@
+#summary One-sentence summary of this page.
+
+= Google Project =
+
+== Adding Image ==
+// See http://code.google.com/p/support/wiki/WikiSyntax
+
+For all of you who want to add images to your wiki using the wiki repo here is how you do it.
+
+{{{
+svn checkout https://project-name-here.googlecode.com/svn/wiki/ project-name-here-wiki --username your-username
+
+cd project-name-here-wiki
+
+# suggested good practice is to create a directory
+# for attachments for each wiki page
+mkdir WikiPageName.attach
+
+cp ~/image_name.png WikiPageName.attach/
+
+svn add WikiPageName.attach
+}}}
+
+Edit your wiki page to add the image links
+
+{{{
+vi WikiPageName.wiki
+
+# Add the link to your image    
+http://project-name-here.googlecode.com/svn/wiki/WikiPageName.attach/imagename.png
+
+svn commit -m "Adding images and links for WikiPageName" WikiPageName
+}}}
+
+Go check your wiki page out, the updated page with the images should be there.
+
+Any new images can be added just as easily.
+
+{{{
+svn add WikiPageName.attach/newimage.png
+vi WikiPageName.wiki
+svn commit -m "Adding newimage.png to WikiPageName" WikiPageName.attach/newimage.png 
+}}}
