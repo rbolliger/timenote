@@ -8,6 +8,8 @@
 Le fichier du virtual host pour timenote:
 {{{
 usr@pc:/var/www/timenote$ more /etc/apache2/vhosts/timenote.conf 
+}}}
+{{{
 <VirtualHost *:80>
 	ServerName timenote
 	ServerAlias timenote
@@ -33,6 +35,8 @@ usr@pc:/var/www/timenote$ more /etc/apache2/vhosts/timenote.conf
 également ajouter 
 {{{
 usr@pc::/var/www/timenote$ more /etc/hosts
+}}}
+{{{
 127.0.0.1	localhost.localdomain	localhost
 127.0.0.X	timenote timenote.localdomain
 }}}
