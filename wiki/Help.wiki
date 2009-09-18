@@ -1,7 +1,9 @@
-#summary One-sentence summary of this page.
+#summary Help with this project
+
+= General Help =
+...
 
 = Google Project =
-
 == Adding Image ==
 // See http://code.google.com/p/support/wiki/WikiSyntax
 
