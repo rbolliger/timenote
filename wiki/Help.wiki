@@ -3,6 +3,33 @@
 = General Help =
 ...
 
+= Apache =
+== Utiliser aisément le répertoire contenant les sites ==
+Source: http://doc.ubuntu-fr.org/lamp#changer_le_repertoire_www_contenant_mes_sites_web
+
+Le répertoire contenant les sites lus par Apache est par défaut /var/www/ Ses droits par défaut sont : propriétaire=root, group=root droits rwXr-Xr-X (X signifie droit x pour les répertoires, mais pas pour les fichiers). L'utilisateur Apache est 'www-data'.
+Pour accéder aux fichiers qu'il doit lire, Apache utilise donc en standard le droit 'r' de others, mais seul root peut modifier ces fichiers, ce qui n'est pas pratique.
+Un ajustement de la politique des droits permet de mieux utiliser ce répertoire
+
+Il faut commencer par s'ajouter au groupe de apache le 'www-data':
+{{{
+sudo addgroup $USER www-data
+}}}
+
+Puis modifier les droits
+{{{
+sudo chown -R www-data:www-data /var/www  
+sudo chmod -R 770 /var/www
+}}}
+
+il faudra peut être redémarrer votre session ou actualiser l'explorateur pour que cela soit pris en compte.
+
+  * permettra à apache de lire le répertoire pour produire les pages
+  * permettra à tous les utilisateurs membres du groupe www-data de travailler sur les fichiers (en général, il faut créer ce groupe "www-data" et se mettre comme membre)
+  * permettra à tous les fichiers et répertoires créés dans ce répertoire d'avoir les mêmes propriétés au travers du groupe (GIG activé par g=s)
+  * les autres utilisateurs n'ont droit à rien (correct dans un environnement avec de nombreux utilisateurs)
+
+
 = Google Project =
 == Adding Image ==
 // See http://code.google.com/p/support/wiki/WikiSyntax
