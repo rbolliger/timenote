@@ -1,0 +1,4 @@
+#summary Navigation page
+
+  * [http://code.google.com/p/timenote/ Home]
+  * [http://code.google.com/p/timenote/w/list Wiki]
