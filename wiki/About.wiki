@@ -1,8 +1,7 @@
 #summary About page: project infos, tools, ...
 
 = Introduction =
-
-...
+TODO: check http://code.google.com/p/timenote/wiki/RoadMap
 
 
 = Tools we use =
