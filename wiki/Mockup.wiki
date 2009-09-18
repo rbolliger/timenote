@@ -1,0 +1,3 @@
+#summary Les maquettes des pages
+
+= Frontend =
