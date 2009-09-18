@@ -3,5 +3,7 @@
   * [http://code.google.com/p/timenote/ Home]
   * [http://code.google.com/p/timenote/wiki/ Wiki]
     * [http://code.google.com/p/timenote/wiki/About About]
-    * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
+    * [http://code.google.com/p/timenote/wiki/Architecture Architecture]
+    * [http://code.google.com/p/timenote/wiki/Ideas Ideas]
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
+    * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
