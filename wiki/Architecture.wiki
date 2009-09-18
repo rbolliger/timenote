@@ -1,0 +1,12 @@
+#summary Apps / Module / Class Architecture
+
+  * Frontend
+    * Capture
+    * Search
+    * Export
+    * User Profile (sfGuard)
+    * Options (sfGuard ?)
+
+  * Backend
+    * ..
+      * ..
