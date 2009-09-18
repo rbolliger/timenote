@@ -1,0 +1,75 @@
+propel:
+  # Projects table
+  timenote_project:
+    _attributes:
+      #phpName: tnProject
+      treeMode: NestedSet
+    id: 
+    title:  # required for nested set!
+      type: varchar(255)
+      required: true
+      index: true
+    description:
+      type: longvarchar
+    slug:
+      type: varchar(60)
+      #required: true
+      index: true
+    lft: # required for nested set!
+      type: integer
+      required: true
+      nestedSetLeftKey: true
+    rgt: # required for nested set!
+      type: integer
+      required: true
+      nestedSetRightKey: true
+    created_at:
+    updated_at:
+
+  # Types table
+  timenote_type:
+    #_attributes:
+    #  phpName: tnCategory
+    id:
+    name:
+      type: varchar(255)
+      required: true
+      index: true
+    description:
+      type: longvarchar
+    slug:
+      type: varchar(60)
+      #required: true
+      index: true
+    created_at:
+    updated_at:
+
+  # Entries table
+  timenote_entry:
+    #_attributes:
+    #  phpName: tnEntry
+    id:
+    project_id:  { type: integer, foreignTable: timenote_project, foreignReference: id, required: true }
+    type_id: { type: integer, foreignTable: timenote_type, foreignReference: id, required: true }
+    user_id: { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    #timenote_project_id: { type: integer, required: true, primaryKey: true, foreignTable: timenote_project, foreignReference: id }
+    #timenote_type_id: { type: integer, required: true, primaryKey: true, foreignTable: timenote_type, foreignReference: id }
+    start_dt: TIMESTAMP
+    end_dt: TIMESTAMP
+    comment:
+      type: varchar(255)
+      required: true
+    percent: NUMERIC # to tell the % of activity of the user
+
+  sf_guard_user_profile:
+    _attributes: { phpName: sfGuardUserProfile }
+    id:
+    user_id:     { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    remember:    boolean
+    first_name:  varchar(120)
+    last_name:   varchar(120)
+    email:       varchar(255)
+    birthday:    date
+    sciper:      varchar(10)
+    # Example to use with sfGuardPlugin
+    created_by:  { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }

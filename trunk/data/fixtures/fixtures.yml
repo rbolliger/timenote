@@ -1,0 +1,278 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+
+sfGuardUser:
+  admin:
+    username:       admin
+    password:       admin
+    is_super_admin: true
+  nbo:
+    username:       nbo
+    password:       ob1
+    is_super_admin: true
+  rbo:
+    username:       rbo
+    password:       ob1
+    is_super_admin: true
+
+sfGuardPermission:
+  admin:
+    name:           admin
+    description:    Administrator permission
+  manager:
+    name:           manager
+    description:    Manager permission
+  user:
+    name:           user
+    description:    User permission
+
+sfGuardGroup:
+  admin:
+    name:           admin
+    description:    Administrator group
+  manager:
+    name:           manager
+    description:    Manager group
+  user:
+    name:           user
+    description:    User group
+
+sfGuardGroupPermission:
+  admin:
+    group_id:       admin
+    permission_id:  admin
+  manager:
+    group_id:       manager
+    permission_id:  manager
+  user:
+    group_id:       user
+    permission_id:  user
+
+sfGuardUserGroup:
+  admin:
+    group_id:       admin
+    user_id:        admin
+  nbo:
+    group_id:       admin
+    user_id:        nbo
+  rbo:
+    group_id:       admin
+    user_id:        rbo
+
+# check http://www.amicalement-web.net/symfony-gestion-d-un-arbre-en-propel-via-les-nestedset-part-1/2009/05/12/
+TimenoteProject:
+#  prj_1:
+#    title: root
+#    description: root
+#    slug: root
+#    lft: 1
+#    rgt: 10
+#  prj_2:
+#    title: web
+#    description: web
+#    slug: web
+#    lft: 2
+#    rgt: 7
+#  prj_3:
+#    title: teaching
+#    description: teaching
+#    slug: teaching
+#    lft: 3
+#    rgt: 4
+#  prj_4:
+#    title: general
+#    description: general
+#    slug: genrl
+#    lft: 5
+#    rgt: 6
+#  prj_5:
+#    title: other
+#    description: other
+#    slug: other
+#    lft: 8
+#    rgt: 9
+  prj_1:
+    #id: 1
+    title: root
+    description: root
+    slug: root
+    lft: 1
+    rgt: 26
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_2:
+    #id: 2
+    title: LENI Urban Systems
+    description: LENI Urban Systems
+    slug: leni_urban_system
+    lft: 20
+    rgt: 23
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_3:
+    #id: 3
+    title: Teaching
+    description: teaching
+    slug: teaching
+    lft: 5
+    rgt: 6
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_4:
+    #id: 4
+    title: LENI Industry
+    description: LENI Industry
+    slug: leni_industry
+    lft: 21
+    rgt: 22
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_5:
+    #id: 5
+    title: Others
+    description: other
+    slug: other
+    lft: 24
+    rgt: 25
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_6:
+    #id: 6
+    title: LENI Systems
+    description: 
+    slug: leni_systems
+    lft: 14
+    rgt: 19
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_7:
+    #id: 7
+    title: General LENI
+    description: 
+    slug: general_leni
+    lft: 2
+    rgt: 7
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_8:
+    #id: 8
+    title: LENI ORC
+    description: 
+    slug: 
+    lft: 8
+    rgt: 9
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_9:
+    #id: 9
+    title: LENI Reactive
+    description: 
+    slug: leni_reactive
+    lft: 10
+    rgt: 11
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_10:
+    #id: 10
+    title: Meeting
+    description: LENI Meeting
+    slug: leni_meeting
+    lft: 3
+    rgt: 4
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_11:
+    #id: 11
+    title: Osmose
+    description: 
+    slug: osmose
+    lft: 15
+    rgt: 16
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_12:
+    #id: 12
+    title: PinchLight
+    description: PinchLight
+    slug: pinchlight
+    lft: 17
+    rgt: 18
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+  prj_13:
+    #id: 13
+    title: LENI Solar
+    description: 
+    slug: leni_solar
+    lft: 12
+    rgt: 13
+    created_at: 1970-01-01 00:00:01
+    updated_at: 1970-01-01 00:00:01
+
+
+TimenoteType:
+  typ_1:
+    name: Analyze
+    description: Analyze
+    slug: analyze
+  typ_2:
+    name: Meeting
+    description: Meeting
+    slug: meeting
+  typ_3:
+    name: Preproject
+    description: Preproject
+    slug: preproject
+  typ_4:
+    name: Readings and documentation
+    description: Readings and documentation
+    slug: readings_and_documentation
+  typ_5:
+    name: Research
+    description: Research
+    slug: research
+  typ_6:
+    name: Other
+    description: Other
+    slug: other
+
+TimenoteEntry:
+  ent_1:
+    project_id: prj_7
+    type_id: typ_1
+    user_id: nbo
+    comment: test
+    start_dt: 2009-01-01 08:00:00
+    end_dt: 2009-01-01 09:00:00
+    percent: 100
+  ent_2:
+    project_id: prj_7
+    type_id: typ_6
+    user_id: nbo
+    comment: test
+    start_dt: 2009-01-01 09:00:00
+    end_dt: 2009-01-01 11:00:00
+    percent: 100
+  ent_3:
+    project_id: prj_5
+    type_id: typ_6
+    user_id: nbo
+    comment: test
+    start_dt: 2009-01-01 11:00:00
+    end_dt: 2009-01-01 13:00:00
+    percent: 100

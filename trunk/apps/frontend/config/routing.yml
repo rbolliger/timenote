@@ -1,0 +1,25 @@
+# sf_guard rules
+sf_guard_signin:
+  url:   /signin
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /signout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /gimmemypassword
+  param: { module: sfGuardAuth, action: password }
+
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

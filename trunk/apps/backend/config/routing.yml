@@ -1,0 +1,76 @@
+sf_guard_user:
+  class: sfPropelRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               sf_guard_user
+    prefix_path:          sf_guard_user
+    column:               id
+    with_wildcard_routes: true
+
+timenote_entry:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteEntry
+    module:               entry
+    prefix_path:          entry
+    column:               id
+    with_wildcard_routes: true
+
+timenote_type:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteType
+    module:               type
+    prefix_path:          type
+    column:               id
+    with_wildcard_routes: true
+
+timenote_project:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteProject
+    module:               project
+    prefix_path:          project
+    column:               id
+    with_wildcard_routes: true
+
+entry:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteEntry
+    module:               entry
+    prefix_path:          entry
+    column:               id
+    with_wildcard_routes: true
+
+project:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteProject
+    module:               project
+    prefix_path:          project
+    column:               id
+    with_wildcard_routes: true
+    
+type:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteType
+    module:               type
+    prefix_path:          type
+    column:               id
+    with_wildcard_routes: true
+
+
+
+# default rules
+homepage:
+  url:   /
+  param: { module: default, action: index }
+
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

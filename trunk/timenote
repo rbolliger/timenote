@@ -1,0 +1,103 @@
+#!/bin/bash
+echo " _____________________________________________ "
+echo "|                                             |"
+echo "|           timenote update v0.1              |"
+echo "|      .: update your timenote app :.         |"
+echo "|_____________________________________________|"
+
+
+WRKDIR="/var/www/timenote";
+
+echo "- moving in your timenote directory"
+cd $WRKDIR
+pwd
+
+echo 
+
+retour=X
+while [ "$retour" = "X" ]; do
+echo -n "- run svn up ? [y/n] " 
+read respone
+case "$respone" in
+y*| Y* | o* | O* ) 
+echo "... updating your timenote local copy with the repository"
+svn up
+retour=0
+;;
+[nN]* )
+echo "... skipping the update of working copy"
+retour=1
+;;
+"?"* )
+echo "launch svn up in here"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retour
+
+
+echo "- testing cache and log dirs chmod"
+if test -w $WRKDIR/cache
+then 
+  echo "... cache already ok"
+else 
+  sudo chmod 777 -R $WRKDIR/cache
+  echo "... cache successfuly chmoded"
+fi
+
+if test -w $WRKDIR/log
+then
+  echo "... log dir already ok"
+else
+  sudo chmod 777 -R $WRKDIR/cache
+  echo "... log dir successfuly chmoded"
+fi
+
+echo
+
+
+#echo "... symfony propel build all"
+#php symfony propel-build-all
+
+#echo "... symfony propel load data"
+#php symfony propel-load-data frontend
+
+
+
+
+echo
+
+retour=X
+while [ "$retour" = "X" ]; do
+echo -n "- run symfony cc ? [y/n] "
+read respone
+case "$respone" in
+y*| Y* | o* | O* )
+echo "... running symfony clear:cache task"
+php symfony cc
+retour=0
+;;
+[nN]* )
+echo "... skipping clearing of cache"
+retour=1
+;;
+"?"* )
+echo "clear the cache of the timenote project"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retour
+
+echo "- that's it, go to"
+echo "http://localhost/timenote"
+
+exit 0
+
