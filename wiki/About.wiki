@@ -6,7 +6,7 @@ TODO: check http://code.google.com/p/timenote/wiki/RoadMap
 Le but du projet est de faire un gestionnaire de saisie des heures de travail.
 
 == Ligne de conduite et contexte ==
-Ce projet est avant tout développé pour le LENI mais se doit d'être aussi souple et générique que possible afin de le distributer en interne (EPFL) et en externe.
+Ce projet est avant tout développé pour un usage spécifique mais se doit d'être aussi souple et générique que possible afin de le distribuer.
 
 == Schéma simple d'utilisation ==
 === Utilisateurs ===
