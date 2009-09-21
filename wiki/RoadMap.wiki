@@ -1,23 +1,6 @@
 #summary RoadMap
 
-= timenote =
 
-== Description ==
-Le but du projet est de faire un gestionnaire de saisie des heures de travail.
-
-== Ligne de conduite et contexte ==
-Ce projet est avant tout développé pour le LENI mais se doit d'être aussi souple et générique que possible afin de le distributer en interne (EPFL) et en externe.
-
-== Schéma simple d'utilisation ==
-=== Utilisateurs ===
-Chaque jour Tim va travailler. Il note son heure d'arrivée, puis assigne ses heures de travail de différents types sur différents projets. Au minimum sa journée de travail se comp
-ose d'une heure d'arrivée et d'une heure de départ. Généralement une pause de midi est également notée.
-A tout moment, il peut exporter ses heures pour une utilisation externe. Il a également une vision facilitée de ses heures supplémentaires et de son solde de vacances.
-=== Managers ===
-Toute les 2 semaines Tom doit fournir un export des heures du projet de la société. Il se rend dans l'interface d'administration du site et peut exporter ce rapport en présélectio
-nnant le projet et les dates. Le rapport peut-être détaillé par sous-projets et par utilisateur.
-=== Adminsitrateurs ===
-Tor est l'utilisateurs ayant la possibilité de créer des projets et de gérer les droits des utilisateurs. Il a accès à toute la configuration du système.
 
 == Fonctionalités ==
 === Frontend ====
@@ -79,4 +62,4 @@ Version 1 + ...
   * Plusieurs types de vues, selon la mise en page: à la google calendar, liste-texte
   * Export avancé: utiliser templating (smarty?, symfony templating (annocé pour bientôt)) pour remplir des canevas imposés par les projets, par l'entreprise, les clients, ...
   * API (en tous cas système permettant à des tiers de poster des heures)
-  * Gestion des jour fériés
+  * Gestion des jours fériés
