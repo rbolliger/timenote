@@ -1,1 +1,16 @@
 #summary Lists of project features
+
+_en cours de réalisaiton_
+
+== Fonctionalités ==
+=== Frontend ====
+  * Authentification
+  * Saisie simple des heures (début, fin, projet, type)
+  * Recherche -> export basic
+  * Contact (bug, feedback, ...)
+=== Backend ====
+  * Authentification
+  * Gestion utilisateurs
+  * Gestion projets
+  * Gestion types
+  * Gestion des jours fériés
