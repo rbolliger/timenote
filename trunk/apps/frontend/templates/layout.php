@@ -3,7 +3,7 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Jobeet - Your best job board</title>
+    <title>timenote - time's capture</title>
     <link rel="shortcut icon" href="/favicon.ico" />
 
     <?php include_javascripts() ?>
