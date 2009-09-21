@@ -1,4 +1,5 @@
 #summary About page: project infos, tools, ...
+#labels Featured
 
 TODO: check http://code.google.com/p/timenote/wiki/RoadMap
 
