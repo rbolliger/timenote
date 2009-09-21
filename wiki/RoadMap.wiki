@@ -1,19 +1,5 @@
 #summary RoadMap
 
-
-
-== Fonctionalités ==
-=== Frontend ====
-  * Authentification
-  * Saisie simple des heures (début, fin, projet, type)
-  * Recherche -> export basic
-  * Contact (bug, feedback, ...)
-=== Backend ====
-  * Authentification
-  * Gestion utilisateurs
-  * Gestion projets
-  * Gestion types
-
 == Objectifs ==
 === Version 1 ===
 ==== Frontend ====
