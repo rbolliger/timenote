@@ -1,4 +1,5 @@
 #summary Les maquettes des pages
+#labels Featured
 
 = Infos =
 The mockup are made with http://www.balsamiq.com/demos/mockups/Mockups.html. Save the code in a txt file and import it into balsamiq interface.
