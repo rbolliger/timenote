@@ -1,0 +1,4 @@
+#summary One-sentence summary of this page.
+
+= Screenshots =
+No screenshots yet. See [http://code.google.com/p/timenote/wiki/Mockup Mockup]
