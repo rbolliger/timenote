@@ -20,16 +20,19 @@
       <div id="menu">
         <ul>
           <li>
-            <?php echo link_to('Project', '@project') ?>
+            <?php echo link_to('Project', '@timenote_project') ?>
           </li>
           <li>
-            <?php echo link_to('Type', '@type') ?>
+            <?php echo link_to('Type', '@timenote_type') ?>
           </li>
           <li>
-            <?php echo link_to('Entry', '@entry') ?>
+            <?php echo link_to('Entry', '@timenote_entry') ?>
           </li>
           <li>
             <?php echo link_to('sfGuard', '@sf_guard_user') ?>
+          </li>
+          <li>
+            <?php echo link_to('Days Off', '@timenote_dayoff') ?>
           </li>
         </ul>
       </div>

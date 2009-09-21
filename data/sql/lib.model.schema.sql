@@ -79,6 +79,25 @@ CREATE TABLE `timenote_entry`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
+#-- timenote_dayoff
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `timenote_dayoff`;
+
+
+CREATE TABLE `timenote_dayoff`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`date` DATE,
+	`yearly` TINYINT,
+	`name` VARCHAR(100),
+	`description` TEXT,
+	`created_at` DATETIME,
+	`updated_at` DATETIME,
+	PRIMARY KEY (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
 #-- sf_guard_user_profile
 #-----------------------------------------------------------------------------
 
