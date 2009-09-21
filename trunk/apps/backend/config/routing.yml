@@ -34,14 +34,24 @@ timenote_project:
     column:               id
     with_wildcard_routes: true
 
-entry:
+
+timenote_dayoff:
   class: sfPropelRouteCollection
   options:
-    model:                TimenoteEntry
-    module:               entry
-    prefix_path:          entry
+    model:                TimenoteDayoff
+    module:               dayoff
+    prefix_path:          dayoff
     column:               id
     with_wildcard_routes: true
+    
+#entry:
+#  class: sfPropelRouteCollection
+#  options:
+#    model:                TimenoteEntry
+#    module:               entry
+#    prefix_path:          entry
+#    column:               id
+#    with_wildcard_routes: true
 
 project:
   class: sfPropelRouteCollection
@@ -52,16 +62,23 @@ project:
     column:               id
     with_wildcard_routes: true
     
-type:
-  class: sfPropelRouteCollection
-  options:
-    model:                TimenoteType
-    module:               type
-    prefix_path:          type
-    column:               id
-    with_wildcard_routes: true
+#type:
+#  class: sfPropelRouteCollection
+#  options:
+#    model:                TimenoteType
+#    module:               type
+#    prefix_path:          type
+#    column:               id
+#    with_wildcard_routes: true
 
-
+#dayoff:
+#  class: sfPropelRouteCollection
+#  options:
+#    model:                TimenoteDayoff
+#    module:               dayoff
+#    prefix_path:          dayoff
+#    column:               id
+#    with_wildcard_routes: true
 
 # default rules
 homepage:

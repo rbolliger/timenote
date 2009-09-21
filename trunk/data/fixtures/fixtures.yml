@@ -283,3 +283,17 @@ TimenoteEntry:
     start_dt: 2009-01-01 11:00:00
     end_dt: 2009-01-01 13:00:00
     percent: 100
+
+
+# Days Off table
+TimenoteDayoff:
+  day1:
+    date: 1980-12-25
+    yearly: true
+    name: christmas
+    description: Christmas, also referred to as Christmas Day, is an annual holiday celebrated on December 25 that commemorates the birth of Jesus of Nazareth.
+  day2:
+    date: 1980-12-31
+    yearly: true
+    name: new year
+    description: The New Year is an event that happens when a culture celebrates the end of one year and the beginning of the next year.

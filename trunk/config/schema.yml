@@ -61,6 +61,18 @@ propel:
       required: true
     percent: NUMERIC # to tell the % of activity of the user
 
+  # Days Off table
+  timenote_dayoff:
+    id:
+    date: date
+    yearly: boolean
+    name:
+      type: varchar(100)
+    description:
+      type: longvarchar
+    created_at:
+    updated_at:
+
   sf_guard_user_profile:
     _attributes: { phpName: sfGuardUserProfile }
     id:
