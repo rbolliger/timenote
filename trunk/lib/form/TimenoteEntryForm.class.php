@@ -32,12 +32,12 @@ class TimenoteEntryForm extends BaseTimenoteEntryForm
  * 
  */
 
-    // configure the widget
+  /*  // configure the widget
     $this->widgetSchema['project_id'] = new sfWidgetFormChoice(array(
       'choices'  => $prjDropDown,
       'expanded' => false
     ));
-
+*/
     // TODO: start_dt and end_dt input mask http://digitalbush.com/projects/masked-input-plugin/
     //$this->setWidgets['start_dt'] = new sfWidgetFormInput();
 

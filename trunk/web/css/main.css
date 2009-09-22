@@ -154,6 +154,22 @@ body
   margin-top: 5px;
 }
 
+#menu
+{
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+  background-color: #fff;
+  text-align: center;
+}
+
+#menu li
+{
+  margin-right: 15px;
+  display: inline;
+}
+
 #content .content {
   width: 783px;
   margin: 0 auto;

@@ -10,34 +10,53 @@
     <?php include_stylesheets() ?>
   </head>
   <body>
+
     <div id="container">
+
       <div id="header">
+
         <div class="content">
-          <h1><a href="<?php echo url_for('capture/main') ?>">
-            <img src="/images/logo.jpg" alt="timenote capture board" />
-          </a></h1>
 
-<!--          <div id="sub_header">
-            <div class="post">
-              <h2>Ask for people</h2>
-              <div>
-                <a href="<?php echo url_for('job/index') ?>">Post a Job</a>
-              </div>
-            </div>
+          <h1>
+            <a href="<?php echo url_for('capture/main') ?>">
+              <img src="/images/logo.jpg" alt="timenote capture board" />
+            </a>
+          </h1>
 
-            <div class="search">
-              <h2>Ask for a job</h2>
-              <form action="" method="get">
-                <input type="text" name="keywords"
-                  id="search_keywords" />
-                <input type="submit" value="search" />
-                <div class="help">
-                  Enter some keywords (city, country, position, ...)
-                </div>
-              </form>
-            </div> 
-          </div>-->
+          <div id="menu">
+            <ul>
+            <?php if ($sf_user->isAuthenticated()) : ?>
+              <li>
+                <?php echo link_to('Capture hours', 'capture/main') ?>
+              </li>
+              <li>
+                <?php echo link_to('Search & Export', 'capture/index') ?>
+              </li>
+              <li>
+                <!-- Spacer --> &nbsp;
+              </li>
+              <li>
+                <?php echo link_to('User Options', '@homepage') ?>
+              </li>
+              <li>
+                <!-- Spacer --> &nbsp;
+              </li>
+              <li>
+                <?php echo link_to('Sign out', '@sf_guard_signout') ?>
+              </li>
+            <?php else: ?>
+              <li>
+                <?php echo link_to('Login', '@sf_guard_signin') ?>
+              </li>
+              <li>
+                <?php echo link_to('Sign in', '@sf_guard_signin') ?>
+              </li>
+            <?php endif; ?>
+            </ul>
+          </div>
+
         </div>
+
       </div>
 
       <div id="content">
