@@ -7,10 +7,9 @@
     * Export
     * User Profile (sfGuard)
     * Options (sfGuard ?)
-
     * Hour: CRUD (several views)
-    * Project: 
-        *  CRUD (several views)
+    * Project:
+        * CRUD (several views)
         * manage sub-project (tree view, apply properties to sub-projects)
         * options
     * Categories: CRUD
