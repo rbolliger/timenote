@@ -1,0 +1,72 @@
+<mockup version="1.0" skin="sketch" measuredW="863" measuredH="737" mockupW="824" mockupH="695">
+  <controls>
+    <control controlID="40" controlTypeID="__group__" x="361" y="245" w="-1" h="-1" measuredW="173" measuredH="125" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="28" controlTypeID="com.balsamiq.mockups::Button" x="95" y="97" w="78" h="-1" measuredW="73" measuredH="28" zOrder="0" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>Sign%20Up</text>
+          </controlProperties>
+        </control>
+        <control controlID="35" controlTypeID="com.balsamiq.mockups::Button" x="0" y="97" w="55" h="-1" measuredW="55" measuredH="28" zOrder="1" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>Login</text>
+          </controlProperties>
+        </control>
+        <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="0" y="0" w="36" h="25" measuredW="36" measuredH="25" zOrder="2" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>Login</text>
+          </controlProperties>
+        </control>
+        <control controlID="37" controlTypeID="com.balsamiq.mockups::TextInput" x="8" y="32" w="161" h="-1" measuredW="73" measuredH="29" zOrder="3" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>Username</text>
+          </controlProperties>
+        </control>
+        <control controlID="38" controlTypeID="com.balsamiq.mockups::TextInput" x="8" y="61" w="161" h="-1" measuredW="68" measuredH="29" zOrder="4" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>Password</text>
+          </controlProperties>
+        </control>
+        <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="66" y="98" w="25" h="25" measuredW="25" measuredH="25" zOrder="5" locked="false" isInGroup="40">
+          <controlProperties>
+            <text>OR</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::HRule" x="152" y="454" w="590" h="-1" measuredW="100" measuredH="5" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::VRule" x="310" y="492" w="-1" h="-1" measuredW="5" measuredH="100" zOrder="6" locked="false" isInGroup="-1"/>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::VRule" x="533" y="489" w="-1" h="-1" measuredW="5" measuredH="100" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Paragraph" x="126" y="479" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20paragraph%20of%20text.%0AA%20_second_%20%5Brow%5D%20of%20*text*.</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Paragraph" x="341" y="479" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20paragraph%20of%20text.%0AA%20_second_%20%5Brow%5D%20of%20*text*.</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Paragraph" x="555" y="479" w="-1" h="-1" measuredW="200" measuredH="140" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20paragraph%20of%20text.%0AA%20_second_%20%5Brow%5D%20of%20*text*.</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="29" y="32" w="824" h="695" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Timenote%20Login%20Page%0Ahttp%3A//timenote/login</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Canvas" x="57" y="121" w="783" h="62" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Title" x="66" y="121" w="181" h="-1" measuredW="181" measuredH="62" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Timenote</text>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::LinkBar" x="657" y="158" w="-1" h="-1" measuredW="169" measuredH="25" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>FAQ%2C%20Contact%2C%20About</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
