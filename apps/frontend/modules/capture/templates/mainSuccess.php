@@ -4,17 +4,17 @@
 <!--
 <ul>
 <?php
-
+/*
   foreach ($projectTreeListRoot->getDescendants() as $item) { ?>
       <li style='padding-left:<?php echo $item->getLevel(); ?>em'>
       <?php echo $item->getTitle(); ?>
-      </li>
-<?php    }
+      </li> 
+<?php    } */
 ?>
 </ul> -->
 <?php include_partial('form', array('form' => $form)) ?>
 
-<h1>Capture List</h1>
+<h1>Recent Captures</h1>
 
 <table>
   <thead>

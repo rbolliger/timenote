@@ -23,3 +23,40 @@ default_index:
 
 default:
   url:   /:module/:action/*
+
+timenote_entry:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteEntry
+    module:               entry
+    prefix_path:          entry
+    column:               id
+    with_wildcard_routes: true
+
+timenote_type:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteType
+    module:               type
+    prefix_path:          type
+    column:               id
+    with_wildcard_routes: true
+
+timenote_project:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteProject
+    module:               project
+    prefix_path:          project
+    column:               id
+    with_wildcard_routes: true
+
+
+timenote_dayoff:
+  class: sfPropelRouteCollection
+  options:
+    model:                TimenoteDayoff
+    module:               dayoff
+    prefix_path:          dayoff
+    column:               id
+    with_wildcard_routes: true
