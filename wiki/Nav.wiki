@@ -4,6 +4,7 @@
   * [http://code.google.com/p/timenote/wiki/ Wiki]
     * [http://code.google.com/p/timenote/wiki/About About]
     * [http://code.google.com/p/timenote/wiki/Architecture Architecture]
+      * [http://code.google.com/p/timenote/wiki/CascadingProjectProperties Cascading Project Properties]
     * [http://code.google.com/p/timenote/wiki/Features Features]
     * [http://code.google.com/p/timenote/wiki/Ideas Ideas]
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
