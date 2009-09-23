@@ -26,6 +26,16 @@ propel:
     created_at:
     updated_at:
 
+
+  project_category:
+     id: ~
+     name:   varchar(255)
+     description: longvarchar
+     is_working: boolean
+
+
+     
+
   # Types table
   timenote_type:
     #_attributes:
@@ -60,6 +70,7 @@ propel:
       type: varchar(255)
       required: true
     percent: NUMERIC # to tell the % of activity of the user
+    user_profile_version:  { type: integer, foreignTable: sf_guard_user_profile, foreignReference: version, required: true }
 
   # Days Off table
   timenote_dayoff:
@@ -85,3 +96,4 @@ propel:
     sciper:      varchar(10)
     # Example to use with sfGuardPlugin
     created_by:  { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
+    version:     integer
