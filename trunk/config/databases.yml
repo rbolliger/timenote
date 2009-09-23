@@ -12,8 +12,8 @@ all:
     param:
       classname: PropelPDO
       dsn: 'mysql:dbname=timenote;host=localhost'
-      username: root
-      password: nrj+2020
+      username: timenote
+      password: t1men@te
       encoding: utf8
       persistent: true
       pooling: true

@@ -1,9 +1,7 @@
 propel:
   # Projects table
   timenote_project:
-    _attributes:
-      #phpName: tnProject
-      treeMode: NestedSet
+    _attributes: {treeMode: NestedSet}
     id: 
     title:  # required for nested set!
       type: varchar(255)
@@ -27,14 +25,14 @@ propel:
     updated_at:
 
 
-  project_category:
-     id: ~
-     name:   varchar(255)
-     description: longvarchar
-     is_working: boolean
+  timenote_project_category:
+    id:
+    name:   {type: varchar(255), required: true, index: true}
+    description: longvarchar
+    is_working: boolean
+    created_at:
+    updated_at:
 
-
-     
 
   # Types table
   timenote_type:
@@ -55,9 +53,7 @@ propel:
     updated_at:
 
   # Entries table
-  timenote_entry:
-    #_attributes:
-    #  phpName: tnEntry
+  hour:
     id:
     project_id:  { type: integer, foreignTable: timenote_project, foreignReference: id, required: true }
     type_id: { type: integer, foreignTable: timenote_type, foreignReference: id, required: true }
@@ -69,7 +65,6 @@ propel:
     comment:
       type: varchar(255)
       required: true
-    percent: NUMERIC # to tell the % of activity of the user
     user_profile_version:  { type: integer, foreignTable: sf_guard_user_profile, foreignReference: version, required: true }
 
   # Days Off table
@@ -94,6 +89,6 @@ propel:
     email:       varchar(255)
     birthday:    date
     sciper:      varchar(10)
-    # Example to use with sfGuardPlugin
     created_by:  { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
     version:     integer
+    percent: float # to tell the % of activity of the user
