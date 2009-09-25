@@ -1,0 +1,10 @@
+# This page describes the "Project" table characteristics
+
+= Introduction =
+
+"Project" table contains all projects and sub-projects. 
+
+
+= Freemind representation =
+
+http://timenote.googlecode.com/svn/wiki/TableProject.attach/project.jpg
