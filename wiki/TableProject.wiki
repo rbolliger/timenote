@@ -1,4 +1,4 @@
-# This page describes the "Project" table characteristics
+#This page describes the "Project" table characteristics
 
 = Introduction =
 
