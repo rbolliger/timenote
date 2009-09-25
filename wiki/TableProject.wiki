@@ -7,4 +7,4 @@
 
 = Freemind representation =
 
-http://timenote.googlecode.com/svn/wiki/TableProject.attach/Project.jpg
+http://timenote.googlecode.com/svn/wiki/TableProject.attach/Project.jpeg
