@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Base class that represents a row from the 'sf_guard_remember_key' table.
+ * Base class that represents a row from the 'hour' table.
  *
  * 
  *
@@ -9,20 +9,38 @@
  *
  * Fri Sep 25 22:07:34 2009
  *
- * @package    plugins.sfGuardPlugin.lib.model.om
+ * @package    lib.model.om
  */
-abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent {
+abstract class BaseHour extends BaseObject  implements Persistent {
 
 
-  const PEER = 'sfGuardRememberKeyPeer';
+  const PEER = 'HourPeer';
 
 	/**
 	 * The Peer class.
 	 * Instance provides a convenient way of calling static methods on a class
 	 * that calling code may not be able to identify.
-	 * @var        sfGuardRememberKeyPeer
+	 * @var        HourPeer
 	 */
 	protected static $peer;
+
+	/**
+	 * The value for the id field.
+	 * @var        int
+	 */
+	protected $id;
+
+	/**
+	 * The value for the project_id field.
+	 * @var        int
+	 */
+	protected $project_id;
+
+	/**
+	 * The value for the type_id field.
+	 * @var        int
+	 */
+	protected $type_id;
 
 	/**
 	 * The value for the user_id field.
@@ -31,27 +49,48 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	protected $user_id;
 
 	/**
-	 * The value for the remember_key field.
+	 * The value for the start_dt field.
 	 * @var        string
 	 */
-	protected $remember_key;
+	protected $start_dt;
 
 	/**
-	 * The value for the ip_address field.
+	 * The value for the end_dt field.
 	 * @var        string
 	 */
-	protected $ip_address;
+	protected $end_dt;
 
 	/**
-	 * The value for the created_at field.
+	 * The value for the comment field.
 	 * @var        string
 	 */
-	protected $created_at;
+	protected $comment;
+
+	/**
+	 * The value for the user_profile_version field.
+	 * @var        int
+	 */
+	protected $user_profile_version;
+
+	/**
+	 * @var        TimenoteProject
+	 */
+	protected $aTimenoteProject;
+
+	/**
+	 * @var        TimenoteType
+	 */
+	protected $aTimenoteType;
 
 	/**
 	 * @var        sfGuardUser
 	 */
 	protected $asfGuardUser;
+
+	/**
+	 * @var        sfGuardUserProfile
+	 */
+	protected $asfGuardUserProfile;
 
 	/**
 	 * Flag to prevent endless save loop, if this object is referenced
@@ -68,7 +107,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	protected $alreadyInValidation = false;
 
 	/**
-	 * Initializes internal state of BasesfGuardRememberKey object.
+	 * Initializes internal state of BaseHour object.
 	 * @see        applyDefaults()
 	 */
 	public function __construct()
@@ -88,6 +127,36 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	}
 
 	/**
+	 * Get the [id] column value.
+	 * 
+	 * @return     int
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	/**
+	 * Get the [project_id] column value.
+	 * 
+	 * @return     int
+	 */
+	public function getProjectId()
+	{
+		return $this->project_id;
+	}
+
+	/**
+	 * Get the [type_id] column value.
+	 * 
+	 * @return     int
+	 */
+	public function getTypeId()
+	{
+		return $this->type_id;
+	}
+
+	/**
 	 * Get the [user_id] column value.
 	 * 
 	 * @return     int
@@ -98,27 +167,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	}
 
 	/**
-	 * Get the [remember_key] column value.
-	 * 
-	 * @return     string
-	 */
-	public function getRememberKey()
-	{
-		return $this->remember_key;
-	}
-
-	/**
-	 * Get the [ip_address] column value.
-	 * 
-	 * @return     string
-	 */
-	public function getIpAddress()
-	{
-		return $this->ip_address;
-	}
-
-	/**
-	 * Get the [optionally formatted] temporal [created_at] column value.
+	 * Get the [optionally formatted] temporal [start_dt] column value.
 	 * 
 	 *
 	 * @param      string $format The date/time format string (either date()-style or strftime()-style).
@@ -126,22 +175,22 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 * @return     mixed Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00
 	 * @throws     PropelException - if unable to parse/validate the date/time value.
 	 */
-	public function getCreatedAt($format = 'Y-m-d H:i:s')
+	public function getStartDt($format = 'Y-m-d H:i:s')
 	{
-		if ($this->created_at === null) {
+		if ($this->start_dt === null) {
 			return null;
 		}
 
 
-		if ($this->created_at === '0000-00-00 00:00:00') {
+		if ($this->start_dt === '0000-00-00 00:00:00') {
 			// while technically this is not a default value of NULL,
 			// this seems to be closest in meaning.
 			return null;
 		} else {
 			try {
-				$dt = new DateTime($this->created_at);
+				$dt = new DateTime($this->start_dt);
 			} catch (Exception $x) {
-				throw new PropelException("Internally stored date/time/timestamp value could not be converted to DateTime: " . var_export($this->created_at, true), $x);
+				throw new PropelException("Internally stored date/time/timestamp value could not be converted to DateTime: " . var_export($this->start_dt, true), $x);
 			}
 		}
 
@@ -156,10 +205,136 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	}
 
 	/**
+	 * Get the [optionally formatted] temporal [end_dt] column value.
+	 * 
+	 *
+	 * @param      string $format The date/time format string (either date()-style or strftime()-style).
+	 *							If format is NULL, then the raw DateTime object will be returned.
+	 * @return     mixed Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00
+	 * @throws     PropelException - if unable to parse/validate the date/time value.
+	 */
+	public function getEndDt($format = 'Y-m-d H:i:s')
+	{
+		if ($this->end_dt === null) {
+			return null;
+		}
+
+
+		if ($this->end_dt === '0000-00-00 00:00:00') {
+			// while technically this is not a default value of NULL,
+			// this seems to be closest in meaning.
+			return null;
+		} else {
+			try {
+				$dt = new DateTime($this->end_dt);
+			} catch (Exception $x) {
+				throw new PropelException("Internally stored date/time/timestamp value could not be converted to DateTime: " . var_export($this->end_dt, true), $x);
+			}
+		}
+
+		if ($format === null) {
+			// Because propel.useDateTimeClass is TRUE, we return a DateTime object.
+			return $dt;
+		} elseif (strpos($format, '%') !== false) {
+			return strftime($format, $dt->format('U'));
+		} else {
+			return $dt->format($format);
+		}
+	}
+
+	/**
+	 * Get the [comment] column value.
+	 * 
+	 * @return     string
+	 */
+	public function getComment()
+	{
+		return $this->comment;
+	}
+
+	/**
+	 * Get the [user_profile_version] column value.
+	 * 
+	 * @return     int
+	 */
+	public function getUserProfileVersion()
+	{
+		return $this->user_profile_version;
+	}
+
+	/**
+	 * Set the value of [id] column.
+	 * 
+	 * @param      int $v new value
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setId($v)
+	{
+		if ($v !== null) {
+			$v = (int) $v;
+		}
+
+		if ($this->id !== $v) {
+			$this->id = $v;
+			$this->modifiedColumns[] = HourPeer::ID;
+		}
+
+		return $this;
+	} // setId()
+
+	/**
+	 * Set the value of [project_id] column.
+	 * 
+	 * @param      int $v new value
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setProjectId($v)
+	{
+		if ($v !== null) {
+			$v = (int) $v;
+		}
+
+		if ($this->project_id !== $v) {
+			$this->project_id = $v;
+			$this->modifiedColumns[] = HourPeer::PROJECT_ID;
+		}
+
+		if ($this->aTimenoteProject !== null && $this->aTimenoteProject->getId() !== $v) {
+			$this->aTimenoteProject = null;
+		}
+
+		return $this;
+	} // setProjectId()
+
+	/**
+	 * Set the value of [type_id] column.
+	 * 
+	 * @param      int $v new value
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setTypeId($v)
+	{
+		if ($v !== null) {
+			$v = (int) $v;
+		}
+
+		if ($this->type_id !== $v) {
+			$this->type_id = $v;
+			$this->modifiedColumns[] = HourPeer::TYPE_ID;
+		}
+
+		if ($this->aTimenoteType !== null && $this->aTimenoteType->getId() !== $v) {
+			$this->aTimenoteType = null;
+		}
+
+		return $this;
+	} // setTypeId()
+
+	/**
 	 * Set the value of [user_id] column.
 	 * 
 	 * @param      int $v new value
-	 * @return     sfGuardRememberKey The current object (for fluent API support)
+	 * @return     Hour The current object (for fluent API support)
 	 */
 	public function setUserId($v)
 	{
@@ -169,7 +344,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 
 		if ($this->user_id !== $v) {
 			$this->user_id = $v;
-			$this->modifiedColumns[] = sfGuardRememberKeyPeer::USER_ID;
+			$this->modifiedColumns[] = HourPeer::USER_ID;
 		}
 
 		if ($this->asfGuardUser !== null && $this->asfGuardUser->getId() !== $v) {
@@ -180,53 +355,13 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	} // setUserId()
 
 	/**
-	 * Set the value of [remember_key] column.
-	 * 
-	 * @param      string $v new value
-	 * @return     sfGuardRememberKey The current object (for fluent API support)
-	 */
-	public function setRememberKey($v)
-	{
-		if ($v !== null) {
-			$v = (string) $v;
-		}
-
-		if ($this->remember_key !== $v) {
-			$this->remember_key = $v;
-			$this->modifiedColumns[] = sfGuardRememberKeyPeer::REMEMBER_KEY;
-		}
-
-		return $this;
-	} // setRememberKey()
-
-	/**
-	 * Set the value of [ip_address] column.
-	 * 
-	 * @param      string $v new value
-	 * @return     sfGuardRememberKey The current object (for fluent API support)
-	 */
-	public function setIpAddress($v)
-	{
-		if ($v !== null) {
-			$v = (string) $v;
-		}
-
-		if ($this->ip_address !== $v) {
-			$this->ip_address = $v;
-			$this->modifiedColumns[] = sfGuardRememberKeyPeer::IP_ADDRESS;
-		}
-
-		return $this;
-	} // setIpAddress()
-
-	/**
-	 * Sets the value of [created_at] column to a normalized version of the date/time value specified.
+	 * Sets the value of [start_dt] column to a normalized version of the date/time value specified.
 	 * 
 	 * @param      mixed $v string, integer (timestamp), or DateTime value.  Empty string will
 	 *						be treated as NULL for temporal objects.
-	 * @return     sfGuardRememberKey The current object (for fluent API support)
+	 * @return     Hour The current object (for fluent API support)
 	 */
-	public function setCreatedAt($v)
+	public function setStartDt($v)
 	{
 		// we treat '' as NULL for temporal objects because DateTime('') == DateTime('now')
 		// -- which is unexpected, to say the least.
@@ -251,22 +386,115 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 			}
 		}
 
-		if ( $this->created_at !== null || $dt !== null ) {
+		if ( $this->start_dt !== null || $dt !== null ) {
 			// (nested ifs are a little easier to read in this case)
 
-			$currNorm = ($this->created_at !== null && $tmpDt = new DateTime($this->created_at)) ? $tmpDt->format('Y-m-d H:i:s') : null;
+			$currNorm = ($this->start_dt !== null && $tmpDt = new DateTime($this->start_dt)) ? $tmpDt->format('Y-m-d H:i:s') : null;
 			$newNorm = ($dt !== null) ? $dt->format('Y-m-d H:i:s') : null;
 
 			if ( ($currNorm !== $newNorm) // normalized values don't match 
 					)
 			{
-				$this->created_at = ($dt ? $dt->format('Y-m-d H:i:s') : null);
-				$this->modifiedColumns[] = sfGuardRememberKeyPeer::CREATED_AT;
+				$this->start_dt = ($dt ? $dt->format('Y-m-d H:i:s') : null);
+				$this->modifiedColumns[] = HourPeer::START_DT;
 			}
 		} // if either are not null
 
 		return $this;
-	} // setCreatedAt()
+	} // setStartDt()
+
+	/**
+	 * Sets the value of [end_dt] column to a normalized version of the date/time value specified.
+	 * 
+	 * @param      mixed $v string, integer (timestamp), or DateTime value.  Empty string will
+	 *						be treated as NULL for temporal objects.
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setEndDt($v)
+	{
+		// we treat '' as NULL for temporal objects because DateTime('') == DateTime('now')
+		// -- which is unexpected, to say the least.
+		if ($v === null || $v === '') {
+			$dt = null;
+		} elseif ($v instanceof DateTime) {
+			$dt = $v;
+		} else {
+			// some string/numeric value passed; we normalize that so that we can
+			// validate it.
+			try {
+				if (is_numeric($v)) { // if it's a unix timestamp
+					$dt = new DateTime('@'.$v, new DateTimeZone('UTC'));
+					// We have to explicitly specify and then change the time zone because of a
+					// DateTime bug: http://bugs.php.net/bug.php?id=43003
+					$dt->setTimeZone(new DateTimeZone(date_default_timezone_get()));
+				} else {
+					$dt = new DateTime($v);
+				}
+			} catch (Exception $x) {
+				throw new PropelException('Error parsing date/time value: ' . var_export($v, true), $x);
+			}
+		}
+
+		if ( $this->end_dt !== null || $dt !== null ) {
+			// (nested ifs are a little easier to read in this case)
+
+			$currNorm = ($this->end_dt !== null && $tmpDt = new DateTime($this->end_dt)) ? $tmpDt->format('Y-m-d H:i:s') : null;
+			$newNorm = ($dt !== null) ? $dt->format('Y-m-d H:i:s') : null;
+
+			if ( ($currNorm !== $newNorm) // normalized values don't match 
+					)
+			{
+				$this->end_dt = ($dt ? $dt->format('Y-m-d H:i:s') : null);
+				$this->modifiedColumns[] = HourPeer::END_DT;
+			}
+		} // if either are not null
+
+		return $this;
+	} // setEndDt()
+
+	/**
+	 * Set the value of [comment] column.
+	 * 
+	 * @param      string $v new value
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setComment($v)
+	{
+		if ($v !== null) {
+			$v = (string) $v;
+		}
+
+		if ($this->comment !== $v) {
+			$this->comment = $v;
+			$this->modifiedColumns[] = HourPeer::COMMENT;
+		}
+
+		return $this;
+	} // setComment()
+
+	/**
+	 * Set the value of [user_profile_version] column.
+	 * 
+	 * @param      int $v new value
+	 * @return     Hour The current object (for fluent API support)
+	 */
+	public function setUserProfileVersion($v)
+	{
+		if ($v !== null) {
+			$v = (int) $v;
+		}
+
+		if ($this->user_profile_version !== $v) {
+			$this->user_profile_version = $v;
+			$this->modifiedColumns[] = HourPeer::USER_PROFILE_VERSION;
+		}
+
+		if ($this->asfGuardUserProfile !== null && $this->asfGuardUserProfile->getVersion() !== $v) {
+			$this->asfGuardUserProfile = null;
+		}
+
+		return $this;
+	} // setUserProfileVersion()
 
 	/**
 	 * Indicates whether the columns in this object are only set to default values.
@@ -305,10 +533,14 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	{
 		try {
 
-			$this->user_id = ($row[$startcol + 0] !== null) ? (int) $row[$startcol + 0] : null;
-			$this->remember_key = ($row[$startcol + 1] !== null) ? (string) $row[$startcol + 1] : null;
-			$this->ip_address = ($row[$startcol + 2] !== null) ? (string) $row[$startcol + 2] : null;
-			$this->created_at = ($row[$startcol + 3] !== null) ? (string) $row[$startcol + 3] : null;
+			$this->id = ($row[$startcol + 0] !== null) ? (int) $row[$startcol + 0] : null;
+			$this->project_id = ($row[$startcol + 1] !== null) ? (int) $row[$startcol + 1] : null;
+			$this->type_id = ($row[$startcol + 2] !== null) ? (int) $row[$startcol + 2] : null;
+			$this->user_id = ($row[$startcol + 3] !== null) ? (int) $row[$startcol + 3] : null;
+			$this->start_dt = ($row[$startcol + 4] !== null) ? (string) $row[$startcol + 4] : null;
+			$this->end_dt = ($row[$startcol + 5] !== null) ? (string) $row[$startcol + 5] : null;
+			$this->comment = ($row[$startcol + 6] !== null) ? (string) $row[$startcol + 6] : null;
+			$this->user_profile_version = ($row[$startcol + 7] !== null) ? (int) $row[$startcol + 7] : null;
 			$this->resetModified();
 
 			$this->setNew(false);
@@ -318,10 +550,10 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 			}
 
 			// FIXME - using NUM_COLUMNS may be clearer.
-			return $startcol + 4; // 4 = sfGuardRememberKeyPeer::NUM_COLUMNS - sfGuardRememberKeyPeer::NUM_LAZY_LOAD_COLUMNS).
+			return $startcol + 8; // 8 = HourPeer::NUM_COLUMNS - HourPeer::NUM_LAZY_LOAD_COLUMNS).
 
 		} catch (Exception $e) {
-			throw new PropelException("Error populating sfGuardRememberKey object", $e);
+			throw new PropelException("Error populating Hour object", $e);
 		}
 	}
 
@@ -341,8 +573,17 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	public function ensureConsistency()
 	{
 
+		if ($this->aTimenoteProject !== null && $this->project_id !== $this->aTimenoteProject->getId()) {
+			$this->aTimenoteProject = null;
+		}
+		if ($this->aTimenoteType !== null && $this->type_id !== $this->aTimenoteType->getId()) {
+			$this->aTimenoteType = null;
+		}
 		if ($this->asfGuardUser !== null && $this->user_id !== $this->asfGuardUser->getId()) {
 			$this->asfGuardUser = null;
+		}
+		if ($this->asfGuardUserProfile !== null && $this->user_profile_version !== $this->asfGuardUserProfile->getVersion()) {
+			$this->asfGuardUserProfile = null;
 		}
 	} // ensureConsistency
 
@@ -367,13 +608,13 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(sfGuardRememberKeyPeer::DATABASE_NAME, Propel::CONNECTION_READ);
+			$con = Propel::getConnection(HourPeer::DATABASE_NAME, Propel::CONNECTION_READ);
 		}
 
 		// We don't need to alter the object instance pool; we're just modifying this instance
 		// already in the pool.
 
-		$stmt = sfGuardRememberKeyPeer::doSelectStmt($this->buildPkeyCriteria(), $con);
+		$stmt = HourPeer::doSelectStmt($this->buildPkeyCriteria(), $con);
 		$row = $stmt->fetch(PDO::FETCH_NUM);
 		$stmt->closeCursor();
 		if (!$row) {
@@ -383,7 +624,10 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 
 		if ($deep) {  // also de-associate any related objects?
 
+			$this->aTimenoteProject = null;
+			$this->aTimenoteType = null;
 			$this->asfGuardUser = null;
+			$this->asfGuardUserProfile = null;
 		} // if (deep)
 	}
 
@@ -399,7 +643,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	public function delete(PropelPDO $con = null)
 	{
 
-    foreach (sfMixer::getCallables('BasesfGuardRememberKey:delete:pre') as $callable)
+    foreach (sfMixer::getCallables('BaseHour:delete:pre') as $callable)
     {
       $ret = call_user_func($callable, $this, $con);
       if ($ret)
@@ -414,12 +658,12 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(sfGuardRememberKeyPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(HourPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		
 		$con->beginTransaction();
 		try {
-			sfGuardRememberKeyPeer::doDelete($this, $con);
+			HourPeer::doDelete($this, $con);
 			$this->setDeleted(true);
 			$con->commit();
 		} catch (PropelException $e) {
@@ -428,7 +672,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 		}
 	
 
-    foreach (sfMixer::getCallables('BasesfGuardRememberKey:delete:post') as $callable)
+    foreach (sfMixer::getCallables('BaseHour:delete:post') as $callable)
     {
       call_user_func($callable, $this, $con);
     }
@@ -450,7 +694,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	public function save(PropelPDO $con = null)
 	{
 
-    foreach (sfMixer::getCallables('BasesfGuardRememberKey:save:pre') as $callable)
+    foreach (sfMixer::getCallables('BaseHour:save:pre') as $callable)
     {
       $affectedRows = call_user_func($callable, $this, $con);
       if (is_int($affectedRows))
@@ -460,29 +704,24 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
     }
 
 
-    if ($this->isNew() && !$this->isColumnModified(sfGuardRememberKeyPeer::CREATED_AT))
-    {
-      $this->setCreatedAt(time());
-    }
-
 		if ($this->isDeleted()) {
 			throw new PropelException("You cannot save an object that has been deleted.");
 		}
 
 		if ($con === null) {
-			$con = Propel::getConnection(sfGuardRememberKeyPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
+			$con = Propel::getConnection(HourPeer::DATABASE_NAME, Propel::CONNECTION_WRITE);
 		}
 		
 		$con->beginTransaction();
 		try {
 			$affectedRows = $this->doSave($con);
 			$con->commit();
-    foreach (sfMixer::getCallables('BasesfGuardRememberKey:save:post') as $callable)
+    foreach (sfMixer::getCallables('BaseHour:save:post') as $callable)
     {
       call_user_func($callable, $this, $con, $affectedRows);
     }
 
-			sfGuardRememberKeyPeer::addInstanceToPool($this);
+			HourPeer::addInstanceToPool($this);
 			return $affectedRows;
 		} catch (PropelException $e) {
 			$con->rollBack();
@@ -512,6 +751,20 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 			// method.  This object relates to these object(s) by a
 			// foreign key reference.
 
+			if ($this->aTimenoteProject !== null) {
+				if ($this->aTimenoteProject->isModified() || $this->aTimenoteProject->isNew()) {
+					$affectedRows += $this->aTimenoteProject->save($con);
+				}
+				$this->setTimenoteProject($this->aTimenoteProject);
+			}
+
+			if ($this->aTimenoteType !== null) {
+				if ($this->aTimenoteType->isModified() || $this->aTimenoteType->isNew()) {
+					$affectedRows += $this->aTimenoteType->save($con);
+				}
+				$this->setTimenoteType($this->aTimenoteType);
+			}
+
 			if ($this->asfGuardUser !== null) {
 				if ($this->asfGuardUser->isModified() || $this->asfGuardUser->isNew()) {
 					$affectedRows += $this->asfGuardUser->save($con);
@@ -519,18 +772,30 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 				$this->setsfGuardUser($this->asfGuardUser);
 			}
 
+			if ($this->asfGuardUserProfile !== null) {
+				if ($this->asfGuardUserProfile->isModified() || $this->asfGuardUserProfile->isNew()) {
+					$affectedRows += $this->asfGuardUserProfile->save($con);
+				}
+				$this->setsfGuardUserProfile($this->asfGuardUserProfile);
+			}
+
+			if ($this->isNew() ) {
+				$this->modifiedColumns[] = HourPeer::ID;
+			}
 
 			// If this object has been modified, then save it to the database.
 			if ($this->isModified()) {
 				if ($this->isNew()) {
-					$pk = sfGuardRememberKeyPeer::doInsert($this, $con);
+					$pk = HourPeer::doInsert($this, $con);
 					$affectedRows += 1; // we are assuming that there is only 1 row per doInsert() which
 										 // should always be true here (even though technically
 										 // BasePeer::doInsert() can insert multiple rows).
 
+					$this->setId($pk);  //[IMV] update autoincrement primary key
+
 					$this->setNew(false);
 				} else {
-					$affectedRows += sfGuardRememberKeyPeer::doUpdate($this, $con);
+					$affectedRows += HourPeer::doUpdate($this, $con);
 				}
 
 				$this->resetModified(); // [HL] After being saved an object is no longer 'modified'
@@ -607,14 +872,32 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 			// method.  This object relates to these object(s) by a
 			// foreign key reference.
 
+			if ($this->aTimenoteProject !== null) {
+				if (!$this->aTimenoteProject->validate($columns)) {
+					$failureMap = array_merge($failureMap, $this->aTimenoteProject->getValidationFailures());
+				}
+			}
+
+			if ($this->aTimenoteType !== null) {
+				if (!$this->aTimenoteType->validate($columns)) {
+					$failureMap = array_merge($failureMap, $this->aTimenoteType->getValidationFailures());
+				}
+			}
+
 			if ($this->asfGuardUser !== null) {
 				if (!$this->asfGuardUser->validate($columns)) {
 					$failureMap = array_merge($failureMap, $this->asfGuardUser->getValidationFailures());
 				}
 			}
 
+			if ($this->asfGuardUserProfile !== null) {
+				if (!$this->asfGuardUserProfile->validate($columns)) {
+					$failureMap = array_merge($failureMap, $this->asfGuardUserProfile->getValidationFailures());
+				}
+			}
 
-			if (($retval = sfGuardRememberKeyPeer::doValidate($this, $columns)) !== true) {
+
+			if (($retval = HourPeer::doValidate($this, $columns)) !== true) {
 				$failureMap = array_merge($failureMap, $retval);
 			}
 
@@ -637,7 +920,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function getByName($name, $type = BasePeer::TYPE_PHPNAME)
 	{
-		$pos = sfGuardRememberKeyPeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
+		$pos = HourPeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
 		$field = $this->getByPosition($pos);
 		return $field;
 	}
@@ -653,16 +936,28 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	{
 		switch($pos) {
 			case 0:
-				return $this->getUserId();
+				return $this->getId();
 				break;
 			case 1:
-				return $this->getRememberKey();
+				return $this->getProjectId();
 				break;
 			case 2:
-				return $this->getIpAddress();
+				return $this->getTypeId();
 				break;
 			case 3:
-				return $this->getCreatedAt();
+				return $this->getUserId();
+				break;
+			case 4:
+				return $this->getStartDt();
+				break;
+			case 5:
+				return $this->getEndDt();
+				break;
+			case 6:
+				return $this->getComment();
+				break;
+			case 7:
+				return $this->getUserProfileVersion();
 				break;
 			default:
 				return null;
@@ -683,12 +978,16 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function toArray($keyType = BasePeer::TYPE_PHPNAME, $includeLazyLoadColumns = true)
 	{
-		$keys = sfGuardRememberKeyPeer::getFieldNames($keyType);
+		$keys = HourPeer::getFieldNames($keyType);
 		$result = array(
-			$keys[0] => $this->getUserId(),
-			$keys[1] => $this->getRememberKey(),
-			$keys[2] => $this->getIpAddress(),
-			$keys[3] => $this->getCreatedAt(),
+			$keys[0] => $this->getId(),
+			$keys[1] => $this->getProjectId(),
+			$keys[2] => $this->getTypeId(),
+			$keys[3] => $this->getUserId(),
+			$keys[4] => $this->getStartDt(),
+			$keys[5] => $this->getEndDt(),
+			$keys[6] => $this->getComment(),
+			$keys[7] => $this->getUserProfileVersion(),
 		);
 		return $result;
 	}
@@ -705,7 +1004,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function setByName($name, $value, $type = BasePeer::TYPE_PHPNAME)
 	{
-		$pos = sfGuardRememberKeyPeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
+		$pos = HourPeer::translateFieldName($name, $type, BasePeer::TYPE_NUM);
 		return $this->setByPosition($pos, $value);
 	}
 
@@ -721,16 +1020,28 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	{
 		switch($pos) {
 			case 0:
-				$this->setUserId($value);
+				$this->setId($value);
 				break;
 			case 1:
-				$this->setRememberKey($value);
+				$this->setProjectId($value);
 				break;
 			case 2:
-				$this->setIpAddress($value);
+				$this->setTypeId($value);
 				break;
 			case 3:
-				$this->setCreatedAt($value);
+				$this->setUserId($value);
+				break;
+			case 4:
+				$this->setStartDt($value);
+				break;
+			case 5:
+				$this->setEndDt($value);
+				break;
+			case 6:
+				$this->setComment($value);
+				break;
+			case 7:
+				$this->setUserProfileVersion($value);
 				break;
 		} // switch()
 	}
@@ -754,12 +1065,16 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function fromArray($arr, $keyType = BasePeer::TYPE_PHPNAME)
 	{
-		$keys = sfGuardRememberKeyPeer::getFieldNames($keyType);
+		$keys = HourPeer::getFieldNames($keyType);
 
-		if (array_key_exists($keys[0], $arr)) $this->setUserId($arr[$keys[0]]);
-		if (array_key_exists($keys[1], $arr)) $this->setRememberKey($arr[$keys[1]]);
-		if (array_key_exists($keys[2], $arr)) $this->setIpAddress($arr[$keys[2]]);
-		if (array_key_exists($keys[3], $arr)) $this->setCreatedAt($arr[$keys[3]]);
+		if (array_key_exists($keys[0], $arr)) $this->setId($arr[$keys[0]]);
+		if (array_key_exists($keys[1], $arr)) $this->setProjectId($arr[$keys[1]]);
+		if (array_key_exists($keys[2], $arr)) $this->setTypeId($arr[$keys[2]]);
+		if (array_key_exists($keys[3], $arr)) $this->setUserId($arr[$keys[3]]);
+		if (array_key_exists($keys[4], $arr)) $this->setStartDt($arr[$keys[4]]);
+		if (array_key_exists($keys[5], $arr)) $this->setEndDt($arr[$keys[5]]);
+		if (array_key_exists($keys[6], $arr)) $this->setComment($arr[$keys[6]]);
+		if (array_key_exists($keys[7], $arr)) $this->setUserProfileVersion($arr[$keys[7]]);
 	}
 
 	/**
@@ -769,12 +1084,16 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function buildCriteria()
 	{
-		$criteria = new Criteria(sfGuardRememberKeyPeer::DATABASE_NAME);
+		$criteria = new Criteria(HourPeer::DATABASE_NAME);
 
-		if ($this->isColumnModified(sfGuardRememberKeyPeer::USER_ID)) $criteria->add(sfGuardRememberKeyPeer::USER_ID, $this->user_id);
-		if ($this->isColumnModified(sfGuardRememberKeyPeer::REMEMBER_KEY)) $criteria->add(sfGuardRememberKeyPeer::REMEMBER_KEY, $this->remember_key);
-		if ($this->isColumnModified(sfGuardRememberKeyPeer::IP_ADDRESS)) $criteria->add(sfGuardRememberKeyPeer::IP_ADDRESS, $this->ip_address);
-		if ($this->isColumnModified(sfGuardRememberKeyPeer::CREATED_AT)) $criteria->add(sfGuardRememberKeyPeer::CREATED_AT, $this->created_at);
+		if ($this->isColumnModified(HourPeer::ID)) $criteria->add(HourPeer::ID, $this->id);
+		if ($this->isColumnModified(HourPeer::PROJECT_ID)) $criteria->add(HourPeer::PROJECT_ID, $this->project_id);
+		if ($this->isColumnModified(HourPeer::TYPE_ID)) $criteria->add(HourPeer::TYPE_ID, $this->type_id);
+		if ($this->isColumnModified(HourPeer::USER_ID)) $criteria->add(HourPeer::USER_ID, $this->user_id);
+		if ($this->isColumnModified(HourPeer::START_DT)) $criteria->add(HourPeer::START_DT, $this->start_dt);
+		if ($this->isColumnModified(HourPeer::END_DT)) $criteria->add(HourPeer::END_DT, $this->end_dt);
+		if ($this->isColumnModified(HourPeer::COMMENT)) $criteria->add(HourPeer::COMMENT, $this->comment);
+		if ($this->isColumnModified(HourPeer::USER_PROFILE_VERSION)) $criteria->add(HourPeer::USER_PROFILE_VERSION, $this->user_profile_version);
 
 		return $criteria;
 	}
@@ -789,43 +1108,31 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 */
 	public function buildPkeyCriteria()
 	{
-		$criteria = new Criteria(sfGuardRememberKeyPeer::DATABASE_NAME);
+		$criteria = new Criteria(HourPeer::DATABASE_NAME);
 
-		$criteria->add(sfGuardRememberKeyPeer::USER_ID, $this->user_id);
-		$criteria->add(sfGuardRememberKeyPeer::IP_ADDRESS, $this->ip_address);
+		$criteria->add(HourPeer::ID, $this->id);
 
 		return $criteria;
 	}
 
 	/**
-	 * Returns the composite primary key for this object.
-	 * The array elements will be in same order as specified in XML.
-	 * @return     array
+	 * Returns the primary key for this object (row).
+	 * @return     int
 	 */
 	public function getPrimaryKey()
 	{
-		$pks = array();
-
-		$pks[0] = $this->getUserId();
-
-		$pks[1] = $this->getIpAddress();
-
-		return $pks;
+		return $this->getId();
 	}
 
 	/**
-	 * Set the [composite] primary key.
+	 * Generic method to set the primary key (id column).
 	 *
-	 * @param      array $keys The elements of the composite key (order must match the order in XML file).
+	 * @param      int $key Primary key.
 	 * @return     void
 	 */
-	public function setPrimaryKey($keys)
+	public function setPrimaryKey($key)
 	{
-
-		$this->setUserId($keys[0]);
-
-		$this->setIpAddress($keys[1]);
-
+		$this->setId($key);
 	}
 
 	/**
@@ -834,23 +1141,31 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 * If desired, this method can also make copies of all associated (fkey referrers)
 	 * objects.
 	 *
-	 * @param      object $copyObj An object of sfGuardRememberKey (or compatible) type.
+	 * @param      object $copyObj An object of Hour (or compatible) type.
 	 * @param      boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
 	 * @throws     PropelException
 	 */
 	public function copyInto($copyObj, $deepCopy = false)
 	{
 
+		$copyObj->setProjectId($this->project_id);
+
+		$copyObj->setTypeId($this->type_id);
+
 		$copyObj->setUserId($this->user_id);
 
-		$copyObj->setRememberKey($this->remember_key);
+		$copyObj->setStartDt($this->start_dt);
 
-		$copyObj->setIpAddress($this->ip_address);
+		$copyObj->setEndDt($this->end_dt);
 
-		$copyObj->setCreatedAt($this->created_at);
+		$copyObj->setComment($this->comment);
+
+		$copyObj->setUserProfileVersion($this->user_profile_version);
 
 
 		$copyObj->setNew(true);
+
+		$copyObj->setId(NULL); // this is a auto-increment column, so set to default value
 
 	}
 
@@ -863,7 +1178,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 * objects.
 	 *
 	 * @param      boolean $deepCopy Whether to also copy all rows that refer (by fkey) to the current row.
-	 * @return     sfGuardRememberKey Clone of current object.
+	 * @return     Hour Clone of current object.
 	 * @throws     PropelException
 	 */
 	public function copy($deepCopy = false)
@@ -882,21 +1197,123 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 	 * same instance for all member of this class. The method could therefore
 	 * be static, but this would prevent one from overriding the behavior.
 	 *
-	 * @return     sfGuardRememberKeyPeer
+	 * @return     HourPeer
 	 */
 	public function getPeer()
 	{
 		if (self::$peer === null) {
-			self::$peer = new sfGuardRememberKeyPeer();
+			self::$peer = new HourPeer();
 		}
 		return self::$peer;
+	}
+
+	/**
+	 * Declares an association between this object and a TimenoteProject object.
+	 *
+	 * @param      TimenoteProject $v
+	 * @return     Hour The current object (for fluent API support)
+	 * @throws     PropelException
+	 */
+	public function setTimenoteProject(TimenoteProject $v = null)
+	{
+		if ($v === null) {
+			$this->setProjectId(NULL);
+		} else {
+			$this->setProjectId($v->getId());
+		}
+
+		$this->aTimenoteProject = $v;
+
+		// Add binding for other direction of this n:n relationship.
+		// If this object has already been added to the TimenoteProject object, it will not be re-added.
+		if ($v !== null) {
+			$v->addHour($this);
+		}
+
+		return $this;
+	}
+
+
+	/**
+	 * Get the associated TimenoteProject object
+	 *
+	 * @param      PropelPDO Optional Connection object.
+	 * @return     TimenoteProject The associated TimenoteProject object.
+	 * @throws     PropelException
+	 */
+	public function getTimenoteProject(PropelPDO $con = null)
+	{
+		if ($this->aTimenoteProject === null && ($this->project_id !== null)) {
+			$c = new Criteria(TimenoteProjectPeer::DATABASE_NAME);
+			$c->add(TimenoteProjectPeer::ID, $this->project_id);
+			$this->aTimenoteProject = TimenoteProjectPeer::doSelectOne($c, $con);
+			/* The following can be used additionally to
+			   guarantee the related object contains a reference
+			   to this object.  This level of coupling may, however, be
+			   undesirable since it could result in an only partially populated collection
+			   in the referenced object.
+			   $this->aTimenoteProject->addHours($this);
+			 */
+		}
+		return $this->aTimenoteProject;
+	}
+
+	/**
+	 * Declares an association between this object and a TimenoteType object.
+	 *
+	 * @param      TimenoteType $v
+	 * @return     Hour The current object (for fluent API support)
+	 * @throws     PropelException
+	 */
+	public function setTimenoteType(TimenoteType $v = null)
+	{
+		if ($v === null) {
+			$this->setTypeId(NULL);
+		} else {
+			$this->setTypeId($v->getId());
+		}
+
+		$this->aTimenoteType = $v;
+
+		// Add binding for other direction of this n:n relationship.
+		// If this object has already been added to the TimenoteType object, it will not be re-added.
+		if ($v !== null) {
+			$v->addHour($this);
+		}
+
+		return $this;
+	}
+
+
+	/**
+	 * Get the associated TimenoteType object
+	 *
+	 * @param      PropelPDO Optional Connection object.
+	 * @return     TimenoteType The associated TimenoteType object.
+	 * @throws     PropelException
+	 */
+	public function getTimenoteType(PropelPDO $con = null)
+	{
+		if ($this->aTimenoteType === null && ($this->type_id !== null)) {
+			$c = new Criteria(TimenoteTypePeer::DATABASE_NAME);
+			$c->add(TimenoteTypePeer::ID, $this->type_id);
+			$this->aTimenoteType = TimenoteTypePeer::doSelectOne($c, $con);
+			/* The following can be used additionally to
+			   guarantee the related object contains a reference
+			   to this object.  This level of coupling may, however, be
+			   undesirable since it could result in an only partially populated collection
+			   in the referenced object.
+			   $this->aTimenoteType->addHours($this);
+			 */
+		}
+		return $this->aTimenoteType;
 	}
 
 	/**
 	 * Declares an association between this object and a sfGuardUser object.
 	 *
 	 * @param      sfGuardUser $v
-	 * @return     sfGuardRememberKey The current object (for fluent API support)
+	 * @return     Hour The current object (for fluent API support)
 	 * @throws     PropelException
 	 */
 	public function setsfGuardUser(sfGuardUser $v = null)
@@ -912,7 +1329,7 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 		// Add binding for other direction of this n:n relationship.
 		// If this object has already been added to the sfGuardUser object, it will not be re-added.
 		if ($v !== null) {
-			$v->addsfGuardRememberKey($this);
+			$v->addHour($this);
 		}
 
 		return $this;
@@ -937,10 +1354,61 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 			   to this object.  This level of coupling may, however, be
 			   undesirable since it could result in an only partially populated collection
 			   in the referenced object.
-			   $this->asfGuardUser->addsfGuardRememberKeys($this);
+			   $this->asfGuardUser->addHours($this);
 			 */
 		}
 		return $this->asfGuardUser;
+	}
+
+	/**
+	 * Declares an association between this object and a sfGuardUserProfile object.
+	 *
+	 * @param      sfGuardUserProfile $v
+	 * @return     Hour The current object (for fluent API support)
+	 * @throws     PropelException
+	 */
+	public function setsfGuardUserProfile(sfGuardUserProfile $v = null)
+	{
+		if ($v === null) {
+			$this->setUserProfileVersion(NULL);
+		} else {
+			$this->setUserProfileVersion($v->getVersion());
+		}
+
+		$this->asfGuardUserProfile = $v;
+
+		// Add binding for other direction of this n:n relationship.
+		// If this object has already been added to the sfGuardUserProfile object, it will not be re-added.
+		if ($v !== null) {
+			$v->addHour($this);
+		}
+
+		return $this;
+	}
+
+
+	/**
+	 * Get the associated sfGuardUserProfile object
+	 *
+	 * @param      PropelPDO Optional Connection object.
+	 * @return     sfGuardUserProfile The associated sfGuardUserProfile object.
+	 * @throws     PropelException
+	 */
+	public function getsfGuardUserProfile(PropelPDO $con = null)
+	{
+		if ($this->asfGuardUserProfile === null && ($this->user_profile_version !== null)) {
+			$c = new Criteria(sfGuardUserProfilePeer::DATABASE_NAME);
+			$c->add(sfGuardUserProfilePeer::VERSION, $this->user_profile_version);
+			$this->asfGuardUserProfile = sfGuardUserProfilePeer::doSelectOne($c, $con);
+			/* The following can be used additionally to
+			   guarantee the related object contains a reference
+			   to this object.  This level of coupling may, however, be
+			   undesirable since it could result in an only partially populated collection
+			   in the referenced object.
+			   $this->asfGuardUserProfile->addHours($this);
+			 */
+		}
+		return $this->asfGuardUserProfile;
 	}
 
 	/**
@@ -957,15 +1425,18 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
 		if ($deep) {
 		} // if ($deep)
 
+			$this->aTimenoteProject = null;
+			$this->aTimenoteType = null;
 			$this->asfGuardUser = null;
+			$this->asfGuardUserProfile = null;
 	}
 
 
   public function __call($method, $arguments)
   {
-    if (!$callable = sfMixer::getCallable('BasesfGuardRememberKey:'.$method))
+    if (!$callable = sfMixer::getCallable('BaseHour:'.$method))
     {
-      throw new sfException(sprintf('Call to undefined method BasesfGuardRememberKey::%s', $method));
+      throw new sfException(sprintf('Call to undefined method BaseHour::%s', $method));
     }
 
     array_unshift($arguments, $this);
@@ -974,4 +1445,4 @@ abstract class BasesfGuardRememberKey extends BaseObject  implements Persistent 
   }
 
 
-} // BasesfGuardRememberKey
+} // BaseHour

@@ -22,6 +22,8 @@ class BasesfGuardUserProfileForm extends BaseFormPropel
       'birthday'   => new sfWidgetFormDate(),
       'sciper'     => new sfWidgetFormInput(),
       'created_by' => new sfWidgetFormPropelChoice(array('model' => 'sfGuardUser', 'add_empty' => true)),
+      'version'    => new sfWidgetFormInput(),
+      'percent'    => new sfWidgetFormInput(),
     ));
 
     $this->setValidators(array(
@@ -34,6 +36,8 @@ class BasesfGuardUserProfileForm extends BaseFormPropel
       'birthday'   => new sfValidatorDate(array('required' => false)),
       'sciper'     => new sfValidatorString(array('max_length' => 10, 'required' => false)),
       'created_by' => new sfValidatorPropelChoice(array('model' => 'sfGuardUser', 'column' => 'id', 'required' => false)),
+      'version'    => new sfValidatorInteger(array('required' => false)),
+      'percent'    => new sfValidatorNumber(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile[%s]');

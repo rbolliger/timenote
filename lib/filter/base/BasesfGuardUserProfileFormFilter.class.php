@@ -23,6 +23,8 @@ class BasesfGuardUserProfileFormFilter extends BaseFormFilterPropel
       'birthday'   => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => true)),
       'sciper'     => new sfWidgetFormFilterInput(),
       'created_by' => new sfWidgetFormPropelChoice(array('model' => 'sfGuardUser', 'add_empty' => true)),
+      'version'    => new sfWidgetFormFilterInput(),
+      'percent'    => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
@@ -34,6 +36,8 @@ class BasesfGuardUserProfileFormFilter extends BaseFormFilterPropel
       'birthday'   => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDate(array('required' => false)), 'to_date' => new sfValidatorDate(array('required' => false)))),
       'sciper'     => new sfValidatorPass(array('required' => false)),
       'created_by' => new sfValidatorPropelChoice(array('required' => false, 'model' => 'sfGuardUser', 'column' => 'id')),
+      'version'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'percent'    => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('sf_guard_user_profile_filters[%s]');
@@ -60,6 +64,8 @@ class BasesfGuardUserProfileFormFilter extends BaseFormFilterPropel
       'birthday'   => 'Date',
       'sciper'     => 'Text',
       'created_by' => 'ForeignKey',
+      'version'    => 'Number',
+      'percent'    => 'Number',
     );
   }
 }
