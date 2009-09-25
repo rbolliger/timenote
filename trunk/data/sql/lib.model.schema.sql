@@ -26,6 +26,25 @@ CREATE TABLE `timenote_project`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
+#-- timenote_project_category
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `timenote_project_category`;
+
+
+CREATE TABLE `timenote_project_category`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(255)  NOT NULL,
+	`description` TEXT,
+	`is_working` TINYINT,
+	`created_at` DATETIME,
+	`updated_at` DATETIME,
+	PRIMARY KEY (`id`),
+	KEY `timenote_project_category_I_1`(`name`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
 #-- timenote_type
 #-----------------------------------------------------------------------------
 
@@ -46,13 +65,13 @@ CREATE TABLE `timenote_type`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- timenote_entry
+#-- hour
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `timenote_entry`;
+DROP TABLE IF EXISTS `hour`;
 
 
-CREATE TABLE `timenote_entry`
+CREATE TABLE `hour`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`project_id` INTEGER  NOT NULL,
@@ -61,21 +80,25 @@ CREATE TABLE `timenote_entry`
 	`start_dt` DATETIME,
 	`end_dt` DATETIME,
 	`comment` VARCHAR(255)  NOT NULL,
-	`percent` DECIMAL,
+	`user_profile_version` INTEGER  NOT NULL,
 	PRIMARY KEY (`id`),
-	INDEX `timenote_entry_FI_1` (`project_id`),
-	CONSTRAINT `timenote_entry_FK_1`
+	INDEX `hour_FI_1` (`project_id`),
+	CONSTRAINT `hour_FK_1`
 		FOREIGN KEY (`project_id`)
 		REFERENCES `timenote_project` (`id`),
-	INDEX `timenote_entry_FI_2` (`type_id`),
-	CONSTRAINT `timenote_entry_FK_2`
+	INDEX `hour_FI_2` (`type_id`),
+	CONSTRAINT `hour_FK_2`
 		FOREIGN KEY (`type_id`)
 		REFERENCES `timenote_type` (`id`),
-	INDEX `timenote_entry_FI_3` (`user_id`),
-	CONSTRAINT `timenote_entry_FK_3`
+	INDEX `hour_FI_3` (`user_id`),
+	CONSTRAINT `hour_FK_3`
 		FOREIGN KEY (`user_id`)
 		REFERENCES `sf_guard_user` (`id`)
-		ON DELETE CASCADE
+		ON DELETE CASCADE,
+	INDEX `hour_FI_4` (`user_profile_version`),
+	CONSTRAINT `hour_FK_4`
+		FOREIGN KEY (`user_profile_version`)
+		REFERENCES `sf_guard_user_profile` (`version`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
@@ -115,7 +138,10 @@ CREATE TABLE `sf_guard_user_profile`
 	`birthday` DATE,
 	`sciper` VARCHAR(10),
 	`created_by` INTEGER,
+	`version` INTEGER,
+	`percent` FLOAT,
 	PRIMARY KEY (`id`),
+	INDEX `I_referenced_hour_FK_4_1` (`version`),
 	INDEX `sf_guard_user_profile_FI_1` (`user_id`),
 	CONSTRAINT `sf_guard_user_profile_FK_1`
 		FOREIGN KEY (`user_id`)
