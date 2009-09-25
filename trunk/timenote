@@ -70,6 +70,24 @@ fi
 echo
 
 ##
+# PROPEL BUILD ALL LOAD
+# OR PROPEL BUILD ALL AND PROPEL LOAD DATA
+##
+retour=X
+while [ "$retour" = "X" ]; do
+echo -n "- run propel build all load ? [y/n] " 
+read respone
+case "$respone" in
+y*| Y* | o* | O* )
+echo "... running propel build all load"
+php symfony propel:build-all-load
+retour=0
+;;
+[nN]* )
+echo "... skipping propel build all load"
+### start propel buil all load skip
+echo 
+##
 # PROPEL BUILD ALL
 ##
 retour=X
@@ -124,8 +142,18 @@ esac
 echo 
 done
 ##exit $retour
-
-echo
+### end propel buil all load skip
+;;
+"?"* )
+echo "launch propel build all load here"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retour
 
 ##
 # SYMFONY CLEAR CACHE
@@ -160,7 +188,7 @@ done
 # ENDING
 ##
 echo "- that's it, go to"
-echo "http://localhost/timenote"
+echo "http://timenote"
 
 exit 0
 
