@@ -26,3 +26,4 @@
   * Export avancé: utiliser templating (smarty?, symfony templating (annocé pour bientôt)) pour remplir des canevas imposés par les projets, par l'entreprise, les clients, ...
   * API (en tous cas système permettant à des tiers de poster des heures)
   * Gestion des jours fériés
+  * Alertes orientées projets (email / RSS)
