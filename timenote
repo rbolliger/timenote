@@ -49,7 +49,8 @@ done
 
 ##
 # TESTING DIRECTORY CHMODAGE
-## 
+##  
+# TODO test if cache dir is writable by apache www-data user!
 echo "- testing cache and log dirs chmod"
 if test -w $WRKDIR/cache
 then 
@@ -59,13 +60,18 @@ else
   echo "... cache successfuly chmoded"
 fi
 
-if test -w $WRKDIR/log
-then
-  echo "... log dir already ok"
-else
-  sudo chmod 777 -R $WRKDIR/cache
+echo "... touching file /log/frontend_dev.log"
+touch $WRKDIR/log/frontend_dev.log
+
+# TODO test if log dir is writable by apache www-data user!
+#if test -w $WRKDIR/log
+#then
+#  echo "... log dir already ok"
+#else
+  echo "... chmoding log dir"
+  sudo chmod 777 -R $WRKDIR/log
   echo "... log dir successfuly chmoded"
-fi
+#fi
 
 echo
 
