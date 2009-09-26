@@ -1,10 +1,28 @@
 #This page describes the "Project" table characteristics
 
 = Introduction =
-
 "Project" table contains all projects and sub-projects. 
 
 
-= Freemind representation =
-
+== Freemind representation ==
 http://timenote.googlecode.com/svn/wiki/TableProject.attach/Project.jpeg
+
+== Working and non-working ==
+This is the vision of working and non-working hours:
+
+=== Working ===
+All working hours are directly deducted from the "must working hours" amount and means that these hours fit to the employer specifications contract (understand that these hours are profitable/beneficial to the boss)
+Exemple: Tim have to work 40 hours by weeks. On monday, he enters 8 working hours on his main project. That's means he should yet work 32 hours more this week to have a 0 hours balance.
+
+=== Non-Working ===
+Non-working hours specifies hours which are not profitable/beneficial.
+Exemple: Tim get married. Congratulations to him and his wife. Due to the law, tim's employer has to give him 2 days off. Accordingly, the week he takes these 2 days he should  work 24 hours left to have a 0 hours balance (40 - 2 x 8).
+This exemple above shows the importance of non-working hours. With this "hours classification" we are now able to know if employees are working for the employer or not. 
+
+But (there's always a but) non-working hours are not so simple. Expressing it with an exemple will be better: according to Tim's work's contract he have to visits his doctor outside his working hours. But his doctor offers him a rendez-vous at 15h00. Tim has 2 possibilities with timenote:
+# just let his daytime with a blank between 14h00 and 17h00 (2 hours driving the path, 1 hours meeting). 
+# setting these 3 hours as non-working hours, uncredited.
+The advantage of the second method is to have this appointment archived. This means he could have saved this appointment in the past, or someone (an allowed person like his secretary) could have saved it for him. Additionally, his colleagues could know he would not be at his office and he could receive a reminder according to differents hours' behaviors.
+
+== Hours behaviors ==
+By adding some behaviors to each type of hours we will be able to know if the employee is here or not, is in vacation or not, travelling, and so ever.
