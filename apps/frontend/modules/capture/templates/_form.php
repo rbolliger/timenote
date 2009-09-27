@@ -1,7 +1,8 @@
 <?php include_stylesheets_for_form($form) ?>
 <?php include_javascripts_for_form($form) ?>
 
-    <?php use_javascript('jquery.maskedinput-1.2.2.min.js') ?>
+<?php //use_javascript('jquery.js') ?>
+<?php use_javascript('jquery.maskedinput-1.2.2.min.js') ?>
 
 
 <?php #echo $form ?>
@@ -20,8 +21,20 @@
 </form>
 <script language="text/javascript">
 <!--
-jQuery(function($){
-   $("#timenote_entry_end_dt_time").mask("99:99");
+
+//jQuery(function($){
+//   $("#timenote_entry_end_dt_time").mask("99:99");
+//   $("#timenote_entry_end_time").mask("99:99");
+//   $("#timenote_entry_start_time").mask("99:99");
+//});
+
+$(window).load(function(){
+  // Le code placé ici sera déclenché
+  // au chargement complet de la page.
+   //$("#timenote_entry_end_dt_time").mask("99:99");
+   $("#timenote_entry_end_time").mask("99:99");
+   $("#timenote_entry_start_time").mask("99:99");
 });
+
 //-->
 </script>
