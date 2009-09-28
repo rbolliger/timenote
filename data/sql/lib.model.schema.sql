@@ -18,6 +18,7 @@ CREATE TABLE `timenote_project`
 	`slug` VARCHAR(60),
 	`lft` INTEGER  NOT NULL,
 	`rgt` INTEGER  NOT NULL,
+	`is_counted` TINYINT  NOT NULL,
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
 	PRIMARY KEY (`id`),
@@ -26,32 +27,34 @@ CREATE TABLE `timenote_project`
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- timenote_project_category
+#-- timenote_project_behaviors
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `timenote_project_category`;
+DROP TABLE IF EXISTS `timenote_project_behaviors`;
 
 
-CREATE TABLE `timenote_project_category`
+CREATE TABLE `timenote_project_behaviors`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255)  NOT NULL,
+	`project_id` INTEGER  NOT NULL,
+	`title` VARCHAR(255)  NOT NULL,
 	`description` TEXT,
-	`is_working` TINYINT,
-	`created_at` DATETIME,
-	`updated_at` DATETIME,
 	PRIMARY KEY (`id`),
-	KEY `timenote_project_category_I_1`(`name`)
+	KEY `timenote_project_behaviors_I_1`(`title`),
+	INDEX `timenote_project_behaviors_FI_1` (`project_id`),
+	CONSTRAINT `timenote_project_behaviors_FK_1`
+		FOREIGN KEY (`project_id`)
+		REFERENCES `timenote_project` (`id`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- timenote_type
+#-- timenote_hour_category
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `timenote_type`;
+DROP TABLE IF EXISTS `timenote_hour_category`;
 
 
-CREATE TABLE `timenote_type`
+CREATE TABLE `timenote_hour_category`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(255)  NOT NULL,
@@ -60,64 +63,41 @@ CREATE TABLE `timenote_type`
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
 	PRIMARY KEY (`id`),
-	KEY `timenote_type_I_1`(`name`),
-	KEY `timenote_type_I_2`(`slug`)
+	KEY `timenote_hour_category_I_1`(`name`),
+	KEY `timenote_hour_category_I_2`(`slug`)
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
-#-- hour
+#-- timenote_hour
 #-----------------------------------------------------------------------------
 
-DROP TABLE IF EXISTS `hour`;
+DROP TABLE IF EXISTS `timenote_hour`;
 
 
-CREATE TABLE `hour`
+CREATE TABLE `timenote_hour`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
 	`project_id` INTEGER  NOT NULL,
-	`type_id` INTEGER  NOT NULL,
+	`cat_id` INTEGER  NOT NULL,
 	`user_id` INTEGER  NOT NULL,
 	`start_dt` DATETIME,
 	`end_dt` DATETIME,
-	`comment` VARCHAR(255)  NOT NULL,
-	`user_profile_version` INTEGER  NOT NULL,
+	`comment` VARCHAR(255),
 	PRIMARY KEY (`id`),
-	INDEX `hour_FI_1` (`project_id`),
-	CONSTRAINT `hour_FK_1`
+	KEY `timenote_hour_I_1`(`comment`),
+	INDEX `timenote_hour_FI_1` (`project_id`),
+	CONSTRAINT `timenote_hour_FK_1`
 		FOREIGN KEY (`project_id`)
 		REFERENCES `timenote_project` (`id`),
-	INDEX `hour_FI_2` (`type_id`),
-	CONSTRAINT `hour_FK_2`
-		FOREIGN KEY (`type_id`)
-		REFERENCES `timenote_type` (`id`),
-	INDEX `hour_FI_3` (`user_id`),
-	CONSTRAINT `hour_FK_3`
+	INDEX `timenote_hour_FI_2` (`cat_id`),
+	CONSTRAINT `timenote_hour_FK_2`
+		FOREIGN KEY (`cat_id`)
+		REFERENCES `timenote_hour_category` (`id`),
+	INDEX `timenote_hour_FI_3` (`user_id`),
+	CONSTRAINT `timenote_hour_FK_3`
 		FOREIGN KEY (`user_id`)
 		REFERENCES `sf_guard_user` (`id`)
-		ON DELETE CASCADE,
-	INDEX `hour_FI_4` (`user_profile_version`),
-	CONSTRAINT `hour_FK_4`
-		FOREIGN KEY (`user_profile_version`)
-		REFERENCES `sf_guard_user_profile` (`version`)
-)Type=InnoDB;
-
-#-----------------------------------------------------------------------------
-#-- timenote_dayoff
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `timenote_dayoff`;
-
-
-CREATE TABLE `timenote_dayoff`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`date` DATE,
-	`yearly` TINYINT,
-	`name` VARCHAR(100),
-	`description` TEXT,
-	`created_at` DATETIME,
-	`updated_at` DATETIME,
-	PRIMARY KEY (`id`)
+		ON DELETE CASCADE
 )Type=InnoDB;
 
 #-----------------------------------------------------------------------------
@@ -141,7 +121,6 @@ CREATE TABLE `sf_guard_user_profile`
 	`version` INTEGER,
 	`percent` FLOAT,
 	PRIMARY KEY (`id`),
-	INDEX `I_referenced_hour_FK_4_1` (`version`),
 	INDEX `sf_guard_user_profile_FI_1` (`user_id`),
 	CONSTRAINT `sf_guard_user_profile_FK_1`
 		FOREIGN KEY (`user_id`)
