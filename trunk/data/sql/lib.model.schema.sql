@@ -57,13 +57,13 @@ DROP TABLE IF EXISTS `timenote_hour_category`;
 CREATE TABLE `timenote_hour_category`
 (
 	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255)  NOT NULL,
+	`title` VARCHAR(255)  NOT NULL,
 	`description` TEXT,
 	`slug` VARCHAR(60),
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
 	PRIMARY KEY (`id`),
-	KEY `timenote_hour_category_I_1`(`name`),
+	KEY `timenote_hour_category_I_1`(`title`),
 	KEY `timenote_hour_category_I_2`(`slug`)
 )Type=InnoDB;
 

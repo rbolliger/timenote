@@ -14,7 +14,7 @@ class BaseTimenoteHourCategoryForm extends BaseFormPropel
   {
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
-      'name'        => new sfWidgetFormInput(),
+      'title'       => new sfWidgetFormInput(),
       'description' => new sfWidgetFormTextarea(),
       'slug'        => new sfWidgetFormInput(),
       'created_at'  => new sfWidgetFormDateTime(),
@@ -23,7 +23,7 @@ class BaseTimenoteHourCategoryForm extends BaseFormPropel
 
     $this->setValidators(array(
       'id'          => new sfValidatorPropelChoice(array('model' => 'TimenoteHourCategory', 'column' => 'id', 'required' => false)),
-      'name'        => new sfValidatorString(array('max_length' => 255)),
+      'title'       => new sfValidatorString(array('max_length' => 255)),
       'description' => new sfValidatorString(array('required' => false)),
       'slug'        => new sfValidatorString(array('max_length' => 60, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(array('required' => false)),

@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($timenote_entry_list as $timenote_entry): ?>
+    <?php foreach ($timenote_hour_list as $timenote_entry): ?>
     <tr>
       <td><a href="<?php echo url_for('capture/edit?id='.$timenote_entry->getId()) ?>"><?php echo $timenote_entry->getId() ?></a></td>
       <td><?php echo $timenote_entry->getProjectId() ?></td>

@@ -235,27 +235,27 @@ TimenoteProject:
 #TimenoteType:
 TimenoteHourCategory:
   cat_1:
-    name: Analyze
+    title: Analyze
     description: Analyze
     slug: analyze
   cat_2:
-    name: Meeting
+    title: Meeting
     description: Meeting
     slug: meeting
   cat_3:
-    name: Preproject
+    title: Preproject
     description: Preproject
     slug: preproject
   cat_4:
-    name: Readings and documentation
+    title: Readings and documentation
     description: Readings and documentation
     slug: readings_and_documentation
   cat_5:
-    name: Research
+    title: Research
     description: Research
     slug: research
   cat_6:
-    name: Other
+    title: Other
     description: Other
     slug: other
 
