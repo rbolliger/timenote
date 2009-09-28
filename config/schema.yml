@@ -8,22 +8,17 @@ propel:
     slug:        { type: varchar(60), index: true}
     lft:         { type: integer, required: true, nestedSetLeftKey: true} # required for nested set!
     rgt:         { type: integer, required: true, nestedSetRightKey: true} # required for nested set!
+    is_counted:  { type: boolean, required: true} # counted or uncounted hours in project
     created_at:
     updated_at:
 
-
-  timenote_project_category:
+  timenote_project_behaviors:
     id:
-    name:        { type: varchar(255), required: true, index: true}
+    project_id:  { type: integer, foreignTable: timenote_project, foreignReference: id, required: true }
+    title:       { type: varchar(255), required: true, index: true}
     description: longvarchar
-    is_working:  boolean # working or non-working hours in project
-    is_counted:  boolean # if non-working, counted or uncounted hours in project
-    created_at:
-    updated_at:
 
-
-  # Types table
-  timenote_type:
+  timenote_hour_category:
     id:
     name:        { type: varchar(255), required: true, index: true}
     description: longvarchar
@@ -32,27 +27,16 @@ propel:
     updated_at:
 
   # Entries table
-  hour:
+  timenote_hour:
     id:
     project_id:  { type: integer, foreignTable: timenote_project, foreignReference: id, required: true }
-    type_id:     { type: integer, foreignTable: timenote_type, foreignReference: id, required: true }
+    cat_id:      { type: integer, foreignTable: timenote_hour_category, foreignReference: id, required: true }
     user_id:     { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
     #timenote_project_id: { type: integer, required: true, primaryKey: true, foreignTable: timenote_project, foreignReference: id }
     #timenote_type_id: { type: integer, required: true, primaryKey: true, foreignTable: timenote_type, foreignReference: id }
     start_dt:    TIMESTAMP
     end_dt:      TIMESTAMP
     comment:     { type: varchar(255), required: false, index: false}
-    user_profile_version:  { type: integer, foreignTable: sf_guard_user_profile, foreignReference: version, required: true }
-
-  # Days Off table
-  timenote_dayoff:
-    id:
-    date:        date
-    yearly:      boolean
-    name:        varchar(100)
-    description: longvarchar
-    created_at:
-    updated_at:
 
   sf_guard_user_profile:
     _attributes: { phpName: sfGuardUserProfile }

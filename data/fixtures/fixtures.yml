@@ -232,68 +232,66 @@ TimenoteProject:
     updated_at: 1970-01-01 00:00:01
 
 
-TimenoteType:
-  typ_1:
+#TimenoteType:
+TimenoteHourCategory:
+  cat_1:
     name: Analyze
     description: Analyze
     slug: analyze
-  typ_2:
+  cat_2:
     name: Meeting
     description: Meeting
     slug: meeting
-  typ_3:
+  cat_3:
     name: Preproject
     description: Preproject
     slug: preproject
-  typ_4:
+  cat_4:
     name: Readings and documentation
     description: Readings and documentation
     slug: readings_and_documentation
-  typ_5:
+  cat_5:
     name: Research
     description: Research
     slug: research
-  typ_6:
+  cat_6:
     name: Other
     description: Other
     slug: other
 
-TimenoteEntry:
+TimenoteHour:
   ent_1:
     project_id: prj_7
-    type_id: typ_1
+    cat_id: cat_1
     user_id: nbo
     comment: test
     start_dt: 2009-01-01 08:00:00
     end_dt: 2009-01-01 09:00:00
-    percent: 100
   ent_2:
     project_id: prj_7
-    type_id: typ_6
+    cat_id: cat_6
     user_id: nbo
     comment: test
     start_dt: 2009-01-01 09:00:00
     end_dt: 2009-01-01 11:00:00
-    percent: 100
   ent_3:
     project_id: prj_5
-    type_id: typ_6
+    cat_id: cat_6
     user_id: nbo
     comment: test
     start_dt: 2009-01-01 11:00:00
     end_dt: 2009-01-01 13:00:00
-    percent: 100
 
 
 # Days Off table
-TimenoteDayoff:
-  day1:
-    date: 1980-12-25
-    yearly: true
-    name: christmas
-    description: Christmas, also referred to as Christmas Day, is an annual holiday celebrated on December 25 that commemorates the birth of Jesus of Nazareth.
-  day2:
-    date: 1980-12-31
-    yearly: true
-    name: new year
-    description: The New Year is an event that happens when a culture celebrates the end of one year and the beginning of the next year.
+#TimenoteDayoff:
+#  day1:
+#    date: 1980-12-25
+#    yearly: true
+#    name: christmas
+#    description: Christmas, also referred to as Christmas Day, is an annual holiday celebrated on December 25 that commemorates the birth of Jesus of Nazareth.
+#  day2:
+#   date: 1980-12-31
+#    yearly: true
+#    name: new year
+#    description: The New Year is an event that happens when a culture celebrates the end of one year and the beginning of the next year.
