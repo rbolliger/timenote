@@ -25,19 +25,19 @@ default_index:
 default:
   url:   /:module/:action/*
 
-timenote_entry:
+timenote_hour:
   class: sfPropelRouteCollection
   options:
-    model:                TimenoteEntry
+    model:                TimenoteHour
     module:               entry
     prefix_path:          entry
     column:               id
     with_wildcard_routes: true
 
-timenote_type:
+timenote_hour_category:
   class: sfPropelRouteCollection
   options:
-    model:                TimenoteType
+    model:                TimenoteHourCategory
     module:               type
     prefix_path:          type
     column:               id

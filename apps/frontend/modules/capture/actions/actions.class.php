@@ -12,19 +12,19 @@ class captureActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->timenote_entry_list = TimenoteEntryPeer::doSelect(new Criteria());
+    $this->timenote_hour_list = TimenoteHourPeer::doSelect(new Criteria());
   }
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new TimenoteEntryForm();
+    $this->form = new TimenoteHourForm();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post'));
 
-    $this->form = new TimenoteEntryForm();
+    $this->form = new TimenoteHourForm();
 
     $this->processForm($request, $this->form);
 
@@ -33,15 +33,15 @@ class captureActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->forward404Unless($timenote_entry = TimenoteEntryPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
-    $this->form = new TimenoteEntryForm($timenote_entry);
+    $this->forward404Unless($timenote_entry = TimenoteHourPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
+    $this->form = new TimenoteHourForm($timenote_entry);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod('post') || $request->isMethod('put'));
-    $this->forward404Unless($timenote_entry = TimenoteEntryPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
-    $this->form = new TimenoteEntryForm($timenote_entry);
+    $this->forward404Unless($timenote_entry = TimenoteHourPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
+    $this->form = new TimenoteHourForm($timenote_entry);
 
     $this->processForm($request, $this->form);
 
@@ -52,7 +52,7 @@ class captureActions extends sfActions
   {
     $request->checkCSRFProtection();
 
-    $this->forward404Unless($timenote_entry = TimenoteEntryPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
+    $this->forward404Unless($timenote_entry = TimenoteHourPeer::retrieveByPk($request->getParameter('id')), sprintf('Object timenote_entry does not exist (%s).', $request->getParameter('id')));
     $timenote_entry->delete();
 
     $this->redirect('capture/index');
@@ -72,9 +72,9 @@ class captureActions extends sfActions
 
   public function executeMain(sfWebRequest $request)
   {
-    $this->timenote_entry_list = TimenoteEntryPeer::doSelect(new Criteria());
+    $this->timenote_hour_list = TimenoteHourPeer::doSelect(new Criteria());
 
-    $this->form = new TimenoteEntryForm();
+    $this->form = new TimenoteHourForm();
 
     // commented in source <!-- -->
     $this->projectTreeListRoot = TimenoteProjectPeer::retrieveByPk('1');
