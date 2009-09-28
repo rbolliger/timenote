@@ -53,11 +53,11 @@ timenote_project:
     with_wildcard_routes: true
 
 
-timenote_dayoff:
-  class: sfPropelRouteCollection
-  options:
-    model:                TimenoteDayoff
-    module:               dayoff
-    prefix_path:          dayoff
-    column:               id
-    with_wildcard_routes: true
+#timenote_dayoff:
+#  class: sfPropelRouteCollection
+#  options:
+#    model:                TimenoteDayoff
+#    module:               dayoff
+#    prefix_path:          dayoff
+#    column:               id
+#    with_wildcard_routes: true
