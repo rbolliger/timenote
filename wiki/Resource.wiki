@@ -8,7 +8,11 @@
   * http://mite.yo.lk/en/
   * http://www.timewhale.com/
   * http://tracking-time.com/screenshots.html
+  * http://www.timelog.com/products/timelog-project.aspx
+  * http://1timetracking.com
+  * http://www.tiwix.com/en/
   * http://www.formassembly.com/time-tracker/#
+  * http://timefiler.com/Features_smart-timesheets.html
 
 = Client App tools =
   * http://www.taskcoach.org/screenshots.html
