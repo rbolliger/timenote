@@ -9,6 +9,7 @@
   * http://mite.yo.lk/en/
 
   * http://www.timewhale.com/
+  * http://basecamphq.com/
   * http://tracking-time.com/screenshots.html
   * http://www.tickspot.com/screenshots/
   * http://www.timelog.com/products/timelog-project.aspx
@@ -21,8 +22,12 @@
 
 = Client App tools =
   * http://www.taskcoach.org/screenshots.html
+  * http://userbase.kde.org/KTimeTracker
+  * http://klok.mcgraphix.com/klok/index.htm
 
 = Resources =
   * http://www.smashingmagazine.com/2009/03/08/70-new-useful-ajax-and-javascript-techniques/
   * http://www.smashingmagazine.com/2008/02/22/gallery-of-date-stamps-and-calendars/
   * http://freelanceswitch.com/productivity/6-cool-tools-to-track-your-time/
+  * http://wakoopa.com/
+http://www.tasksy.com/
