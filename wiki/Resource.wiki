@@ -4,8 +4,10 @@
 == Lists ==
   * http://www.google.com/Top/Computers/Software/Accounting/Time_Tracking/Web_Based/
 == Tool ==
+  * http://www.slimtimer.com
   * http://www.clockspot.net/
   * http://mite.yo.lk/en/
+
   * http://www.timewhale.com/
   * http://tracking-time.com/screenshots.html
   * http://www.timelog.com/products/timelog-project.aspx
