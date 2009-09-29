@@ -1,0 +1,10 @@
+#This page describes the "Hour" table characteristics
+
+= Introduction =
+"Hour" table contains all hours declared by users. 
+
+
+== Freemind representation ==
+http://timenote.googlecode.com/svn/wiki/TableHour.attach/Hour.jpeg
+
+
