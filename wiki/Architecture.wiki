@@ -27,3 +27,4 @@
 = Tables = 
 
 [TableProject Project]
+[TableHour Hour]
