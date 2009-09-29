@@ -26,5 +26,5 @@
 
 = Tables = 
 
-[TableProject Project]
-[TableHour Hour]
+  * [TableProject Project]
+  * [TableHour Hour]
