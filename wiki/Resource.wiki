@@ -1,13 +1,15 @@
 #summary Different sites and resources wich will be useful
 
-= Resources =
+= Web Based =
+== Lists ==
+  * http://www.google.com/Top/Computers/Software/Accounting/Time_Tracking/Web_Based/
+== Tool ==
+  * http://www.formassembly.com/time-tracker/#
 
+= Client App tools =
+  * http://www.taskcoach.org/screenshots.html
+
+= Resources =
   * http://www.smashingmagazine.com/2009/03/08/70-new-useful-ajax-and-javascript-techniques/
   * http://www.smashingmagazine.com/2008/02/22/gallery-of-date-stamps-and-calendars/
   * http://freelanceswitch.com/productivity/6-cool-tools-to-track-your-time/
-
-= Similars but different tools =
-  * http://www.formassembly.com/time-tracker/#
-
-= App tools =
-  * http://www.taskcoach.org/screenshots.html
