@@ -30,4 +30,4 @@
   * http://www.smashingmagazine.com/2008/02/22/gallery-of-date-stamps-and-calendars/
   * http://freelanceswitch.com/productivity/6-cool-tools-to-track-your-time/
   * http://wakoopa.com/
-http://www.tasksy.com/
+  * http://papermashup.com/jquery-form-highlighting/
