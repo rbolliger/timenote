@@ -12,32 +12,36 @@ class TimenoteHourForm extends BaseTimenoteHourForm
 {
   public function configure()
   {
-/*
-    // getting root node
-    $projectTreeListRoot = TimenoteProjectPeer::retrieveByPk('1') ;
 
-    // adding incermential spaces
-    foreach ($projectTreeListRoot->getDescendants() as $item) {
 
-      $itm_prefix = '' ;
-
-      for ($i=2 ; $i <= $item->getLevel() ; $i++) {
-        $itm_prefix .= '&nbsp;&nbsp;' ;
-      }
-
-      $prjDropDown[$item->getId()] = $itm_prefix . $item->getTitle() ;
-
+  //TODO: a clean function to retrieve project list!
+  // getting root node
+  $projectTreeListRoot = TimenoteProjectPeer::retrieveByPk('1') ;
+  // adding incermential spaces
+  foreach ($projectTreeListRoot->getDescendants() as $item) {
+    $itm_prefix = '' ;
+    for ($i=2 ; $i <= $item->getLevel() ; $i++) {
+      $itm_prefix .= '&nbsp;&nbsp;' ;
     }
- */
+    $prjDropDown[$item->getId()] = $itm_prefix . $item->getTitle() ;
+  }
+
+  // short method below
+  //$c = new Criteria();
+  //$catDropDown = TimenoteHourCategoryPeer::doSelect($c);
 
 
- // Date fields without time
-  $this->widgetSchema['start_dt'] = new sfWidgetFormDate();
-  $this->widgetSchema['end_dt'] = new sfWidgetFormDate();
+  $this->setWidgets(array(
+    'user_id'  => new sfWidgetFormInputHidden(array('default' => 'unknow')),
+    'project_id'  => new sfWidgetFormChoice(array('choices' => $prjDropDown)),
+    'cat_id'  => new sfWidgetFormChoice(array('choices' => TimenoteHourCategoryPeer::doSelect(new Criteria()))),
+    'comment' => new sfWidgetFormTextarea(),
+    'start_dt'  => new sfWidgetFormJQueryDate() , //new sfWidgetFormDate(),
+    'start_time'  => new sfWidgetFormInput(),
+    'end_dt'  => new sfWidgetFormJQueryDate(),
+    'end_time'  => new sfWidgetFormInput(),
+  ));
 
-// Additional Time fields
-  $this->widgetSchema['start_time'] = new sfWidgetFormInput();
-  $this->widgetSchema['end_time'] = new sfWidgetFormInput();
 
 // Time fields validators
 //  $this->validatorSchema['start_time'] = new sfValidatorString(array('required' => true, 'min_length' => 5, 'max_length' => 5)); // 00:00
