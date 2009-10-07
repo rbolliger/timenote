@@ -35,11 +35,11 @@ class TimenoteHourForm extends BaseTimenoteHourForm
     'user_id'  => new sfWidgetFormInputHidden(array('default' => 'unknow')),
     'project_id'  => new sfWidgetFormChoice(array('choices' => $prjDropDown)),
     'cat_id'  => new sfWidgetFormChoice(array('choices' => TimenoteHourCategoryPeer::doSelect(new Criteria()))),
-    'comment' => new sfWidgetFormTextarea(),
-    'start_dt'  => new sfWidgetFormJQueryDate() , //new sfWidgetFormDate(),
-    'start_time'  => new sfWidgetFormInput(),
-    'end_dt'  => new sfWidgetFormJQueryDate(),
-    'end_time'  => new sfWidgetFormInput(),
+    'comment' => new sfWidgetFormTextarea(array('default' => 'comment required!')),
+    'start_dt'  => new sfWidgetFormJQueryDate(array('default' => date('m-d-Y'))) , //new sfWidgetFormDate(),
+    'start_time'  => new sfWidgetFormInput(array('default' => date('H:i'))),
+    'end_dt'  => new sfWidgetFormJQueryDate(array('default' => date('m-d-Y'))),
+    'end_time'  => new sfWidgetFormInput(array('default' => date('H:i'))),
   ));
 
 
