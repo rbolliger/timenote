@@ -133,5 +133,52 @@ CREATE TABLE `sf_guard_user_profile`
 		ON DELETE CASCADE
 )Type=InnoDB;
 
+#-----------------------------------------------------------------------------
+#-- user_worktime
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `user_worktime`;
+
+
+CREATE TABLE `user_worktime`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`user_id` INTEGER  NOT NULL,
+	`serie_start` DATETIME,
+	`timeline_generator_id` INTEGER,
+	`timeline_generator_workdays` TEXT,
+	`timeline_generator_offdays` TEXT,
+	`timeline_generator_hours_start` TEXT,
+	`timeline_generator_hours_stop` TEXT,
+	PRIMARY KEY (`id`),
+	INDEX `user_worktime_FI_1` (`user_id`),
+	CONSTRAINT `user_worktime_FK_1`
+		FOREIGN KEY (`user_id`)
+		REFERENCES `sf_guard_user` (`id`)
+		ON DELETE CASCADE,
+	INDEX `user_worktime_FI_2` (`timeline_generator_id`),
+	CONSTRAINT `user_worktime_FK_2`
+		FOREIGN KEY (`timeline_generator_id`)
+		REFERENCES `timeline_generator` (`id`)
+)Type=InnoDB;
+
+#-----------------------------------------------------------------------------
+#-- timeline_generator
+#-----------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS `timeline_generator`;
+
+
+CREATE TABLE `timeline_generator`
+(
+	`id` INTEGER  NOT NULL AUTO_INCREMENT,
+	`date_start` DATETIME,
+	`workdays` TEXT,
+	`off_days` TEXT,
+	`hours_start` TEXT,
+	`hours_stop` TEXT,
+	PRIMARY KEY (`id`)
+)Type=InnoDB;
+
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
