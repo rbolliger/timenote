@@ -1,0 +1,24 @@
+#summary This page details the user timeline, which represents the (planned) working hours of the user
+
+= Introduction =
+
+The user declares his occupation in the "Hours" table. In order to know if the user has worked too much or not enough, timenote must know his planning.
+The user_worktime table contains such data.
+
+= Details =
+
+== Working principle == 
+
+Planned hours are defined as a series until a change is performed. They are generated with a generator function, which accepts some parameters defining which days are considered, which ones have to be ignored (among considered days, ex: easter), starting and leaving hours.
+
+== Generators == 
+
+The generator function is the following:
+
+{{{
+
+timeline = generate_timeline(start_at, workdays, offdays, hours_start, hours_stop)
+
+}}}
+
+...to be continued
