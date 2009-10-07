@@ -51,3 +51,23 @@ propel:
     created_by:  { type: integer, foreignTable: sf_guard_user, foreignReference: id, onDelete: cascade }
     version:     integer
     percent:     float # to tell the % of activity of the user
+
+
+  user_worktime:
+    id:
+    user_id:     { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
+    serie_start: TIMESTAMP
+    timeline_generator_id:
+    timeline_generator_workdays:   { type: longvarchar }  # use implode to store here, and explode to recover the array
+    timeline_generator_offdays: { type: longvarchar }
+    timeline_generator_hours_start: { type: longvarchar }
+    timeline_generator_hours_stop: { type: longvarchar }
+
+
+  timeline_generator:
+    id:
+    date_start: TIMESTAMP
+    workdays:  longvarchar
+    off_days:  longvarchar
+    hours_start: longvarchar
+    hours_stop: longvarchar
