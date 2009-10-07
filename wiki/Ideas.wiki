@@ -32,3 +32,4 @@
     * App client
   * Gestion des jours fériés
   * Alertes orientées projets (email / RSS)
+  * Attention i18n et GMT dans les datetime!
