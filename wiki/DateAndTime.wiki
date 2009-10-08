@@ -1,0 +1,15 @@
+#summary wiki page for all date and time related questions and resources
+
+= Date and Time =
+Date and Time related problematic. How to deal with user's timezone (localization)? How not to be forced to use server timestamp? NNTP Server?
+
+= PHP =
+Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Related Extensions]. 
+ * [http://www.php.net/manual/en/timezones.php List of Supported Timezones]
+ * latest version of the [http://www.php.net/manual/en/timezones.php timezonedb] (via PECL's)
+ * *[http://ch2.php.net/manual/en/ref.datetime.php Date/Time Functions]*
+ * [http://www.php.net/manual/en/function.date-sunrise.php date_sunrise()] and [http://www.php.net/manual/en/function.date-sunset.php date_sunset()]
+
+= Symfony =
+
+= MySQL =
