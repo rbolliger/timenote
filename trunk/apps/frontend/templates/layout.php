@@ -58,38 +58,34 @@
       </div>
 
       <div id="content">
-        <?php if ($sf_user->hasFlash('notice')): ?>
-          <div class="flash_notice">
-            <?php echo $sf_user->getFlash('notice') ?>
-          </div>
-        <?php endif; ?>
 
-        <?php if ($sf_user->hasFlash('error')): ?>
-          <div class="flash_error">
-            <?php echo $sf_user->getFlash('error') ?>
-          </div>
-        <?php endif; ?>
+<!--        <div id="sidebar">
+          <?php if (!include_slot('sidebar')): ?>
+            <h1>sidebar zone</h1>
+            <p>This zone contains links and information
+            relative to the main content of the page.</p>
+          <?php endif; ?>
+        </div> -->
 
-        <div class="content">
+        <div class="content" id="main">
+          <?php if ($sf_user->hasFlash('notice')): ?>
+            <div class="flash_notice">
+              <?php echo $sf_user->getFlash('notice') ?>
+            </div>
+          <?php endif; ?>
+
+          <?php if ($sf_user->hasFlash('error')): ?>
+            <div class="flash_error">
+              <?php echo $sf_user->getFlash('error') ?>
+            </div>
+          <?php endif; ?>
+
           <?php echo $sf_content ?>
         </div>
       </div>
 
       <div id="footer">
-        <div class="content">
-          <span class="symfony">
-            <!-- <img src="/images/jobeet-mini.png" /> -->
-            powered by <a href="http://www.symfony-project.org/">
-            <img src="/images/symfony.gif" alt="symfony framework" />
-            </a>
-          </span>
-          <ul>
-            <li><a href="">About timenote</a></li>
-            <li class="feed"><a href="">Full feed</a></li>
-            <li><a href="">timenote API</a></li>
-            <li class="last"><a href="">..</a></li>
-          </ul>
-        </div>
+         <?php if (has_component_slot('footer')) { include_component_slot('footer'); } ?>
       </div>
     </div>
   </body>
