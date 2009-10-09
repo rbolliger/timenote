@@ -40,6 +40,8 @@ timeline = generate_timeline(date_start, date_end, weekdays, offdays, time_start
 
 || *Field* || *Description* ||
 || ID || generator pk ||
+|| name || Generator name ||
+|| use_count || Counting generator usage allows to sort most requested as favorites ||
 || weekdays || Defines which days in the week have to be worked ||
 || offdays || Defines which days between date_start and date_end (from planned hour table) are considered as legal holidays ||
 || time_start || Array defining starting times of working activities each weekday ||
