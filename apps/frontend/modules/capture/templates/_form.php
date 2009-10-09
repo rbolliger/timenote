@@ -60,13 +60,16 @@
         <?php echo $form['end_time'] ?>
       </td>
     </tr>
+
+    <?php echo $form['comment']->renderRow() ?>
+    <!--
     <tr>
       <th><?php echo $form['comment']->renderLabel() ?>:</th>
       <td>
         <?php echo $form['comment']->renderError() ?>
         <?php echo $form['comment'] ?>
       </td>
-    </tr>
+    </tr> -->
     <tr>
       <td colspan="2">
         <input type="submit" />
