@@ -1,4 +1,4 @@
-# Definition of Propel technique to retrieve a project property which may be inherited from upper-level projects in the tree.
+#summary Definition of Propel technique to retrieve a project property which may be inherited from upper-level projects in the tree.
 
 = Introduction =
 Each project entity may have properties set. If a property is not eplicitely set, it is inherited from the upper-level project in the tree. If the property is still empty, it will be recovered from an upper level and so on until a valid value is defined or the project root is reached.
