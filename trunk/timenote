@@ -22,19 +22,19 @@ echo
 ##
 # SUBVERSION UPDATE
 ##
-retour=X
-while [ "$retour" = "X" ]; do
+retoura=X
+while [ "$retoura" = "X" ]; do
 echo -n "- run svn up ? [y/n] " 
-read respone
-case "$respone" in
+read response
+case "$response" in
 y*| Y* | o* | O* ) 
 echo "... updating your timenote local copy with the repository"
 svn up
-retour=0
+retoura=0
 ;;
 [nN]* )
 echo "... skipping the update of working copy"
-retour=1
+retoura=1
 ;;
 "?"* )
 echo "launch svn up in here"
@@ -45,7 +45,7 @@ echo "Error : press [y]es ou [n]o."
 esac
 echo 
 done
-##exit $retour
+##exit $retoura
 
 ##
 # TESTING DIRECTORY CHMODAGE
@@ -73,82 +73,122 @@ touch $WRKDIR/log/frontend_dev.log
   echo "... log dir successfuly chmoded"
 #fi
 
+echo 
+
+##
+# CLEANING LIBs
+##
+retourb=X
+while [ "$retourb" = "X" ]; do
+echo -n "- clean all libs ? [y/n] " 
+read response
+case "$response" in
+y*| Y* | o* | O* ) 
+echo "... cleaning lib/filter/base/*"
+rm -f $WRKDIR/lib/filter/base/*.php
+echo "... cleaning lib/form/base/*"
+rm -f $WRKDIR/lib/form/base/*.php
+echo "... cleaning lib/filter/base/*"
+rm -f $WRKDIR/lib/model/map/*.php
+echo "... cleaning lib/filter/base/*"
+rm -f $WRKDIR/lib/model/om/*.php
+echo "... libs successfully cleaned"
+echo "... running propel build all"
+php symfony propel:build-all
+retourb=0
+;;
+[nN]* )
+echo "... skipping the libs cleaning"
+retourb=1
+;;
+"?"* )
+echo "clean filter, form, model base libs"
+;;
+* )
+echo "Error : press [y]es ou [n]o."
+;;
+esac
+echo 
+done
+##exit $retourb
+
 echo
 
 ##
 # PROPEL BUILD ALL LOAD
 # OR PROPEL BUILD ALL AND PROPEL LOAD DATA
 ##
-retour=X
-while [ "$retour" = "X" ]; do
+retourc=X
+while [ "$retourc" = "X" ]; do
 echo -n "- run propel build all load ? [y/n] " 
-read respone
-case "$respone" in
+read response
+case "$response" in
 y*| Y* | o* | O* )
 echo "... running propel build all load"
 php symfony propel:build-all-load
-retour=0
+retourc=0
 ;;
 [nN]* )
-echo "... skipping propel build all load"
-### start propel buil all load skip
-echo 
-##
-# PROPEL BUILD ALL
-##
-retour=X
-while [ "$retour" = "X" ]; do
-echo -n "- run propel build all ? [y/n] " 
-read respone
-case "$respone" in
-y*| Y* | o* | O* )
-echo "... running propel build all"
-php symfony propel:build-all
-retour=0
-;;
-[nN]* )
-echo "... skipping propel build all"
-retour=1
-;;
-"?"* )
-echo "launch propel build all here"
-;;
-* )
-echo "Error : press [y]es ou [n]o."
-;;
-esac
-echo 
-done
-##exit $retour
+	echo "... skipping propel build all load"
+	### start propel buil all load skip
+	echo 
+	##
+	# PROPEL BUILD ALL
+	##
+	retourd=X
+	while [ "$retourd" = "X" ]; do
+	echo -n "- run propel build all ? [y/n] " 
+	read response
+	case "$response" in
+	y*| Y* | o* | O* )
+	echo "... running propel build all"
+	php symfony propel:build-all
+	retourd=0
+	;;
+	[nN]* )
+	echo "... skipping propel build all"
+	retourd=1
+	;;
+	"?"* )
+	echo "launch propel build all here"
+	;;
+	* )
+	echo "Error : press [y]es ou [n]o."
+	;;
+	esac
+	echo 
+	done
+	##exit $retourc
 
-##
-# PROPEL LOAD DATA
-##
-retour=X
-while [ "$retour" = "X" ]; do
-echo -n "- run propel load data ? [y/n] " 
-read respone
-case "$respone" in
-y*| Y* | o* | O* ) 
-echo "... running propel load data"
-php symfony propel:data-load
-retour=0
-;;
-[nN]* )
-echo "... skipping propel load data"
-retour=1
-;;
-"?"* )
-echo "launch propel load data here"
-;;
-* )
-echo "Error : press [y]es ou [n]o."
-;;
-esac
-echo 
-done
-##exit $retour
-### end propel buil all load skip
+	##
+	# PROPEL LOAD DATA
+	##
+	retoure=X
+	while [ "$retoure" = "X" ]; do
+	echo -n "- run propel load data ? [y/n] " 
+	read response
+	case "$response" in
+	y*| Y* | o* | O* ) 
+	echo "... running propel load data"
+	php symfony propel:data-load
+	retoure=0
+	;;
+	[nN]* )
+	echo "... skipping propel load data"
+	retoure=1
+	;;
+	"?"* )
+	echo "launch propel load data here"
+	;;
+	* )
+	echo "Error : press [y]es ou [n]o."
+	;;
+	esac
+	echo 
+	done
+	##exit $retoure
+	### end propel buil all load skip
+	retourc=1
 ;;
 "?"* )
 echo "launch propel build all load here"
@@ -159,24 +199,24 @@ echo "Error : press [y]es ou [n]o."
 esac
 echo 
 done
-##exit $retour
+##exit $retourc
 
 ##
 # SYMFONY CLEAR CACHE
 ##
-retour=X
-while [ "$retour" = "X" ]; do
+retourf=X
+while [ "$retourf" = "X" ]; do
 echo -n "- run symfony cc ? [y/n] "
-read respone
-case "$respone" in
+read response
+case "$response" in
 y*| Y* | o* | O* )
 echo "... running symfony clear:cache task"
 php symfony cc
-retour=0
+retourf=0
 ;;
 [nN]* )
 echo "... skipping clearing of cache"
-retour=1
+retourf=1
 ;;
 "?"* )
 echo "clear the cache of the timenote project"
@@ -187,14 +227,19 @@ echo "Error : press [y]es ou [n]o."
 esac
 echo 
 done
-##exit $retour
+##exit $retourf
 
 
 ##
 # ENDING
 ##
-echo "- that's it, go to"
-echo "http://timenote"
-
+echo "- end of script, go to http://timenote"
+echo " ____________________________________________________ "
+echo "|                                                    |"
+echo "| site:     http://timenote                          |"
+echo "| gproject: http://timenote.googlecode.com/          |"
+echo "| ggroup:   http://groups.google.com/group/timenote  |"
+echo "| symfony:  http://www.symfony-project.org/doc/1_2/  |"
+echo "|____________________________________________________|"
 exit 0
 
