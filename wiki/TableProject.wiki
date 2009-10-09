@@ -1,4 +1,4 @@
-#This page describes the "Project" table characteristics
+#summary This page describes the "Project" table characteristics
 
 = Introduction =
 "Project" table contains all projects and sub-projects. 
