@@ -6,3 +6,14 @@
 
 == Freemind representation ==
 http://timenote.googlecode.com/svn/wiki/TableHour.attach/Hour.jpeg
+
+== Table Content == 
+
+|| *Field* || *Description* ||
+|| ID || hour primary key ||
+|| user_id || link to user primary key ||
+|| project_id || link to project pk where the hour is declared ||
+|| category_id || link to category pk ||
+|| date_start || Date start of the working activity ||
+|| date_end || Date end of the working activity ||
+|| comment || Text area where the suer can add notes ||
