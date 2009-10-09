@@ -21,4 +21,26 @@ timeline = generate_timeline(start_at, workdays, offdays, hours_start, hours_sto
 
 }}}
 
-...to be continued
+== Table Content == 
+
+
+==== Planned hour table ====
+
+|| *Field* || *Description* ||
+|| ID || working period primary key ||
+|| user_id || link to user primary key ||
+|| project_id || link to project pk where the hour is declared ||
+|| category_id || link to category pk ||
+|| generator_id || A function is used to automatically generate regular planning ||
+|| date_start || Date start of the working activity ||
+|| date_end || Date end of the working period ||
+|| comment || Text area where the user can add notes ||
+
+==== Generator table ====
+
+|| *Field* || *Description* ||
+|| ID || generator pk ||
+|| weekdays || Defines which days in the week have to be worked ||
+|| offdays || Defines which days between date_start and date_end (from planned hour table) are considered as legal holidays ||
+|| time_start || Array defining starting times of working activities each weekday ||
+|| time_end || Array defining ending times of working activities each weekday ||
