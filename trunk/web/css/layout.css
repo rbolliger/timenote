@@ -1,0 +1,39 @@
+/* 
+    Document   : layout
+    Created on : Oct 10, 2009, 12:54:33 AM
+    Author     : nbo
+    Description:
+        layout style sheet
+*/
+
+/* 
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#header{
+  border-bottom: 1px solid #112222;
+  background: url(../images/bg-header.jpg) repeat-x top;
+}
+#sidebar{
+  border-right: 1px solid #112255;
+  width: 200px;
+  float: left;
+}
+.sideblock{
+  border-bottom: 1px solid #112266;
+  width: 200px;
+  margin-bottom: 5px;
+  height: 100px;
+}
+#content{
+  border: 0px solid #112277;
+  margin-left: 205px;
+}
+#main{
+  overflow: hidden;
+  margin-top: 5px;
+}
+#footer{
+  border-top: 1px solid #112277;
+  /*margin-left: 220px;*/
+}
