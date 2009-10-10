@@ -9,7 +9,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [layout.css]
 
 #  javascripts:    []
   javascripts:
@@ -18,6 +18,6 @@ default:
   has_layout:     on
   layout:         layout
 
-  components:
-    footer:  [layout, footer]
-    sidebar:  [layout, sidebar]
+#  components:
+#    footer:  [layout, footer]
+#    sidebar:  [layout, sidebar]
