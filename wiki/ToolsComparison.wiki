@@ -1,0 +1,38 @@
+#summary This page reports comparative tests on time tracking tools
+
+= Introduction =
+
+This is a comparison of several internet-based time tracking tools. Following tools are compared:
+
+  * [http://www.example.com  example]
+
+
+= Comparative table =
+
+
+|| *Name* ||
+||  *Url* ||
+||  *Rating* ||
+||  *# Users* ||
+||  *# Projects (root)* ||
+||  *# Sub-projects* ||
+||  *Has categories?* ||
+||  *Has user hierarchies or roles?* || 
+|| *Has user work planning features?* ||
+|| *Handles legal holidays?* ||
+|| *Handles legal absences (wedding,...)?* ||
+|| *Supports user graphical themes?* ||
+|| *Has reports?* ||
+|| *   - User reports* ||
+|| *   - Project reports* ||
+|| *   - Category reports* ||
+|| *   - Other reports* ||
+|| *Can data be exported?* ||
+|| *   - Rss, Atom,...* ||
+|| *   - Pdf, html,...* ||
+|| *   - Raw, csv, excel, xml, ...* ||
+|| *Has widgets, desktop tools,...?* ||
+|| *Has APIs?* ||
+|| *Communicates with other tools (g. calendar, facebook,...)?* ||
+|| *Which professional categories addresses?* ||
+|| *i18n?* ||
