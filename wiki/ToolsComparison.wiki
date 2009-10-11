@@ -1,4 +1,5 @@
 #summary This page reports comparative tests on time tracking tools
+#labels Featured
 
 = Introduction =
 
