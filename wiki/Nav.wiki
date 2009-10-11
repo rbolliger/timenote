@@ -13,5 +13,6 @@
     * [http://code.google.com/p/timenote/wiki/Ideas Ideas]
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
     * [http://code.google.com/p/timenote/wiki/Resource Resource]
+    * [ToolsCOmparison Toos comparison]
     * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
     * [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
