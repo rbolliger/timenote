@@ -1,6 +1,6 @@
 << [ToolsComparison Tools comparison]
 
-#[http://www.clockspot.net/   ClockSpot] Review.
+#[http://www.clockspot.net/   ClockSpot] Review. (not completed yet)
 
 
 = DBE review =
@@ -31,14 +31,19 @@ To write this review I used the [http://demo.clockspot.net  demo] proposed by Cl
 
 The standard users basically have the possibility to start and stop a counter and for this counter choose a "job code" made from an administrator and add comments.
 
-The user may modify the recorded times by sending a request to the administrator.
+The user may modify the recorded times by sending a request to the administrator, he can also create tasks for other users.
 
 The user can ask permission for an absence from a list of possible absence types (sickness, holiday,...).
 
-The user has access to different informations like:
- * sed 
- * sod
+The user has access to different information:
+ * absences at disposal 
+ * day schedules
+ * Payrolls
+ * Tasks
+ * TImers
+ 
 
+An internal message system can be used to contact all the users in the group
 
 === Administrator ===
 
