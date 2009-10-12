@@ -26,23 +26,35 @@ Browser: Firefox 3.5.3, IE 8
 To write this review I used the [http://demo.clockspot.net  demo] proposed by ClockSpot.
 
 
-==== Administrator ====
+
+=== User ===
+
+The standard users basically have the possibility to start and stop a counter and for this counter choose a "job code" made from an administrator and add comments.
+
+The user may modify the recorded times by sending a request to the administrator.
+
+The user can ask permission for an absence from a list of possible absence types (sickness, holiday,...).
 
 
 
-==== User ====
+
+=== Administrator ===
+
+...
+
+
 
 
 
 == What's good ==
 
-
+...
 
 
 
 == What's bad ==
 
-
+...
 
 
 
