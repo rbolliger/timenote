@@ -37,7 +37,8 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Can data be exported?* ||
 || *   - Rss, Atom,...* ||
 || *   - Pdf, html,...* ||
-|| *   - Raw, csv, excel, xml, ...* || xml with API ||
+|| *   - Raw, csv, excel, xml, ...* || cvs ||
+|| *   - Printer* || yes ||
 || *Has widgets, desktop tools,...?* || yes ||
 || *Has APIs?* || yes ||
 || *Communicates with other tools (g. calendar, facebook,...)?* || no ||
