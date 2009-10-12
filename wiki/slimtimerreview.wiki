@@ -11,19 +11,26 @@ Fast registration (no mail confirmation, no image to text). timezone and date fo
 
 Just after registration you can open the "timer" in a new window and easily create tasks (they can be tagged or shared) and measure their duration. Possibility to put the Timer in the system tray (Windows only) (not tested).
 
+When a task duration has been measured an entry in created. An entry can be tagged.
 
+All sorts of Reports can be generated for different periods of time, that contain the time spent on each tasks for every user.
+
+An API is at disposal for entries and tasks manipulations. format availables are XML, YAML and JSON
 
 The timer don't seem to work correctly with firefox 3.5.3
 
 
 = What's good =
 
+Easy to use, good documentation, API
 
 
 = What's bad =
 
+Basic features, not working properly on my test platform
+
+
 = Rating =
 
-ease of use 
-
-features
+ease of use  8/10
+features  4/10
