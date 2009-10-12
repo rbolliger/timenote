@@ -37,13 +37,13 @@ An API (not tested) is at disposal for entries and tasks manipulations. formats 
 
 == What's good ==
 
-Easy to use, good documentation, API
+Easy to use, good documentation, API, tray app
 
 
 
 == What's bad ==
 
-Basic features
+Basic features, English only
 
 
 
