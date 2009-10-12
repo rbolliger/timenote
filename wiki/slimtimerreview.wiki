@@ -1,13 +1,8 @@
-#SlimTimer Review.
+#[http://www.slimtimer.com   SlimTimer] Review.
 
 = Introduction =
 
-Review of SlimTimer application.
+Review of [http://www.slimtimer.com   SlimTimer] application.
 
 
 = Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
