@@ -38,4 +38,9 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Communicates with other tools (g. calendar, facebook,...)?* ||
 || *Which professional categories addresses?* ||
 || *i18n?* ||
+|| IE || 6+ ||
+|| Firefox || 1.5+ ||
+|| Safari || OK ||
+|| Chrome || NO ||
+|| Opera || NO ||
 || *Other features* ||
