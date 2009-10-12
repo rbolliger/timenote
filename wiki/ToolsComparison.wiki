@@ -13,6 +13,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 
 || *Name* || slimtimer  ||
 ||  *Url* || http://www.slimtimer.com  ||
+|| *Internal review?* || [slimtimerreview YES] ||
 ||  *General impression* ||
 ||  *Ergonomics, usability* ||
 ||  *Graphics* ||
