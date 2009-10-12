@@ -34,16 +34,16 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *   - Project reports* || yes ||
 || *   - Category reports* || no ||
 || *   - Other reports* || yes (tags) ||
-|| *Can data be exported?* ||
-|| *   - Rss, Atom,...* ||
-|| *   - Pdf, html,...* ||
+|| *Can data be exported?* || yes ||
+|| *   - Rss, Atom,...* || ||
+|| *   - Pdf, html,...* || ||
 || *   - Raw, csv, excel, xml, ...* || cvs ||
 || *   - Printer* || yes ||
 || *Has widgets, desktop tools,...?* || yes ||
 || *Has APIs?* || yes ||
 || *Communicates with other tools (g. calendar, facebook,...)?* || no ||
-|| *Which professional categories addresses?* ||
-|| *i18n?* || no ||
+|| *Which professional categories addresses?* || small group ||
+|| *i18n?* || date format ||
 || IE || 6+ ||
 || Firefox || 1.5+ ||
 || Safari || OK ||
