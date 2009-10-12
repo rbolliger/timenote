@@ -35,7 +35,9 @@ The user may modify the recorded times by sending a request to the administrator
 
 The user can ask permission for an absence from a list of possible absence types (sickness, holiday,...).
 
-
+The user has access to different informations like:
+ * sed 
+ * sod
 
 
 === Administrator ===
