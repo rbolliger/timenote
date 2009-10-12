@@ -11,8 +11,8 @@ This is a comparison of several internet-based time tracking tools. Following to
 = Comparative table =
 
 
-|| *Name* || slimtimer  ||
-||  *Url* || [http://www.slimtimer.com   slimtimer] ||
+|| *Name* || [http://www.slimtimer.com   SlimTimer]  ||
+||  *Url* || [http://www.slimtimer.com   SlimTimer] ||
 || *Internal review?* || [slimtimerreview  yes] ||
 ||  *General impression* || 6 simple effective ||
 ||  *Ergonomics, usability* || 8 good ||
