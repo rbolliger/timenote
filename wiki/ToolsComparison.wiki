@@ -17,6 +17,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 ||  *# Users* ||
 ||  *# Projects (root)* ||
 ||  *# Sub-projects* ||
+||  *Price* ||
 ||  *Has categories?* ||
 ||  *Has user hierarchies or roles?* || 
 || *Has user work planning features?* ||
