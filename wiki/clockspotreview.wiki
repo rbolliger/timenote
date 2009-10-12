@@ -40,10 +40,14 @@ The user has access to different information:
  * day schedules
  * Payrolls
  * Tasks
- * TImers
+ * Timers
  
 
-An internal message system can be used to contact all the users in the group
+An internal message system can be used to contact all the users in the group.
+
+Is not clear what the difference between a task, a timer and a job_code.
+
+
 
 === Administrator ===
 
