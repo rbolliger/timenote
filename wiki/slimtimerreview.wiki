@@ -1,15 +1,21 @@
 #[http://www.slimtimer.com   SlimTimer] Review.
 
+
+
 = Introduction =
 
 Review of [http://www.slimtimer.com   SlimTimer] application (free content). Basic application that allow task creation and timing on those tasks.
 
 
+
 = Review Info =
 
 Reviewer: DBE
+
 OS: Windows Vista 64bit SP2
+
 Browser: Firefox 3.5.3, IE 8
+
 
 
 = Details =
@@ -25,14 +31,17 @@ All sorts of Reports can be generated for different periods of time, that contai
 An API is at disposal for entries and tasks manipulations. formats available are XML, YAML and JSON. The API use POST http method.
 
 
+
 = What's good =
 
 Easy to use, good documentation, API
 
 
+
 = What's bad =
 
 Basic features
+
 
 
 = Rating =
