@@ -1,0 +1,50 @@
+<< [ToolsComparison Tools comparison]
+
+#[http://www.clockspot.net/   ClockSpot] Review.
+
+
+= DBE review =
+
+== Introduction ==
+
+Review of [http://www.clockspot.net/   ClockSpot] application (demo). 
+
+
+
+== Review Info ==
+
+Reviewer: DBE
+
+OS: Windows Vista 64bit SP2
+
+Browser: Firefox 3.5.3, IE 8
+
+
+
+== Details ==
+
+
+
+
+
+== What's good ==
+
+
+
+
+
+== What's bad ==
+
+
+
+
+
+== Rating ==
+
+ease of use 
+
+features 
+
+graphics 
+
+general impression 
