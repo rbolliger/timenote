@@ -7,18 +7,23 @@ Review of [http://www.slimtimer.com   SlimTimer] application (free content). Bas
 
 = Details =
 
-Fast registration (no mail confirmation, no image to text)
+Fast registration (no mail confirmation, no image to text). timezone and date format asked at registration.
 
-Just after registration you can open the "timer" in a new window and easily create tasks (can be tagged or shared) and measure their duration.
+Just after registration you can open the "timer" in a new window and easily create tasks (they can be tagged or shared) and measure their duration. Possibility to put the Timer in the system tray (Windows only) (not tested).
 
 
 
 The timer don't seem to work correctly with firefox 3.5.3
 
 
+= What's good =
+
+
+
+= What's bad =
+
 = Rating =
 
 ease of use 
 
 features
-
