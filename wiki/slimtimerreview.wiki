@@ -1,6 +1,7 @@
 #[http://www.slimtimer.com   SlimTimer] Review.
 
 
+= DBE review =
 
 == Introduction ==
 
@@ -8,7 +9,7 @@ Review of [http://www.slimtimer.com   SlimTimer] application (free content). Bas
 
 
 
-= Review Info =
+== Review Info ==
 
 Reviewer: DBE
 
@@ -18,7 +19,7 @@ Browser: Firefox 3.5.3, IE 8
 
 
 
-= Details =
+== Details ==
 
 The registration is fast and easy (no mail confirmation, no image to text, few fields to fill). Timezone and date format are asked at registration.
 
@@ -32,19 +33,19 @@ An API is at disposal for entries and tasks manipulations. formats available are
 
 
 
-= What's good =
+== What's good ==
 
 Easy to use, good documentation, API
 
 
 
-= What's bad =
+== What's bad ==
 
 Basic features
 
 
 
-= Rating =
+== Rating ==
 
 ease of use  8/10
 features  4/10
