@@ -2,7 +2,11 @@
 
 = Introduction =
 
-Review of [http://www.slimtimer.com   SlimTimer] application.
+Review of [http://www.slimtimer.com   SlimTimer] application (free content). Basic application that allow task creation and timing on those tasks.
 
 
 = Details =
+
+Fast registration (no mail confirmation, no image to text)
+
+Just after registration you can open the "timer" in a new window and easily create tasks (can be tagged or shared) and measure their duration.
