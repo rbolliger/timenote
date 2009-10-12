@@ -18,36 +18,35 @@ This is a comparison of several internet-based time tracking tools. Following to
 ||  *Ergonomics, usability* || 8 good || 5 average||
 ||  *Graphics* || 8 good || 6 average||
 ||  *# Users* || yes || yes ||
-||  *# Users Types* || 1 || 2 ||
 ||  *# Projects (root)* || yes || yes ||
 ||  *# Sub-projects* || no || yes || 
 ||  *Price* || free || 18+$/month ||
-||  *Has categories?* || no ||
-||  *Has user hierarchies or roles?* || no ||
-||  *Users or managers oriented?* || no ||
-||  *Timetracker or profit calculator?* || no ||
-|| *Has user work planning features?* || no ||
-|| *Handles legal holidays?* || no ||
-|| *Handles legal absences (wedding,...)?* || no ||
-|| *Supports user graphical themes?* || no ||
-|| *Has reports?* || yes  ||
-|| *   - User reports* || yes ||
-|| *   - Project reports* || yes ||
-|| *   - Category reports* || no ||
-|| *   - Other reports* || yes (tags) ||
-|| *Can data be exported?* || yes ||
-|| *   - Rss, Atom,...* || ||
-|| *   - Pdf, html,...* || ||
-|| *   - Raw, csv, excel, xml, ...* || cvs ||
-|| *   - Printer* || yes ||
-|| *Has widgets, desktop tools,...?* || yes ||
-|| *Has APIs?* || yes ||
-|| *Communicates with other tools (g. calendar, facebook,...)?* || no ||
-|| *Which professional categories addresses?* || small group ||
-|| *i18n?* || date format ||
-|| IE || 6+ ||
-|| Firefox || 1.5+ ||
-|| Safari || OK ||
-|| Chrome || no ||
-|| Opera || no ||
-|| *Other features* || ||
+||  *Has categories?* || no || yes ||
+||  *Has user hierarchies or roles?* || no || yes (2) ||
+||  *Users or managers oriented?* || no || yes ||
+||  *Timetracker or profit calculator?* || no || yes ||
+|| *Has user work planning features?* || no || yes ||
+|| *Handles legal holidays?* || no || yes ||
+|| *Handles legal absences (wedding,...)?* || no || yes ||
+|| *Supports user graphical themes?* || no || yes ||
+|| *Has reports?* || yes  || yes ||
+|| *   - User reports* || yes || yes ||
+|| *   - Project reports* || yes || yes ||
+|| *   - Category reports* || no || no ||
+|| *   - Other reports* || yes (tags) || ||
+|| *Can data be exported?* || yes || yes ||
+|| *   - Rss, Atom,...* || || ||
+|| *   - Pdf, html,...* || || ||
+|| *   - Raw, csv, excel, xml, ...* || cvs || ||
+|| *   - Printer* || yes || yes ||
+|| *Has widgets, desktop tools,...?* || yes || no ||
+|| *Has APIs?* || yes || no ||
+|| *Communicates with other tools (g. calendar, facebook,...)?* || no || no ||
+|| *Which professional categories addresses?* || small groups/single || sme ||
+|| *i18n?* || date format || only US ||
+|| IE || 6+ || ||
+|| Firefox || 1.5+ || ||
+|| Safari || OK || ||
+|| Chrome || no || ||
+|| Opera || no || ||
+|| *Other features* || || ||
