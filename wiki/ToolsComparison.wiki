@@ -47,6 +47,6 @@ This is a comparison of several internet-based time tracking tools. Following to
 || IE || 6+ ||
 || Firefox || 1.5+ ||
 || Safari || OK ||
-|| Chrome || NO ||
-|| Opera || NO ||
+|| Chrome || no ||
+|| Opera || no ||
 || *Other features* || ||
