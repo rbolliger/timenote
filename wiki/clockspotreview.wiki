@@ -29,7 +29,7 @@ The graphics are simple and clear, with a double top menu and a side legend (aut
 
 The system use 2 types of users, the user and the administrator.
 
-
+The pricing is 10$ + 5$ x admin + 3$ x user
 
 === User ===
 
