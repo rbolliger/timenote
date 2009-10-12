@@ -25,6 +25,7 @@ Browser: Firefox 3.5.3, IE 8
 
 To write this review I used the [http://demo.clockspot.net  demo] proposed by ClockSpot.
 
+The graphics are simple and clear, with a double top menu and a side legend (autofit browser size).
 
 
 === User ===
@@ -45,36 +46,37 @@ The user has access to different information:
 
 An internal message system can be used to contact all the users in the group.
 
-Is not clear what the difference between a task, a timer and a job_code.
+Is not clear what the difference between a task, a timer and a jobcode.
+
+It is possible to start or stop a timer by phone.
 
 
 
 === Administrator ===
 
-...
-
-
+The administrator has the role to create the Tasks, Timers (and timers cathegories), Jobcodes and absences. He has also to set the absences rights and confirm the times entered from the users and absences permissions.
+Practically the administrator can edit everything a user has edited and can set global options that give users more or less right, but those option affect all users at one time.
 
 
 
 == What's good ==
 
-...
+Rich of features, Easy after understanding
 
 
 
 == What's bad ==
 
-...
+Lack of immediate help, English only, Not clear
 
 
 
 == Rating ==
 
-ease of use 
+ease of use 5/10
 
-features 
+features 8/10
 
-graphics 
+graphics 7/10
 
-general impression 
+general impression 6/10
