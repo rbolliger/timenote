@@ -10,3 +10,15 @@ Review of [http://www.slimtimer.com   SlimTimer] application (free content). Bas
 Fast registration (no mail confirmation, no image to text)
 
 Just after registration you can open the "timer" in a new window and easily create tasks (can be tagged or shared) and measure their duration.
+
+
+
+The timer don't seem to work correctly with firefox 3.5.3
+
+
+= Rating =
+
+ease of use 
+
+features
+
