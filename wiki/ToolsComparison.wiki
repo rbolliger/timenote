@@ -17,9 +17,9 @@ This is a comparison of several internet-based time tracking tools. Following to
 ||  *General impression* || 6 simple effective || 6 complete ||
 ||  *Ergonomics, usability* || 8 good || 5 average||
 ||  *Graphics* || 8 good || 6 average||
-||  *# Users* || yes || yes ||
-||  *# Projects (root)* || yes || yes ||
-||  *# Sub-projects* || no || yes || 
+||  *Number of Users* || yes || yes ||
+||  *Number of Projects (root)* || yes || yes ||
+||  *Number of Sub-projects* || no || yes || 
 ||  *Price* || free || 18+$/month ||
 ||  *Has categories?* || no || yes ||
 ||  *Has user hierarchies or roles?* || no || yes (2) ||
