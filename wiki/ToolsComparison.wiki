@@ -46,7 +46,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *i18n?* || date format || only US ||
 || IE || 6+ || ||
 || Firefox || 1.5+ || ||
-|| Safari || OK || ||
+|| Safari || yes || ||
 || Chrome || no || ||
 || Opera || no || ||
 || *Other features* || || ||
