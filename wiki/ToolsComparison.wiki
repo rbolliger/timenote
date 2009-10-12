@@ -13,7 +13,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 
 || *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] ||
 ||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] ||
-|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  ongoing] ||
+|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] ||
 ||  *General impression* || 6 simple effective || 6 complete ||
 ||  *Ergonomics, usability* || 8 good || 5 average||
 ||  *Graphics* || 8 good || 6 average||
