@@ -14,13 +14,14 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] ||
 ||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] ||
 || *Internal review?* || [slimtimerreview  yes] || [clockspotreview  ongoing] ||
-||  *General impression* || 6 simple effective ||
-||  *Ergonomics, usability* || 8 good ||
-||  *Graphics* || 8 good ||
-||  *# Users* || yes ||
-||  *# Projects (root)* || yes ||
-||  *# Sub-projects* || no ||
-||  *Price* || free ||
+||  *General impression* || 6 simple effective || 6 complete ||
+||  *Ergonomics, usability* || 8 good || 5 average||
+||  *Graphics* || 8 good || 6 average||
+||  *# Users* || yes || yes ||
+||  *# Users Types* || 1 || 2 ||
+||  *# Projects (root)* || yes || yes ||
+||  *# Sub-projects* || no || yes || 
+||  *Price* || free || 18+$/month ||
 ||  *Has categories?* || no ||
 ||  *Has user hierarchies or roles?* || no ||
 ||  *Users or managers oriented?* || no ||
