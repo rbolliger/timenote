@@ -14,6 +14,6 @@
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
     * [http://code.google.com/p/timenote/wiki/Resource Resource]
     * [ToolsComparison Tools comparison]
-      * [http://www.slimtimer.com   SlimTimer]
+      * [sleeptimerreview   SlimTimer]
     * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
     * [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
