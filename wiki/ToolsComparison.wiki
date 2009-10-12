@@ -14,9 +14,9 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Name* || slimtimer  ||
 ||  *Url* || [http://www.slimtimer.com   slimtimer] ||
 || *Internal review?* || [slimtimerreview  yes] ||
-||  *General impression* || simple effective ||
-||  *Ergonomics, usability* || good ||
-||  *Graphics* || good ||
+||  *General impression* || 6 simple effective ||
+||  *Ergonomics, usability* || 8 good ||
+||  *Graphics* || 8 good ||
 ||  *# Users* || yes ||
 ||  *# Projects (root)* || yes ||
 ||  *# Sub-projects* || no ||
