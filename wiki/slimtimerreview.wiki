@@ -50,4 +50,5 @@ Basic features
 == Rating ==
 
 ease of use  8/10
+
 features  4/10
