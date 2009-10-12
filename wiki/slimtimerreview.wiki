@@ -4,7 +4,7 @@
 
 = Introduction =
 
-Review of [http://www.slimtimer.com   SlimTimer] application (free content). Basic application that allow task creation and timing on those tasks.
+Review of [http://www.slimtimer.com   SlimTimer] application (free content). Basic application that allow task creation, sharing and their time recording.
 
 
 
