@@ -51,7 +51,7 @@ An internal message system can be used to contact all the users.
 
 I found hard to know what was the difference between a task, a timer and a jobcode.
 
-It is possible to start or stop a timer by phone.
+It is possible to start, stop a timer and leave a message by phone.
 
 
 
