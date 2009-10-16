@@ -26,13 +26,28 @@ Browser: Firefox 3.5.3, IE 8
 The free trial registration is a painless 6 fields form with a confirmation code sent to your e-mail.
 
 There are 3 kind of users:
-- the main administrator
+- the administrator
 - the users
 - the limited users
 
 The pricing for this utility is 5€ per user per month
 
 The graphics are simple and clear, but personally I don't feel the design too appealing. I also find the difference between the *whites* colors of the main area and the background to small.
+
+A particular feature is the undo button that gives you the possibility to cancel your last action.
+
+The webpages are available in English and German and US Dollar and many European currency are at disposal.
+
+Integration with Twitter and Jabber is possible.
+
+
+
+=== Administrator ===
+
+The administrator has the
+
+
+backup
 
 
 == What's good ==
