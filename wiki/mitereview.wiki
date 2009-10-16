@@ -63,6 +63,7 @@ The "user" as all the rights of the "administrator" account except the ones link
 
 === Limited user ===
 
+Limited Users can only access a defined set of projects and can't access other users working times.
 
 
 
