@@ -82,10 +82,10 @@ no schedule, no absences
 
 == Rating ==
 
-ease of use 8
+ease of use 7
 
-features 6
+features 7
 
-graphics 6
+graphics 5
 
-general impression 7
+general impression 6
