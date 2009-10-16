@@ -23,6 +23,15 @@ Browser: Firefox 3.5.3, IE 8
 
 == Details ==
 
+The free trial registration is a painless 6 fields form with a confirmation code sent to your e-mail.
+
+There are 3 kind of users:
+- the main administrator
+- the users
+- the limited users
+
+The pricing for this utility is 5€ per user per month
+
 
 
 
