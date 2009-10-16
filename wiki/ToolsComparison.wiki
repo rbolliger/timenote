@@ -52,7 +52,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 || date format || yes || US || N/A ||
 || Time zone || yes || yes || yes ||
 || IE || 6+ || ? || ? ||
-|| Firefox || 1.5+ || ? || ? ||
+|| Firefox || 1.5+ || 3.5.3 || 3.5.3 ||
 || Safari || yes || ? || ? ||
 || Chrome || no || ? || ? ||
 || Opera || no || ? || ? ||
