@@ -53,17 +53,18 @@ The "administrator" can than select a project and/or a service and clock the tim
 
 Is possible to backup all the data in XML or YAML/JSON format anytime.
 
+All sort of report can be displayed for users, projects and services. 
 
 
 === User ===
 
-The "user" as all the rights of the "administrator" account except the ones linked at the user  management. They also can't access pay information of other users.
+The "user" as all the rights of the "administrator" account except the ones linked at the user  management. They also can't access payments details of the "administrator".
 
 
 
 === Limited user ===
 
-Limited Users can only access a defined set of projects and can't access other users working times.
+Limited Users can only access a defined set of projects to clock their work time. THey also can only have reports of their working times
 
 
 
