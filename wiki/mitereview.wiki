@@ -32,7 +32,7 @@ There are 3 kind of users:
 
 The pricing for this utility is 5€ per user per month
 
-
+The graphics are simple and clear, but personally I don't feel the design too appealing. I also find the difference between the *whites* colors of the main area and the background to small.
 
 
 == What's good ==
