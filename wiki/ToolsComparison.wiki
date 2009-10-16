@@ -16,39 +16,44 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
 ||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
 || *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] || [mitereview  yes] ||
-||  *General impression* || 6 simple effective || 6 complete || simple ||
+||  *General impression* || 6 simple effective || 6 complete || 6 simple ||
 ||  *Ergonomics, usability* || 8 good || 5 average|| 7 good ||
 ||  *Graphics* || 8 good || 6 average|| 5 average ||
 ||  *Number of Users* || yes || yes || yes ||
 ||  *Number of Projects (root)* || yes || yes || yes ||
 ||  *Number of Sub-projects* || no || yes || no ||
 ||  *Price* || free || 18+$/month || 5€/user/month ||
-||  *Has categories?* || no || yes ||
-||  *Has user hierarchies or roles?* || no || yes (2) ||
-||  *Users or managers oriented?* || users || both ||
-||  *Timetracker or profit calculator?* || tt || pc ||
-|| *Has user work planning features?* || no || yes ||
-|| *Handles legal holidays?* || no || manual ||
-|| *Handles legal absences (wedding,...)?* || no || yes ||
-|| *Supports user graphical themes?* || no || yes ||
-|| *Has reports?* || yes  || yes ||
-|| *   - User reports* || yes || yes ||
-|| *   - Project reports* || yes || yes ||
-|| *   - Category reports* || no || no ||
-|| *   - Other reports* || yes (tags) || ||
+||  *Has categories?* || no || yes || no ||
+||  *Has customers?* || no || no || yes ||
+||  *Has user hierarchies or roles?* || no || yes (2) || yes (3) ||
+||  *Users or managers oriented?* || users || both || both ||
+||  *Timetracker or profit calculator?* || tt || both || both ||
+|| *Has user work planning features?* || no || no || no ||
+|| *Handles legal holidays?* || no || manual || no ||
+|| *Handles legal absences (wedding,...)?* || no || yes || no ||
+|| *Supports user graphical themes?* || no || yes || no ||
+|| *Has reports?* || yes  || yes || yes ||
+|| *   - User reports* || yes || yes || yes ||
+|| *   - Project reports* || yes || yes || yes ||
+|| *   - Category reports* || no || no || no ||
+|| *   - Other reports* || tags || || ||
 || *Can data be exported?* || yes || yes ||
-|| *   - Rss, Atom,...* || || ||
-|| *   - Pdf, html,...* || || ||
-|| *   - Raw, csv, excel, xml, ...* || cvs || ||
-|| *   - Printer* || yes || yes ||
-|| *Has widgets, desktop tools,...?* || yes || no ||
-|| *Has APIs?* || yes || no ||
-|| *Communicates with other tools (g. calendar, facebook,...)?* || no || no ||
-|| *Which professional categories addresses?* || small groups/single || sme ||
-|| *i18n?* || date format || only US ||
-|| IE || 6+ || ? ||
-|| Firefox || 1.5+ || ? ||
-|| Safari || yes || ? ||
-|| Chrome || no || ? ||
-|| Opera || no || ? ||
-|| *Other features* || || ||
+|| *   - Rss, Atom,...* || || || ||
+|| *   - Pdf, html,...* || || || ||
+|| *   - Raw, csv, excel, xml, ...* || cvs || xml,yaml ||
+|| *   - Printer* || yes || yes || yes ||
+|| *Has widgets, desktop tools,...?* || yes || no || no ||
+|| *Has APIs?* || yes || no || yes ||
+|| *Communicates with other tools (g. calendar, facebook,...)?* || no || no || fb, jabber ||
+|| *Which professional categories addresses?* || small groups/single || sme || sme ||
+|| *i18n?* ||  ||  ||  ||
+|| Language || EN || EN || EN/DE ||
+|| Currency || - || $ || many ||
+|| date format || yes || US || N/A ||
+|| Time zone || yes || yes || yes ||
+|| IE || 6+ || ? || ? ||
+|| Firefox || 1.5+ || ? || ? ||
+|| Safari || yes || ? || ? ||
+|| Chrome || no || ? || ? ||
+|| Opera || no || ? || ? ||
+|| *Other features* || || || Undo ||
