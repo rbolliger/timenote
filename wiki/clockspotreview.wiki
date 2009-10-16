@@ -7,7 +7,7 @@
 
 == Introduction ==
 
-Review of [http://www.clockspot.net/   ClockSpot] application (demo). 
+Review of [http://www.clockspot.net/   ClockSpot] application (demo). Well featured utility for the management of an enterprise employees working times, payrolls, project times and absences count.
 
 
 
