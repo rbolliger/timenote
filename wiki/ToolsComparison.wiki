@@ -5,7 +5,9 @@
 
 This is a comparison of several internet-based time tracking tools. Following tools are compared:
 
-  * [http://www.example.com  example]
+  * [http://www.slimtimer.com   SlimTimer]
+  * [http://www.clockspot.net/   ClockSpot]
+  * [http://mite.yo.lk/en/   Mite]
 
 
 = Comparative table =
@@ -13,14 +15,14 @@ This is a comparison of several internet-based time tracking tools. Following to
 
 || *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
 ||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
-|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] || [mitereview  ongoing] ||
-||  *General impression* || 6 simple effective || 6 complete ||
-||  *Ergonomics, usability* || 8 good || 5 average||
-||  *Graphics* || 8 good || 6 average||
-||  *Number of Users* || yes || yes ||
-||  *Number of Projects (root)* || yes || yes ||
-||  *Number of Sub-projects* || no || yes || 
-||  *Price* || free || 18+$/month ||
+|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] || [mitereview  yes] ||
+||  *General impression* || 6 simple effective || 6 complete || simple ||
+||  *Ergonomics, usability* || 8 good || 5 average|| 7 good ||
+||  *Graphics* || 8 good || 6 average|| 5 average ||
+||  *Number of Users* || yes || yes || yes ||
+||  *Number of Projects (root)* || yes || yes || yes ||
+||  *Number of Sub-projects* || no || yes || no ||
+||  *Price* || free || 18+$/month || 5/month ||
 ||  *Has categories?* || no || yes ||
 ||  *Has user hierarchies or roles?* || no || yes (2) ||
 ||  *Users or managers oriented?* || users || both ||
