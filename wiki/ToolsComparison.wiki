@@ -51,8 +51,8 @@ This is a comparison of several internet-based time tracking tools. Following to
 || Currency || - || $ || many ||
 || date format || yes || US || N/A ||
 || Time zone || yes || yes || yes ||
-|| IE || 6+ || ? || ? ||
-|| Firefox || 1.5+ || 3.5.3 || 3.5.3 ||
+|| IE || 6+ || 8 test || 8 test ||
+|| Firefox || 1.5+ || 3.5.3 test || 3.5.3 test ||
 || Safari || yes || ? || ? ||
 || Chrome || no || ? || ? ||
 || Opera || no || ? || ? ||
