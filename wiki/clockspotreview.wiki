@@ -23,7 +23,7 @@ Browser: Firefox 3.5.3, IE 8
 
 == Details ==
 
-To write this review I used the [http://demo.clockspot.net  demo] proposed by ClockSpot.
+To write this review I used the [http://demo.clockspot.net/  demo] proposed by ClockSpot.
 
 The graphics are simple and clear, with a double top menu and a side legend (autofit browser size). I personally don't love the icons choosen for this site. The use of the horizontal space could be better.
 
