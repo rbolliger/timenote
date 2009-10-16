@@ -23,10 +23,10 @@ This is a comparison of several internet-based time tracking tools. Following to
 ||  *Price* || free || 18+$/month ||
 ||  *Has categories?* || no || yes ||
 ||  *Has user hierarchies or roles?* || no || yes (2) ||
-||  *Users or managers oriented?* || no || yes ||
-||  *Timetracker or profit calculator?* || no || yes ||
+||  *Users or managers oriented?* || users || both ||
+||  *Timetracker or profit calculator?* || tt || pc ||
 || *Has user work planning features?* || no || yes ||
-|| *Handles legal holidays?* || no || yes ||
+|| *Handles legal holidays?* || no || manual ||
 || *Handles legal absences (wedding,...)?* || no || yes ||
 || *Supports user graphical themes?* || no || yes ||
 || *Has reports?* || yes  || yes ||
@@ -44,9 +44,9 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *Communicates with other tools (g. calendar, facebook,...)?* || no || no ||
 || *Which professional categories addresses?* || small groups/single || sme ||
 || *i18n?* || date format || only US ||
-|| IE || 6+ || ||
-|| Firefox || 1.5+ || ||
-|| Safari || yes || ||
-|| Chrome || no || ||
-|| Opera || no || ||
+|| IE || 6+ || ? ||
+|| Firefox || 1.5+ || ? ||
+|| Safari || yes || ? ||
+|| Chrome || no || ? ||
+|| Opera || no || ? ||
 || *Other features* || || ||
