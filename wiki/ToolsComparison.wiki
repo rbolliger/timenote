@@ -22,7 +22,7 @@ This is a comparison of several internet-based time tracking tools. Following to
 ||  *Number of Users* || yes || yes || yes ||
 ||  *Number of Projects (root)* || yes || yes || yes ||
 ||  *Number of Sub-projects* || no || yes || no ||
-||  *Price* || free || 18+$/month || 5/month ||
+||  *Price* || free || 18+$/month || 5€/user/month ||
 ||  *Has categories?* || no || yes ||
 ||  *Has user hierarchies or roles?* || no || yes (2) ||
 ||  *Users or managers oriented?* || users || both ||
