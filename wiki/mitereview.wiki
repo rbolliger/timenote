@@ -64,28 +64,28 @@ The "user" as all the rights of the "administrator" account except the ones link
 
 === Limited user ===
 
-Limited Users can only access a defined set of projects to clock their work time. THey also can only have reports of their working times
+Limited Users can only access a defined set of projects to clock their work time. they also can only have reports of their working times
 
 
 
 == What's good ==
 
-
+API, 3rd party integration, simple
 
 
 
 == What's bad ==
 
-
+no schedule, no absences
 
 
 
 == Rating ==
 
-ease of use 
+ease of use 8
 
-features 
+features 6
 
-graphics 
+graphics 6
 
-general impression 
+general impression 7
