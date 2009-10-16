@@ -16,5 +16,6 @@
     * [ToolsComparison Tools comparison]
       * [slimtimerreview   SlimTimer]
       * [clockspotreview   ClockSpot]
+      * [mitereview   Mite]
     * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
     * [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
