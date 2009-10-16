@@ -20,6 +20,10 @@
 
 = Routing =
 
+= ORM = 
+
+[http://www.doctrine-project.org Doctrine] supports database [http://www.doctrine-project.org/documentation/manual/1_1/en/component-overview#views views]
+
 
 = Nested sets trees management = 
 [CascadingProjectProperties Cascading Project Properties]: propel requests
