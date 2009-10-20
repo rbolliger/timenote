@@ -33,7 +33,8 @@ You can access statistics of your daily effort on the projects (feed available) 
 
 There is the possibility to use an API and to integrate a timer in your firefox/safari/explorer browser (still in beta).
 
-The graphic make use of all possible colors, use 2 top menus and one side menu. The site has a simple style, that don't fit to the page
+The graphic makes use of all possible colors, uses 2 top menus and one side menu. The page don't follow the browser size and waste a lot of space in wide screens. The possibility to hide unused parts of the interface can be useful
+
 
 == What's good ==
 
