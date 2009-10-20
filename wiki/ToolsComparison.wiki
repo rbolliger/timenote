@@ -37,10 +37,10 @@ This is a comparison of several internet-based time tracking tools. Following to
 || *   - Project reports* || yes || yes || yes ||
 || *   - Category reports* || no || no || no ||
 || *   - Other reports* || tags || || ||
-|| *Can data be exported?* || yes || yes ||
+|| *Can data be exported?* || yes || yes || yes ||
 || *   - Rss, Atom,...* || || || ||
 || *   - Pdf, html,...* || || || ||
-|| *   - Raw, csv, excel, xml, ...* || cvs || xml,yaml ||
+|| *   - Raw, csv, excel, xml, ...* || cvs || xml,yaml || ||
 || *   - Printer* || yes || yes || yes ||
 || *Has widgets, desktop tools,...?* || yes || no || no ||
 || *Has APIs?* || yes || no || yes ||
