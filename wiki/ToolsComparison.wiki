@@ -8,21 +8,21 @@ This is a comparison of several internet-based time tracking tools. Following to
   * [http://www.slimtimer.com   SlimTimer]
   * [http://www.clockspot.net/   ClockSpot]
   * [http://mite.yo.lk/en/   Mite]
-
+  * [http://letsfreckle.com/   Freckle]
 
 = Comparative table =
 
 
-|| *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
-||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] ||
-|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] || [mitereview  yes] ||
+|| *Name* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] || [http://letsfreckle.com/   Freckle] ||
+||  *Url* || [http://www.slimtimer.com   SlimTimer] || [http://www.clockspot.net/   ClockSpot] || [http://mite.yo.lk/en/   Mite] || [http://letsfreckle.com/   Freckle] ||
+|| *Internal review?* || [slimtimerreview  yes] || [clockspotreview  yes] || [mitereview  yes] || [frecklereview  ongoing] ||
 ||  *General impression* || 6 simple effective || 6 complete || 6 simple ||
 ||  *Ergonomics, usability* || 8 good || 5 average|| 7 good ||
 ||  *Graphics* || 8 good || 6 average|| 5 average ||
 ||  *Number of Users* || yes || yes || yes ||
 ||  *Number of Projects (root)* || yes || yes || yes ||
 ||  *Number of Sub-projects* || no || yes || no ||
-||  *Price* || free || 18+$/month || 5€/user/month ||
+||  *Price* || free || 10+3-5$/user/month || 5€/user/month ||
 ||  *Has categories?* || no || yes || no ||
 ||  *Has customers?* || no || no || yes ||
 ||  *Has user hierarchies or roles?* || no || yes (2) || yes (3) ||
