@@ -33,27 +33,27 @@ You can access statistics of your daily effort on the projects (feed available) 
 
 There is the possibility to use an API and to integrate a timer in your firefox/safari/explorer browser (still in beta).
 
-The graphic makes use of all possible colors, uses 2 top menus and one side menu. The page don't follow the browser size and waste a lot of space in wide screens. The possibility to hide unused parts of the interface can be useful
+The graphic makes use of all possible colors, uses 2 top menus and one side menu. The page don't follow the browser size and waste a lot of space in wide screens. The possibility to hide unused parts of the interface can be useful and a good use of js.
 
 
 == What's good ==
 
-
+API
 
 
 
 == What's bad ==
 
-
+registration, price, plans, components still in beta
 
 
 
 == Rating ==
 
-ease of use 
+ease of use 6
 
-features 
+features 4
 
-graphics 
+graphics 4
 
-general impression 
+general impression 5
