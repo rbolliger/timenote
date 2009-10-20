@@ -52,8 +52,8 @@ registration, price, plans, components still in beta
 
 ease of use 6
 
-features 4
+features 3
 
-graphics 4
+graphics 5
 
 general impression 5
