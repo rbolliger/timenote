@@ -7,7 +7,7 @@
 
 == Introduction ==
 
-Review of [http://letsfreckle.com/   Freckle] application (30 days free trial). (...)
+Review of [http://letsfreckle.com/   Freckle] application (1 account 1 project free plan). (...)
 
 
 
@@ -23,7 +23,7 @@ Browser: Firefox 3.5.3, IE 8
 
 == Details ==
 
-
+I start the registration for the free trial, the first step ask me what plan I want to sign for. Mainly the difference is in the maximum number of accounts allowed and SSL activation. I personally don't like to have to do this choice at this stage. In the end I'm forced to choose the free account with 1 user 1 project, because I don't feel like giving my CC information for a trial. Here end my 10 min registration (they claim 60 sec enough).
 
 
 
