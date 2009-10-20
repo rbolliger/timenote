@@ -17,5 +17,6 @@
       * [slimtimerreview   SlimTimer]
       * [clockspotreview   ClockSpot]
       * [mitereview   Mite]
+      * [frecklereview   Freckle]
     * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
     * [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
