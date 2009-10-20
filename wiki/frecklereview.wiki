@@ -33,7 +33,7 @@ Statistics on users daily efforts in the projects (feed available), and on the p
 
 There is the possibility to use an API and to integrate a timer in your firefox/safari/iexplorer browser (still in beta).
 
-The graphic makes use of all possible colors, uses 2 top menus and one side menu. The page don't follow the browser size and waste a lot of space in wide screens. The possibility to hide unused parts of the interface can be useful and a good use of js.
+The graphic makes use of all possible colors, uses 2 top menus and one side menu. The page don't follow the browser size and waste a lot of space in wide screens. The possibility to hide unused parts of the interface can be useful and a good use of js. The page load time seems a bit long but still not disturbing.
 
 The price goes from 12$ for the one person plan to 98$ for the 50 persons plan.
 
