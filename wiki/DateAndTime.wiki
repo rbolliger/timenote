@@ -11,6 +11,6 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
  * [http://www.php.net/manual/en/function.date-sunrise.php date_sunrise()] and [http://www.php.net/manual/en/function.date-sunset.php date_sunset()]
 
 = Symfony =
-  * Discussion about usage of timezones [http://groups.google.com/group/symfony-users/browse_thread/thread/e00be755e772c9df here]
+  * Discussion about usage of timezones [http://groups.google.com/group/symfony-users/browse_thread/thread/e00be755e772c9df here] and continued [http://groups.google.com/group/symfony-users/browse_thread/thread/9e73abae893f2aa2 here]
 
 = MySQL =
