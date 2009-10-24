@@ -24,4 +24,5 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
 
 = PHP and MySQL = 
 
-[http://jokke.dk/blog/2007/07/timezones_in_mysql_and_php This] is a tutorial explaining how to handle timezones between PHP and MySQL. Read also the comments.
+  * [http://jokke.dk/blog/2007/07/timezones_in_mysql_and_php This] is a tutorial explaining how to handle timezones between PHP and MySQL. Read also the comments.
+  * [http://www.sjhannah.com/blog/?p=113 This] is a possible solution to handle timezones
