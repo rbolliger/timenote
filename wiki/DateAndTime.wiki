@@ -12,7 +12,7 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
  * [http://ch2.php.net/manual/en/class.datetimezone.php PHP timezones handlings]
  * PEAR [http://pear.php.net/manual/en/package.datetime.date.php Date.php]: examples using the extension [http://pear.php.net/manual/en/package.datetime.date.examples.php  here] and [http://www.builderau.com.au/program/php/soa/Get-the-correct-time-by-converting-between-time-zones-with-PHP-and-PEAR/0,339028448,339273806,00.htm# here]
  * Zend Framework
-   * [http://framework.zend.com/manual/en/zend.date.html Zend_Date] for date manipulation
+   * [http://framework.zend.com/manual/en/zend.date.html Zend_Date] for date manipulation. [http://www.wowww.ch/index.php?post/2008/12/25/Zend-Framework-Zend-Date-performance-et-contre-performance Comments on Zend_date()]
    * [http://framework.zend.com/manual/en/zend.locale.html Zend_Locale] for conversion between locales. Dates and times manipulations [http://framework.zend.com/manual/en/zend.locale.date.datesandtimes.html here]
 = Symfony =
   * Discussion about usage of timezones [http://groups.google.com/group/symfony-users/browse_thread/thread/e00be755e772c9df here] and continued [http://groups.google.com/group/symfony-users/browse_thread/thread/9e73abae893f2aa2 here]
@@ -23,7 +23,7 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
 
   * [http://dev.mysql.com/doc/refman/5.0/en/time-zone-support.html MySQL timezone support] and [http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html Date and Time functions]
   * [http://stackoverflow.com/questions/1003171/why-not-use-mysqls-timestamp-across-the-board Here] other storage formats than timestamp are suggested.
-  * Be carful when using UNIX_TIMESTAMP() MySQL function [http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_unix-timestamp]
+  * Be carful when using [http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_unix-timestamp UNIX_TIMESTAMP()] MySQL function
 
 = PHP and MySQL = 
 
