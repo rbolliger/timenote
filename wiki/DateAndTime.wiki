@@ -1,9 +1,11 @@
 #summary wiki page for all date and time related questions and resources
 
 = Date and Time =
+
 Date and Time related problematic. How to deal with user's timezone (localization)? How not to be forced to use server timestamp? NNTP Server?
 
 = PHP =
+
 Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Related Extensions]. 
  * [http://www.php.net/manual/en/timezones.php List of Supported Timezones]
  * latest version of the [http://www.php.net/manual/en/timezones.php timezonedb] (via PECL's)
@@ -29,3 +31,6 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
 
   * [http://jokke.dk/blog/2007/07/timezones_in_mysql_and_php This] is a tutorial explaining how to handle timezones between PHP and MySQL. Read also the comments.
   * [http://www.sjhannah.com/blog/?p=113 This] and [http://www.ultramegatech.com/blog/2009/04/working-with-time-zones-in-php this] are possible solution to handle timezones
+
+= Miscellaneous =
+  * [http://en.wikipedia.org/wiki/Year_2038_problem Unix Millennium bug, Y2K38]
