@@ -11,7 +11,9 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
  * [http://www.php.net/manual/en/function.date-sunrise.php date_sunrise()] and [http://www.php.net/manual/en/function.date-sunset.php date_sunset()]
  * [http://ch2.php.net/manual/en/class.datetimezone.php PHP timezones handlings]
  * PEAR [http://pear.php.net/manual/en/package.datetime.date.php Date.php]: examples using the extension [http://pear.php.net/manual/en/package.datetime.date.examples.php  here] and [http://www.builderau.com.au/program/php/soa/Get-the-correct-time-by-converting-between-time-zones-with-PHP-and-PEAR/0,339028448,339273806,00.htm# here]
-
+ * Zend Framework
+   * [http://framework.zend.com/manual/en/zend.date.html Zend_Date] for date manipulation
+   * [http://framework.zend.com/manual/en/zend.locale.html Zend_Locale] for conversion between locales. Dates and times manimulations [http://framework.zend.com/manual/en/zend.locale.date.datesandtimes.html here]
 = Symfony =
   * Discussion about usage of timezones [http://groups.google.com/group/symfony-users/browse_thread/thread/e00be755e772c9df here] and continued [http://groups.google.com/group/symfony-users/browse_thread/thread/9e73abae893f2aa2 here]
 
