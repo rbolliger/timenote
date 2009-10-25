@@ -21,8 +21,9 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
 
 = MySQL =
 
-  * [http://dev.mysql.com/doc/refman/5.0/en/time-zone-support.html MySQL timezone support]
+  * [http://dev.mysql.com/doc/refman/5.0/en/time-zone-support.html MySQL timezone support] and [http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html Date and Time functions]
   * [http://stackoverflow.com/questions/1003171/why-not-use-mysqls-timestamp-across-the-board Here] other storage formats than timestamp are suggested.
+  * Be carful when using UNIX_TIMESTAMP() MySQL function [http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_unix-timestamp]
 
 = PHP and MySQL = 
 
