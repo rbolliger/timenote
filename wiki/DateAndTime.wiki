@@ -9,7 +9,7 @@ Date and Time related problematic. How to deal with user's timezone (localizatio
 Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Related Extensions]. 
  * [http://www.php.net/manual/en/timezones.php List of Supported Timezones]
  * latest version of the [http://www.php.net/manual/en/timezones.php timezonedb] (via PECL's)
- * *[http://ch2.php.net/manual/en/ref.datetime.php PHP Date/Time Functions]*
+ * *[http://www.php.net/manual/en/book.datetime.php PHP Date/Time Functions]*
  * [http://www.php.net/manual/en/function.date-sunrise.php date_sunrise()] and [http://www.php.net/manual/en/function.date-sunset.php date_sunset()]
  * [http://ch2.php.net/manual/en/class.datetimezone.php PHP timezones handlings]
  * PEAR [http://pear.php.net/manual/en/package.datetime.date.php Date.php]: examples using the extension [http://pear.php.net/manual/en/package.datetime.date.examples.php  here] and [http://www.builderau.com.au/program/php/soa/Get-the-correct-time-by-converting-between-time-zones-with-PHP-and-PEAR/0,339028448,339273806,00.htm# here]
