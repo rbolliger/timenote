@@ -36,3 +36,4 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
   * [http://en.wikipedia.org/wiki/Year_2038_problem Unix Millennium bug, Y2K38]
   * [http://tools.ietf.org/html/rfc3339 RFC 3339]
   * [http://www.w3.org/TR/NOTE-datetime W3C specification & RFC 3339 IETF Internet standard]
+  * [http://www.exit109.com/~ghealton/y2k/yrexamples.html The Best of Dates, The Worst Of Dates]
