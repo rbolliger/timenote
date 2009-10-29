@@ -2,7 +2,7 @@
 
 <iframe src="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-<wiki:gadget url="Q&output=html&widget=true" height="200" border="0" /> 
+<wiki:gadget url="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true" height="200" border="0" /> 
 
 http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html
 
@@ -10,11 +10,11 @@ http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="Gadget Form Example" />
-  <Content type="url" href="Q&output=html&widget=true" />
+  <Content type="url" href="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true" />
 </Module>
 
 
-<wiki:gadget url="Q&output=html&widget=true" width="540" height="400" />
+<wiki:gadget url="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true" width="540" height="400" />
 
 
 <iframe width='500' height='' frameborder='0'src='http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true'></iframe>
