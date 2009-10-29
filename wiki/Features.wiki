@@ -1,16 +1,6 @@
 #summary Lists of project features
 
-_en cours de réalisaiton_
+<iframe src="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-== Fonctionalités ==
-=== Frontend ====
-  * Authentification
-  * Saisie simple des heures (début, fin, projet, type)
-  * Recherche -> export basic
-  * Contact (bug, feedback, ...)
-=== Backend ====
-  * Authentification
-  * Gestion utilisateurs
-  * Gestion projets
-  * Gestion types
-  * Gestion des jours fériés
+
+
