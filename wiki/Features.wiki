@@ -10,8 +10,11 @@ http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
   <ModulePrefs title="Gadget Form Example" />
-  <Content type="url" href="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" />
+  <Content type="url" href="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" />
 </Module>
 
 
-<wiki:gadget url="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" width="540" height="400" />
+<wiki:gadget url="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" width="540" height="400" />
+
+
+<iframe width='500' height='' frameborder='0'src='http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true'></iframe>
