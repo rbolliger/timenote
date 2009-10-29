@@ -2,5 +2,16 @@
 
 <iframe src="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
+<wiki:gadget url="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" height="200" border="0" /> 
+
+http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html
 
 
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Module>
+  <ModulePrefs title="Gadget Form Example" />
+  <Content type="url" href="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" />
+</Module>
+
+
+<wiki:gadget url="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ" width="540" height="400" />
