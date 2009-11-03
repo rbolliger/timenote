@@ -46,7 +46,7 @@ API, timer, js
 
 == What's bad ==
 
-registration, price for few accounts, limit to 50 accounts, plans, components still in beta
+registration, price for few accounts, limit to 50 accounts, plans, components still in beta, CC required for trial
 
 
 
