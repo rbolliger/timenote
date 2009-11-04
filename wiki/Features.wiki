@@ -1,5 +1,7 @@
 #summary Lists of project features
 
+<iframe width='500' height='300' frameborder='0' src='http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true'></iframe>
+
 <iframe src="http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html" width="310" height="566" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 <wiki:gadget url="http://spreadsheets.google.com/ccc?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html&widget=true" height="200" border="0" /> 
