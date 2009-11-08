@@ -9,7 +9,6 @@
       * [http://code.google.com/p/timenote/wiki/TableProject  Project Table]
       * [http://code.google.com/p/timenote/wiki/TableHour  Hour Table]
       * [http://code.google.com/p/timenote/wiki/UserTimeline User timeline]
-    * [http://code.google.com/p/timenote/wiki/Features Features]
     * [http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html Features on Google Docs]
     * [http://code.google.com/p/timenote/wiki/Ideas Ideas]
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
