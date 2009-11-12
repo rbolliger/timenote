@@ -15,8 +15,7 @@ sf_guard_password:
 # default rules
 homepage:
   url:   /
-  param: { module: capture, action: main }
-  #param: { module: default, action: index }
+  param: { module: default, action: index }
 
 default_index:
   url:   /:module
