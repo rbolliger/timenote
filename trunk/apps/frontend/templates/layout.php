@@ -3,7 +3,6 @@
   <head>
     <title>timenote - time's capture</title>
     <link rel="shortcut icon" href="/favicon.ico" />
-
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
   </head>
@@ -13,11 +12,11 @@
       <h1>
         <a href="<?php echo url_for('capture/main') ?>">
           <img src="/images/logo.jpg" alt="timenote capture board" />
-        
-        <span class="sous-titre">
-          <strong>timenote:</strong>
-          worker's time capture
-        </span></a>
+          <span class="subtitle">
+            worker's time capture
+          </span>
+        </a>
+
       </h1>
 
     </div>
