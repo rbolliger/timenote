@@ -42,15 +42,17 @@
   float: left;
 }
 .sideblock{
-  border-bottom: 1px solid #aaa;
-  width: 200px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 5px;
+  width: 190px;
   margin-bottom: 5px;
-  height: 100px;
+  height: 90px;
 }
 #menu{
-  padding: 2px;
+  /*padding: 2px;
   padding-left: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 2px;*/
   border-bottom: 1px solid #aaa;
   background-color: #fff;
 }
