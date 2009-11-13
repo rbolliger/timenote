@@ -27,9 +27,37 @@ while [ "$retoura" = "X" ]; do
 echo -n "- run svn up ? [y/n] " 
 read response
 case "$response" in
-y*| Y* | o* | O* ) 
-echo "... updating your timenote local copy with the repository"
-svn up
+y*| Y* | o* | O* )
+
+
+    retouraa=X
+    while [ "$retouraa" = "X" ]; do
+    echo -n "- with externals ? [y/n] " 
+    read response
+    case "$response" in
+    y*| Y* | o* | O* )
+    echo "... updating your timenote local copy with the repository with externals"
+    svn up
+    retouraa=0
+    ;;
+    [nN]* )
+    echo "... updating your timenote local copy with the repository without externals"
+    svn up --ignore-externals
+    retouraa=1
+    ;;
+    "?"* )
+    echo "launch svn up in here with or without externals"
+    ;;
+    * )
+    echo "Error : press [y]es ou [n]o."
+    ;;
+    esac
+    echo 
+    done
+
+
+#echo "... updating your timenote local copy with the repository"
+#svn up
 retoura=0
 ;;
 [nN]* )
@@ -46,6 +74,7 @@ esac
 echo 
 done
 ##exit $retoura
+
 
 ##
 # TESTING DIRECTORY CHMODAGE
