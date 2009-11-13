@@ -1,0 +1,76 @@
+<html>
+	<head><title>timer</title></head>
+<script type="text/javascript">
+// start Time in to milliseconds.
+
+var a=0
+var x
+function startCount()
+{
+		document.getElementById('txt').value=a
+		a=a+1
+		x=setTimeout("startCount()",(1/1000));
+}
+
+function stopCount()
+{
+		clearTimeout(x)
+}
+
+// start Time in seconds .
+
+var b=0
+var y
+function startCount1()
+{
+		document.getElementById('Text1').value=b
+		b=b+1
+		y=setTimeout("startCount1()",1000);
+}
+
+function stopCount1()
+{
+		clearTimeout(y)
+}
+</script>
+	
+	<body>
+	Found on http://www.dotnetheaven.com/UploadFile/prathore/TimeCount01152009065122AM/TimeCount.aspx.<br/>
+	See http://www.w3schools.com/js/js_timing.asp and exemples.<br/>
+    <form>
+        <table width="500" cellpadding="4" cellspacing="10" style="border-right: #C1C1C1 1px solid; border-top: #C1C1C1 1px solid; border-bottom: #C1C1C1 1px solid; border-left: #C1C1C1 1px solid;">
+            <tr>
+                <td>
+                    <font color="Navy"><b>Time in Milliseconds</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Start time count!" onclick="startCount()">
+                        <input type="text" id="txt">
+                        <input type="button" value="Stop time count!" onclick="stopCount()">
+                        <br />
+                        <font color="gray">Click on 'Start time count' button to time count forever into milliseconds.</font>
+                        <br />
+                        <font color="gray">Click on 'Stop time count' button to stop the counting.</font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                      <font color="navy"><b>Time in seconds</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Start time count!" onclick="startCount1()">
+                    <input type="text" id="Text1">
+                    <input type="button" value="Stop time count!" onclick="stopCount1()">
+<br />
+                    <font color="gray">Click on 'Start time count' button to time count forever into seconds.</font><br />
+                   <font color="gray">Click on 'Stop time count' button to stop the counting.</font>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
