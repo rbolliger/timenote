@@ -1,6 +1,6 @@
 #!/bin/bash
-# $Id:$
-# $Header:$
+# $Id$
+# $Header$
 # /var/www/timenote/timenote
 # timenote bashing for svn/symfony fast manipulation
 # date:		2009-11-13
