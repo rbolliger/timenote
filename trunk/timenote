@@ -1,4 +1,18 @@
 #!/bin/bash
+# $Id:$
+# $Header:$
+# /var/www/timenote/timenote
+# timenote bashing for svn/symfony fast manipulation
+# date:		2009-11-13
+# author: 	nbo
+# version:	v0.2
+# log:
+#  2009-09-18	Created
+#  2009-09-25	Propel build all load choice added
+#  2009-09-26	Directory chmoding
+#  2009-10-09	Propel: build all load OR build all + load data
+#  2009-11-13	SVN externals choice added
+#
 echo " _____________________________________________ "
 echo "|                                             |"
 echo "|           timenote update v0.1              |"
