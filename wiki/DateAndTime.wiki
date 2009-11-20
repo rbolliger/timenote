@@ -60,7 +60,7 @@ YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00) where:
      ss   = two digits of second (00 through 59)
      s    = one or more digits representing a decimal fraction of a second
      TZD  = time zone designator (Z or +hh:mm or -hh:mm)
-)}}}
+}}}
 
 Read
   * [http://tools.ietf.org/html/rfc3339 RFC 3339]
