@@ -16,6 +16,7 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
  * Zend Framework
    * [http://framework.zend.com/manual/en/zend.date.html Zend_Date] for date manipulation. Performance issues discussed [http://www.wowww.ch/index.php?post/2008/12/25/Zend-Framework-Zend-Date-performance-et-contre-performance here] and [http://riotech.blogspot.com/2009/03/zenddate-vs-datetime-performance.html here]
    * [http://framework.zend.com/manual/en/zend.locale.html Zend_Locale] for conversion between locales. Dates and times manipulations [http://framework.zend.com/manual/en/zend.locale.date.datesandtimes.html here]
+
 = Symfony =
   * Discussion about usage of timezones [http://groups.google.com/group/symfony-users/browse_thread/thread/e00be755e772c9df here] and continued [http://groups.google.com/group/symfony-users/browse_thread/thread/9e73abae893f2aa2 here]
 
@@ -37,3 +38,27 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
   * [http://tools.ietf.org/html/rfc3339 RFC 3339]
   * [http://www.w3.org/TR/NOTE-datetime W3C specification & RFC 3339 IETF Internet standard]
   * [http://www.exit109.com/~ghealton/y2k/yrexamples.html The Best of Dates, The Worst Of Dates]
+
+---- 
+
+= Solution =
+
+nbo 2009-11-20: 
+
+I propose the following solution: all date are saved in GMT+0 format in DB. Using the PHP [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] classes and the [http://ch2.php.net/manual/en/function.gmdate.php gmdate], [http://ch2.php.net/manual/en/function.gmmktime.php gmmktime] and [http://ch2.php.net/manual/en/function.gmstrftime.php gmstrftime] will allow us to deal with GMT/UTC but we need to save user's GMT/UTC preference for each entry in database. A way to do that is tu use the W3C: 
+
+Complete date plus hours, minutes and seconds:
+
+YYYY-MM-DDThh:mm:ssTZD (eg 1997-07-16T19:20:30+01:00) where:
+
+{{{
+     YYYY = four-digit year
+     MM   = two-digit month (01=January, etc.)
+     DD   = two-digit day of month (01 through 31)
+     hh   = two digits of hour (00 through 23) (am/pm NOT allowed)
+     mm   = two digits of minute (00 through 59)
+     ss   = two digits of second (00 through 59)
+     s    = one or more digits representing a decimal fraction of a second
+     TZD  = time zone designator (Z or +hh:mm or -hh:mm)
+
+)}}}
