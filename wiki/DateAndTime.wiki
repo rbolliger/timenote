@@ -66,3 +66,7 @@ Read
   * [http://tools.ietf.org/html/rfc3339 RFC 3339]
   * [http://www.w3.org/TR/NOTE-datetime W3C specification & RFC 3339 IETF Internet standard]
 for details. I think RFC 3339 fit all our needs.
+
+rbo 20-nov-2009:
+
+Why not directly [http://ch2.php.net/manual/en/class.datetime.php DateTime] and [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] ? DateTime allows to handle GMT time.
