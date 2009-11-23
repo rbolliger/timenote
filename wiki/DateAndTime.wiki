@@ -70,3 +70,6 @@ for details. I think RFC 3339 fit all our needs.
 rbo 20-nov-2009:
 
 Why not directly [http://ch2.php.net/manual/en/class.datetime.php DateTime] and [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] ? DateTime allows to handle GMT time.
+
+ nbo 2009-11-22:
+ It's PHP date function with [http://ch2.php.net/manual/en/class.datetime.php#datetime.constants.rfc3339 RFC 3339 DateTime Node Types]
