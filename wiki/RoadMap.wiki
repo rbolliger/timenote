@@ -10,11 +10,13 @@ info to read:
 
 = RoadMap =
 == Overview ==
-|| *Version* || *Name* || *Objective* ||
-|| 0.x.x || ? || Provide a simple full-working application ||
-|| 1.x.x || ? || Provide a full-featured application ||
-|| 2.x.x || ? || Provide an extensible full-featured application ||
-|| 3.x.x || ? || Spread the world ||
+|| *Version* || *Name* || *Objective* || *User* || *Project* || *Hours/Entry* || *Details* ||
+|| 0 || ? ||  preliminary research and feasibility study || 	 || 	 || 	 || Discuss and choose well || 
+|| 1 || ? || single user full functional|| unlogged, logged || 	global project trees || User see only his hours || User can register, log, enter hour, manage global tree, export hours || 
+|| 2 || ? || small company|| unlogged, user, manager || global project trees with permissions || 	User see only his hours, manager see all hours || As above, plus manager permissions (who can edit what), manager can see user's hours, Money aspect  || 
+|| 3 || ? || big compagny|| unlogged, user, group manager, manager || 	global project trees complex permissions || User see only his hours, group manager see all group hours, manager see all hours || As above, plus fine manager permissions (group), manager can see group user's hours || 
+|| 4 || ? || multi compagny|| (unlogged, user, group manager, manager) for each company	 || (global project trees complex permissions) for each company	 || As above, many permissions || As above, more company, multi domain, etc... || 
+
 
 == Details ==
 ===0.x.x===
