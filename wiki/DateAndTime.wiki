@@ -73,3 +73,30 @@ Why not directly [http://ch2.php.net/manual/en/class.datetime.php DateTime] and 
 
  nbo 2009-11-22:
  It's PHP date function with [http://ch2.php.net/manual/en/class.datetime.php#datetime.constants.rfc3339 RFC 3339 DateTime Node Types]
+
+
+dbe 10-dec-2009:
+
+I see the solutions, but I don't see why we choose we need such a system.
+Using timezone in mysql, can impact a lot the performances of the application, because most of the databases search use as search parameter the time.
+
+example:
+you have to search all events for a user between 08:15 03-aug-2009 and 12:30 18-aug-2008 GMT+2.
+
+fast solution:
+1. mysql query (simple but gives also false positive (but 05:15 03-aug-2009 GMT-6 is retrieved correctly = 13:15 03-aug-2009 GMT+2)):
+SELECT * FROM events WHERE user_id='15' AND endtime > '2009-08-02 22:15:00' AND starttime < '2009-08-19 00:30:00'
+
+2. php code (clean false positive (09:15 03-aug-2009 GMT+4 should be in list = 07:15 03-aug-2009 GMT+2):
+
+$counter=0;
+foreach ($events as $event) {
+  if ($event->endTimeIsGreatherThan('2009-08-03 08:15:00','GMT+2') && $event->startTimeIsLessThan('2009-08-18 12:30:00','GMT+2')) {
+    $kept_events[$count]=$event;
+    $count++;
+  }
+}
+
+with startTimeIsLessThan() and endTimeIsGreatherThan() methods also recursive for each timezone!
+
+
