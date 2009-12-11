@@ -40,6 +40,9 @@ Globally read [http://www.php.net/manual/en/refs.calendar.php Date and Time Rela
   * [http://www.exit109.com/~ghealton/y2k/yrexamples.html The Best of Dates, The Worst Of Dates]
 
 ---- 
+= Problematics =
+We have to distinguish the storage and the display of the date. The display is made with the user's GMT choice (stored in its preferences) and the date storage should be done with a referential like GMT0 for exemple.
+This solution is good as far as users are always inputing their hours in the same GMT than their preferences. If the user want to input his hours in a work travel in different timezone without make himself the conversion, we have to store the GMT for each entries. 
 
 = Solution =
 
