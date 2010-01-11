@@ -23,7 +23,7 @@ Date and Time related problematic.
    * External/custom (like enterprise time server) (very complex)
 => User prefs: time offset to correct error.
 
-
+Decision: in first revision, choose one of these options, but implement them as "plugins" in order to let to the user the choice of changing them. HOWTO: create an object interface with some basif function calls and then develop objects based on that interface.
 
 ----
 = Others infos =
