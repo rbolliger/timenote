@@ -5,7 +5,7 @@
 Date and Time related problematic. 
    * [DateAndTime#Timezone] Timezone
    * Daylight saving
-   * Datetime provenance (server, client (JS), NNTP, offset)
+   * Datetime provenance (server, client (JS), [http://fr.wikipedia.org/wiki/Network_Time_Protocol NTP], offset)
 
 == Timezone ==
 
@@ -16,7 +16,10 @@ Date and Time related problematic.
 
 
 == Provenance ==
-
+   * Server (date())
+   * Client with JavaScript
+   * NNTP server
+=> User prefs: time offset to correct error.
 
 
 
