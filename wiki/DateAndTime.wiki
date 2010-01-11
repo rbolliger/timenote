@@ -19,6 +19,7 @@ Date and Time related problematic.
    * Server (date())
    * Client with JavaScript
    * [http://fr.wikipedia.org/wiki/Network_Time_Protocol NTP] server
+   * External (like enterprise time server)
 => User prefs: time offset to correct error.
 
 
