@@ -36,6 +36,3 @@
   * http://freelanceswitch.com/productivity/6-cool-tools-to-track-your-time/
   * http://wakoopa.com/
   * http://papermashup.com/jquery-form-highlighting/
-
-  * [http://trac.symfony-project.org/wiki/HowToContributeToSymfony#CodingStandards symofny coding standards]
-  * [http://en.wikipedia.org/wiki/Coding_standards General coding standards]
