@@ -46,6 +46,12 @@ This solution is good as far as users are always inputing their hours in the sam
 
 = Solution =
 
+dbe + nbo + rbo 2010-11-01:
+
+We decided to store the date and time using only 1 timezone (e.g. GMT) in a yet to define format (YYYY-MM-DD hh:mm:ss, unix timestap or personalized version of it). So if a New Yorker store 15:30:22 EST the database will have an entry with 20:20:22 EST ....
+
+
+
 nbo 2009-11-20: 
 
 I propose the following solution: all date are saved in GMT+0 format in DB. Using the PHP [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] classes and the [http://ch2.php.net/manual/en/function.gmdate.php gmdate], [http://ch2.php.net/manual/en/function.gmmktime.php gmmktime] and [http://ch2.php.net/manual/en/function.gmstrftime.php gmstrftime] will allow us to deal with GMT/UTC but we need to save user's GMT/UTC preference for each entry in database. A way to do that is tu use the W3C: 
