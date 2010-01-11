@@ -1,0 +1,13 @@
+#summary Project guidelines to follow strickly!
+
+= Introduction =
+
+This is all stuffs we have to remeber and apply strickly!
+
+
+= Guidelines =
+
+  * All code in english.
+  * Use UTF8 for all (files encoding, database, html...)
+  * No hard text coding - use translator i18n!
+  * Do proper code with comments!
