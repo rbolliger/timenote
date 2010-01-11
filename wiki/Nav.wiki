@@ -1,8 +1,9 @@
 #summary Navigation page
 
   * [http://code.google.com/p/timenote/ Home]
+
   * [http://code.google.com/p/timenote/wiki/ Wiki]
-    * [http://code.google.com/p/timenote/wiki/About About]
+    * [http://code.google.com/p/timenote/wiki/About About] / [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
     * [http://code.google.com/p/timenote/wiki/Architecture Architecture]
       * [http://code.google.com/p/timenote/wiki/CascadingProjectProperties Cascading Project Properties]
       * [http://code.google.com/p/timenote/wiki/DateAndTime Date and Time]
@@ -14,10 +15,12 @@
     * [http://code.google.com/p/timenote/wiki/Ideas Ideas]
     * [http://code.google.com/p/timenote/wiki/Mockup Mockup]
     * [http://code.google.com/p/timenote/wiki/Resource Resource]
+
     * [ToolsComparison Tools comparison]
       * [slimtimerreview   SlimTimer]
       * [clockspotreview   ClockSpot]
       * [mitereview   Mite]
       * [frecklereview   Freckle]
+
+    * [http://code.google.com/p/timenote/wiki/Guidelines Guidelines]
     * [http://code.google.com/p/timenote/wiki/RoadMap RoadMap]
-    * [http://code.google.com/p/timenote/wiki/Screenshots Screenshots]
