@@ -70,6 +70,10 @@ This solution is good as far as users are always inputing their hours in the sam
 
 = Solution =
 
+rbo 2010-11-01:
+
+In fact, we decided to save two dates: local AND utc. From the comaprison of both, we can get all required informations. The user can also set his location with respect to timezones. From this data, we can automatically calclate daylight saving time from TimeZone php classes.
+
 
 dbe + nbo + rbo 2010-11-01:
 
