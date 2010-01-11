@@ -16,10 +16,11 @@ Date and Time related problematic.
 
 
 == Provenance ==
-   * Server (date())
-   * Client with JavaScript
-   * [http://fr.wikipedia.org/wiki/Network_Time_Protocol NTP] server
-   * External/custom (like enterprise time server)
+   * Client with JavaScript (simplest)
+   * Server (date()) (simple but can be erroneous for foreign user)
+   * server/client comparison in JS (normal)
+   * [http://fr.wikipedia.org/wiki/Network_Time_Protocol NTP] server (more complex)
+   * External/custom (like enterprise time server) (very complex)
 => User prefs: time offset to correct error.
 
 
