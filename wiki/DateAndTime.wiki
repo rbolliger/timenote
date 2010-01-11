@@ -73,10 +73,15 @@ This solution is good as far as users are always inputing their hours in the sam
 dbe + nbo + rbo 2010-11-01:
 
 We decided to store the date and time using only 1 timezone (e.g. GMT) in a yet to define format (YYYY-MM-DD hh:mm:ss, unix timestap or personalized version of it). So if a New Yorker store 15:30:22 EST the database will have an entry with 20:20:22 EST.
+
 We though about the daylight saving and we found 3 possibilities:
+
 1. fuck that
+
 2. user choose if the times he enters are with or without it
+
 3. automatic with build in php functions
+
 
 
 
