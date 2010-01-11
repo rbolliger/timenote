@@ -9,6 +9,9 @@ info to read:
 </wiki:comment>
 
 = RoadMap =
+
+A google doc roadmap/feature list [http://spreadsheets.google.com/pub?key=t8SEjJJ-Nc0JuDbL0_zJ7eQ&output=html is available here].
+
 == Overview ==
 || *Version* || *Name* || *Objective* || *User* || *Project* || *Hours/Entry* || *Details* ||
 || 0 || ? ||  preliminary research and feasibility study || 	 || 	 || 	 || Discuss and choose well || 
@@ -29,7 +32,7 @@ copy for a new line:
 </wiki:comment>
 
 
-= Versioning =
+== Versioning ==
 *major*.*minor*.*micro*
 
 The major, minor and micro fields are integer numbers represented in decimal notation and have the following meaning:
