@@ -18,7 +18,7 @@ Date and Time related problematic.
 == Provenance ==
    * Server (date())
    * Client with JavaScript
-   * NNTP server
+   * [http://fr.wikipedia.org/wiki/Network_Time_Protocol NTP] server
 => User prefs: time offset to correct error.
 
 
