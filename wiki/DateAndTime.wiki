@@ -80,7 +80,7 @@ We though about the daylight saving and we found 3 possibilities:
    # user choose if the times he enters are with or without it
    # automatic with build in php functions
 
-
+=> check http://www.anicon.ca/timezone-script.php for a custom code....
 
 
 nbo 2009-11-20: 
