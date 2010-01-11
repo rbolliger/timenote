@@ -2,7 +2,26 @@
 
 = Date and Time =
 
-Date and Time related problematic. How to deal with user's timezone (localization)? How not to be forced to use server timestamp? NNTP Server?
+Date and Time related problematic. 
+   * [#timezone] Timezone
+   * Daylight saving
+   * Datetime provenance (server, client (JS), NNTP, offset)
+
+== Timezone ==
+
+
+
+== Daylight ==
+
+
+
+== Provenance ==
+
+
+
+
+----
+= Others infos =
 
 = PHP =
 
