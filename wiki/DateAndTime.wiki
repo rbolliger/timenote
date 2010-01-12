@@ -69,21 +69,29 @@ We have to distinguish the storage and the display of the date. The display is m
 This solution is good as far as users are always inputing their hours in the same GMT than their preferences. If the user want to input his hours in a work travel in different timezone without make himself the conversion, we have to store the GMT for each entries. 
 
 = Solution =
+dbe 2010-12-01:
+
+Is needed a 3rd table field to store the DSL information and I propose the followings possibilities:
+
+   # DSL true/false
+   # timezone -12/+12 (by using this and the 2 times stored you can extract the DST)
+   # region/country info (by using php build in functions you can recover DST, but affected by exceptions i.e. Israel's Ministry of Interior decide every year if using DST)
+ 
 
 rbo 2010-11-01:
 
-In fact, we decided to save two dates: local AND utc. From the comaprison of both, we can get all required informations. The user can also set his location with respect to timezones. From this data, we can automatically calclate daylight saving time from TimeZone php classes.
+In fact, we decided to save two dates: local AND utc. From the comparison of both, we can get all required informations. The user can also set his location with respect to timezones. From this data, we can automatically calculate daylight saving time from TimeZone php classes.
 
 
 dbe + nbo + rbo 2010-11-01:
 
-We decided to store the date and time using only 1 timezone (e.g. GMT) in a yet to define format (YYYY-MM-DD hh:mm:ss, unix timestap or personalized version of it). So if a New Yorker store 15:30:22 EST the database will have an entry with 20:30:22. In another table field will be stored the timezone information or the user current time in his timezone.
+We decided to store the date and time using only 1 timezone (e.g. GMT) in a yet to define format (YYYY-MM-DD hh:mm:ss, unix timestap or personalized version of it) in a table field. So if a New Yorker store 15:30:22 EST the database will have an entry with 20:30:22. In another table field will be stored the the user current time in his timezone.
 
 We though about the daylight saving and we found 3 possibilities:
 
    # we ignore daylight savings (the user will enter his times using his current time and have only to pay attention if working during the transition).
-   # user choose if the times he enters are with or without it (time is stored in database using a timezone without daysavings, and DLS will be saved in another field).
-   # automatic, with time stored in a fixed timezone (can be tricky and exception are hard to manage and need informations about user country and region).
+   # user manually select if the times he enters are with or without it (time is stored in database using a timezone without daylight saving, and DST will be saved in another field).
+   # automatic, with time stored in a fixed timezone (can be tricky and exception are hard to manage and need information about user country and region) and an additional table field with region information.
 
 => check http://www.anicon.ca/timezone-script.php for a custom code....
 
