@@ -17,3 +17,13 @@ http://timenote.googlecode.com/svn/wiki/TableHour.attach/Hour.jpeg
 || date_start || Date start of the working activity ||
 || date_end || Date end of the working activity ||
 || comment || Text area where the suer can add notes ||
+
+pending fields + fields to modify:
+
+|| date_start || Date start of the working activity GMT (no DST) ||
+|| date_end || Date end of the working activity GMT (no DST) ||
+|| local_date_start || Date start of the working activity in user current timezone (with DST) ||
+|| local_date_end || Date end of the working activity in user current timezone (with DST) ||
+|| DST_start || DST?, timezone or region info at the start of the working activity [DateAndTime#Solution see] ||
+|| DST_end || DST?, timezone or region info at the end of the working activity [DateAndTime#Solution see] ||
+|| tags || tag to help searches ||
