@@ -24,6 +24,6 @@ pending fields + fields to modify:
 || date_end || Date end of the working activity GMT (no DST) ||
 || local_date_start || Date start of the working activity in user current timezone (with DST) ||
 || local_date_end || Date end of the working activity in user current timezone (with DST) ||
-|| DST_start || DST?, timezone or region info at the start of the working activity [DateAndTime#dbe 2010-12-01: see] ||
+|| DST_start || DST?, timezone or region info at the start of the working activity [DateAndTime#dbe_2010-12-01: see] ||
 || DST_end || DST?, timezone or region info at the end of the working activity [DateAndTime#Solution see] ||
 || tags || tag to help searches ||
