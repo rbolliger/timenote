@@ -75,7 +75,7 @@ Is needed a 3rd table field to store the DSL information and I propose the follo
 
    # DSL true/false
    # timezone -12/+12 (by using this and the 2 times stored you can extract the DST)
-   # region/country info (by using php build in functions you can recover DST, but affected by exceptions i.e. Israel's Ministry of Interior decide every year if using DST)
+   # region/country info (by using php build in functions you can recover DST, but affected by exceptions i.e. Israel's Ministry of Interior decides every year if DST need to be used)
  
 
 rbo 2010-11-01:
