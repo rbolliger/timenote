@@ -69,7 +69,7 @@ We have to distinguish the storage and the display of the date. The display is m
 This solution is good as far as users are always inputing their hours in the same GMT than their preferences. If the user want to input his hours in a work travel in different timezone without make himself the conversion, we have to store the GMT for each entries. 
 
 = Solution =
-dbe 2010-12-01:
+==== dbe 2010-12-01: ====
 
 Is needed a 3rd table field to store the DSL information and I propose the followings possibilities:
 
@@ -78,12 +78,12 @@ Is needed a 3rd table field to store the DSL information and I propose the follo
    # region/country info (by using php build in functions you can recover DST, but affected by exceptions i.e. Israel's Ministry of Interior decides every year if DST need to be used)
  
 
-rbo 2010-11-01:
+==== rbo 2010-11-01: ====
 
 In fact, we decided to save two dates: local AND utc. From the comparison of both, we can get all required informations. The user can also set his location with respect to timezones. From this data, we can automatically calculate daylight saving time from TimeZone php classes.
 
 
-dbe + nbo + rbo 2010-11-01:
+==== dbe + nbo + rbo 2010-11-01: ====
 
 We decided to store the date and time using only 1 timezone (e.g. GMT) in a yet to define format (YYYY-MM-DD hh:mm:ss, unix timestap or personalized version of it) in a table field. So if a New Yorker store 15:30:22 EST the database will have an entry with 20:30:22. In another table field will be stored the the user current time in his timezone.
 
@@ -96,7 +96,7 @@ We though about the daylight saving and we found 3 possibilities:
 => check http://www.anicon.ca/timezone-script.php for a custom code....
 
 
-nbo 2009-11-20: 
+==== nbo 2009-11-20: ====
 
 I propose the following solution: all date are saved in GMT+0 format in DB. Using the PHP [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] classes and the [http://ch2.php.net/manual/en/function.gmdate.php gmdate], [http://ch2.php.net/manual/en/function.gmmktime.php gmmktime] and [http://ch2.php.net/manual/en/function.gmstrftime.php gmstrftime] will allow us to deal with GMT/UTC but we need to save user's GMT/UTC preference for each entry in database. A way to do that is tu use the W3C: 
 
@@ -120,7 +120,7 @@ Read
   * [http://www.w3.org/TR/NOTE-datetime W3C specification & RFC 3339 IETF Internet standard]
 for details. I think RFC 3339 fit all our needs.
 
-rbo 20-nov-2009:
+==== rbo 20-nov-2009: ====
 
 Why not directly [http://ch2.php.net/manual/en/class.datetime.php DateTime] and [http://ch2.php.net/manual/en/class.datetimezone.php DateTimeZone] ? DateTime allows to handle GMT time.
 
@@ -128,7 +128,7 @@ Why not directly [http://ch2.php.net/manual/en/class.datetime.php DateTime] and 
  It's PHP date function with [http://ch2.php.net/manual/en/class.datetime.php#datetime.constants.rfc3339 RFC 3339 DateTime Node Types]
 
 
-dbe 10-dec-2009:
+==== dbe 10-dec-2009: ====
 
 I see the solutions, but I don't see why we choose we need such a system.
 Using timezone in mysql, can impact a lot the performances of the application, because most of the databases search use as search parameter the time.
